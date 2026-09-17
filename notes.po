@@ -1,0 +1,11 @@
+#	Commit	Purpose
+1	Industries section	Show who Voxvera serves
+2	Process section	Explain how projects work
+3	Pricing / engagement	Make buying understandable
+4	Why Voxvera	Establish differentiation
+5	Example solutions	Show concrete business use cases
+6	Final CTA	Strong conversion section
+7	Contact section	Give visitors a clear way to start
+8	Footer + navigation	Complete site structure
+9	SEO + accessibility	Production-quality foundation
+10	Final polish + deployment review	Ship the finished site
