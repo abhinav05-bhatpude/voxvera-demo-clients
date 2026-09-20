@@ -1559,3 +1559,1070 @@ h2 em {
   }
 
 }
+/* =====================================================
+   ADVANCED RESPONSIVE SYSTEM
+===================================================== */
+
+/* ---------- LARGE DESKTOP ---------- */
+
+@media (min-width: 1500px) {
+
+  :root {
+    --container: 1380px;
+  }
+
+  .hero {
+    min-height: 820px;
+  }
+
+  .hero-grid {
+    min-height: 820px;
+  }
+
+  .hero-image {
+    height: 650px;
+  }
+
+  .hero h1 {
+    font-size: 125px;
+  }
+
+  h2 {
+    font-size: 78px;
+  }
+}
+
+
+/* =====================================================
+   LAPTOP
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .container {
+    width: min(calc(100% - 40px), 1100px);
+  }
+
+  .desktop-nav {
+    gap: 20px;
+  }
+
+  .desktop-nav a {
+    font-size: 11px;
+  }
+
+  .hero-grid {
+    gap: 40px;
+  }
+
+  .hero h1 {
+    font-size: clamp(70px, 8vw, 100px);
+  }
+
+  .hero-image {
+    height: 540px;
+  }
+
+  .intro-grid {
+    gap: 30px;
+  }
+
+  .pediatric-grid {
+    gap: 60px;
+  }
+
+  .location-grid {
+    gap: 60px;
+  }
+}
+
+
+/* =====================================================
+   TABLET / SMALL LAPTOP
+===================================================== */
+
+@media (max-width: 1024px) {
+
+  .container {
+    width: min(calc(100% - 36px), 900px);
+  }
+
+
+  /* HEADER */
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .nav {
+    min-height: 78px;
+  }
+
+  .nav-button {
+    margin-left: auto;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-grid {
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    padding: 75px 0 0;
+  }
+
+  .hero-content {
+    max-width: 760px;
+    padding: 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(70px, 12vw, 110px);
+  }
+
+  .hero-subtitle {
+    max-width: 600px;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 520px;
+  }
+
+
+  /* INTRO */
+
+  .intro-grid {
+    grid-template-columns: 50px 1fr;
+  }
+
+  .intro-copy {
+    grid-column: 2;
+    padding-top: 0;
+  }
+
+
+  /* CARE */
+
+  .care-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .care-card {
+    min-height: 340px;
+  }
+
+  .care-card + .care-card {
+    border-left: 1px solid var(--line);
+    border-top: 0;
+  }
+
+
+  /* PEDIATRIC */
+
+  .pediatric-grid {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .pediatric-image {
+    height: 560px;
+  }
+
+  .pediatric-content {
+    max-width: 700px;
+  }
+
+
+  /* DOCTORS */
+
+  .doctor-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  /* REVIEWS */
+
+  .review-layout {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .review-box {
+    max-width: 850px;
+  }
+
+
+  /* LOCATION */
+
+  .location-grid {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .map-card {
+    height: 500px;
+  }
+
+
+  /* FOOTER */
+
+  .footer-top {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* =====================================================
+   MOBILE — 768PX
+===================================================== */
+
+@media (max-width: 768px) {
+
+  :root {
+    --container: 100%;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: calc(100% - 32px);
+    max-width: none;
+  }
+
+
+  /* ---------- TOP BAR ---------- */
+
+  .topbar-inner {
+    min-height: 36px;
+
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  .topbar-inner > span {
+    display: none;
+  }
+
+  .top-links {
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 20px;
+  }
+
+  .top-links a {
+    font-size: 10px;
+  }
+
+
+  /* ---------- HEADER ---------- */
+
+  .nav {
+    min-height: 74px;
+
+    gap: 10px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand-mark {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+  }
+
+  .brand-text {
+    min-width: 0;
+  }
+
+  .brand-text small {
+    font-size: 7px;
+  }
+
+  .brand-text strong {
+    font-size: 12px;
+
+    white-space: nowrap;
+  }
+
+  .nav-button {
+    flex-shrink: 0;
+
+    padding: 11px 13px;
+
+    font-size: 8px;
+    letter-spacing: 0.07em;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero-grid {
+    padding-top: 58px;
+
+    gap: 42px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero h1 {
+    margin-top: 20px;
+
+    font-size: clamp(56px, 15.8vw, 90px);
+
+    line-height: 0.86;
+
+    word-break: normal;
+  }
+
+  .hero-subtitle {
+    margin-top: 25px;
+
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    width: 100%;
+
+    margin-top: 30px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .hero-meta {
+    width: 100%;
+
+    margin-top: 38px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+    padding-bottom: 48px;
+  }
+
+  .hero-meta div {
+    min-width: 0;
+  }
+
+  .hero-meta strong {
+    font-size: 13px;
+
+    white-space: nowrap;
+  }
+
+  .hero-meta span {
+    font-size: 7px;
+
+    line-height: 1.3;
+  }
+
+
+  /* ---------- HERO IMAGE ---------- */
+
+  .hero-image {
+    width: 100%;
+    height: min(115vw, 520px);
+
+    min-height: 350px;
+    max-height: 520px;
+  }
+
+  .hero-image img {
+    object-position: center;
+  }
+
+  .image-card {
+    right: 12px;
+    bottom: 12px;
+
+    width: min(230px, calc(100% - 24px));
+
+    padding: 18px;
+  }
+
+  .image-card strong {
+    font-size: 21px;
+  }
+
+
+  /* ---------- GLOBAL SECTIONS ---------- */
+
+  .intro,
+  .care,
+  .pediatric,
+  .doctors,
+  .reviews,
+  .location {
+    padding: 82px 0;
+  }
+
+  h2 {
+    font-size: clamp(40px, 11vw, 58px);
+    line-height: 0.98;
+  }
+
+
+  /* ---------- INTRO ---------- */
+
+  .intro-grid {
+    display: block;
+  }
+
+  .section-number {
+    display: none;
+  }
+
+  .intro-copy {
+    margin-top: 28px;
+  }
+
+  .intro-copy p {
+    font-size: 14px;
+  }
+
+
+  /* ---------- SECTION HEADING ---------- */
+
+  .section-heading {
+    display: block;
+
+    margin-bottom: 45px;
+  }
+
+  .section-heading > p {
+    margin-top: 22px;
+
+    max-width: 500px;
+
+    font-size: 13px;
+  }
+
+
+  /* ---------- CARE ---------- */
+
+  .care-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    width: 100%;
+  }
+
+  .care-card {
+    min-height: 350px;
+
+    padding: 30px;
+  }
+
+  .care-card + .care-card {
+    border-left: 1px solid var(--line);
+    border-top: 0;
+  }
+
+  .card-icon {
+    margin-bottom: 65px;
+  }
+
+  .care-card h3 {
+    font-size: 29px;
+  }
+
+  .care-card p {
+    font-size: 13px;
+  }
+
+
+  /* ---------- PEDIATRIC ---------- */
+
+  .pediatric-grid {
+    gap: 45px;
+  }
+
+  .pediatric-image {
+    width: 100%;
+    height: min(105vw, 500px);
+  }
+
+  .pediatric-content > p {
+    font-size: 14px;
+  }
+
+  .problem-list {
+    margin: 35px 0;
+  }
+
+  .problem-list div {
+    min-height: 54px;
+  }
+
+  .problem-list strong {
+    font-size: 10px;
+  }
+
+
+  /* ---------- DOCTORS ---------- */
+
+  .doctor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-card {
+    min-height: 350px;
+
+    padding: 32px;
+  }
+
+  .doctor-line {
+    margin-top: 80px;
+  }
+
+  .doctor-card h3 {
+    font-size: clamp(34px, 9vw, 48px);
+  }
+
+
+  /* ---------- REVIEWS ---------- */
+
+  .review-layout {
+    gap: 42px;
+  }
+
+  .rating {
+    margin-top: 35px;
+  }
+
+  .review-box {
+    width: 100%;
+
+    padding: 30px;
+  }
+
+  .review-box p {
+    font-size: clamp(25px, 7vw, 35px);
+  }
+
+  .review-footer {
+    gap: 15px;
+
+    font-size: 8px;
+  }
+
+
+  /* ---------- LOCATION ---------- */
+
+  .location-grid {
+    gap: 45px;
+  }
+
+  .location-content > p {
+    font-size: 14px;
+  }
+
+  .contact-details {
+    margin: 35px 0;
+  }
+
+  .contact-details a,
+  .contact-details strong {
+    font-size: 14px;
+  }
+
+  .map-card {
+    width: 100%;
+    height: min(100vw, 450px);
+
+    min-height: 350px;
+  }
+
+  .map-label {
+    width: calc(100% - 30px);
+
+    left: 15px;
+    bottom: 15px;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  .footer-top {
+    min-height: auto;
+
+    padding: 45px 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 28px;
+  }
+
+  .footer-links {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+  }
+
+  .footer-call {
+    font-size: 10px;
+  }
+
+  .footer-bottom {
+    min-height: 90px;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 5px;
+  }
+
+
+  /* ---------- FLOATING CALL ---------- */
+
+  .floating-call {
+    width: 52px;
+    height: 52px;
+
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+
+/* =====================================================
+   SMALL PHONES — 480PX
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .container {
+    width: calc(100% - 24px);
+  }
+
+
+  /* HEADER */
+
+  .nav {
+    min-height: 70px;
+  }
+
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-text small {
+    font-size: 6px;
+  }
+
+  .brand-text strong {
+    font-size: 11px;
+  }
+
+  .nav-button {
+    padding: 10px 10px;
+
+    font-size: 7px;
+  }
+
+
+  /* HERO */
+
+  .hero-grid {
+    padding-top: 48px;
+  }
+
+  .hero h1 {
+    font-size: clamp(52px, 16vw, 74px);
+
+    letter-spacing: -0.075em;
+  }
+
+  .hero-subtitle {
+    max-width: 330px;
+
+    font-size: 13px;
+  }
+
+  .hero-meta {
+    gap: 7px;
+  }
+
+  .hero-meta strong {
+    font-size: 11px;
+  }
+
+  .hero-meta span {
+    font-size: 6.5px;
+
+    letter-spacing: 0.05em;
+  }
+
+  .hero-image {
+    height: 380px;
+    min-height: 380px;
+  }
+
+  .image-card {
+    width: 205px;
+    padding: 16px;
+  }
+
+  .image-card strong {
+    font-size: 19px;
+  }
+
+
+  /* SECTIONS */
+
+  .intro,
+  .care,
+  .pediatric,
+  .doctors,
+  .reviews,
+  .location {
+    padding: 70px 0;
+  }
+
+  h2 {
+    font-size: clamp(38px, 11vw, 50px);
+  }
+
+
+  /* CARE */
+
+  .care-card {
+    min-height: 325px;
+
+    padding: 25px;
+  }
+
+  .card-number {
+    top: 22px;
+    right: 22px;
+  }
+
+  .card-icon {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 60px;
+  }
+
+
+  /* PEDIATRIC */
+
+  .pediatric-image {
+    height: 380px;
+  }
+
+  .problem-list div {
+    gap: 12px;
+  }
+
+  .problem-list strong {
+    font-size: 9px;
+  }
+
+
+  /* DOCTORS */
+
+  .doctor-card {
+    min-height: 320px;
+
+    padding: 27px;
+  }
+
+  .doctor-line {
+    margin-top: 70px;
+  }
+
+
+  /* REVIEWS */
+
+  .review-box {
+    padding: 25px;
+  }
+
+  .quote {
+    font-size: 60px;
+  }
+
+  .review-box p {
+    font-size: 25px;
+  }
+
+
+  /* LOCATION */
+
+  .map-card {
+    height: 350px;
+    min-height: 350px;
+  }
+
+  .map-label {
+    padding: 18px;
+  }
+
+  .map-label strong {
+    font-size: 19px;
+  }
+
+
+  /* BUTTONS */
+
+  .button {
+    min-height: 52px;
+
+    padding: 0 18px;
+
+    font-size: 9px;
+  }
+
+
+  /* FOOTER */
+
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES — 360PX
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .container {
+    width: calc(100% - 20px);
+  }
+
+  .top-links {
+    gap: 12px;
+  }
+
+  .top-links a {
+    font-size: 8px;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand-text strong {
+    font-size: 10px;
+  }
+
+  .nav-button {
+    padding: 9px 8px;
+  }
+
+  .hero h1 {
+    font-size: 51px;
+  }
+
+  .hero-meta strong {
+    font-size: 10px;
+  }
+
+  .hero-meta span {
+    font-size: 6px;
+  }
+
+  .hero-image {
+    height: 330px;
+    min-height: 330px;
+  }
+
+  .image-card {
+    width: 185px;
+
+    padding: 13px;
+  }
+
+  .image-card strong {
+    font-size: 17px;
+  }
+
+  h2 {
+    font-size: 37px;
+  }
+
+  .care-card {
+    min-height: 310px;
+
+    padding: 22px;
+  }
+
+  .care-card h3 {
+    font-size: 26px;
+  }
+
+  .pediatric-image {
+    height: 330px;
+  }
+
+  .doctor-card h3 {
+    font-size: 32px;
+  }
+
+  .review-box p {
+    font-size: 22px;
+  }
+
+  .map-card {
+    height: 320px;
+    min-height: 320px;
+  }
+}
+
+
+/* =====================================================
+   LANDSCAPE PHONES
+===================================================== */
+
+@media (max-height: 600px) and (orientation: landscape) {
+
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+
+    padding: 45px 0;
+
+    align-items: center;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero h1 {
+    font-size: 55px;
+  }
+
+  .hero-subtitle {
+    margin-top: 18px;
+  }
+
+  .hero-actions {
+    margin-top: 20px;
+  }
+
+  .hero-meta {
+    margin-top: 25px;
+    padding-bottom: 0;
+  }
+
+  .hero-image {
+    height: 430px;
+  }
+}
+
+
+/* =====================================================
+   TOUCH DEVICES
+===================================================== */
+
+@media (hover: none) and (pointer: coarse) {
+
+  .care-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .button:hover {
+    transform: none;
+  }
+
+  .floating-call:hover {
+    transform: none;
+  }
+
+  .desktop-nav a::after {
+    display: none;
+  }
+
+  /* Bigger touch targets */
+
+  a {
+    min-height: 40px;
+  }
+
+  .footer-links a,
+  .desktop-nav a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+/* =====================================================
+   ACCESSIBILITY / REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* =====================================================
+   ULTRA-WIDE SAFETY
+===================================================== */
+
+@media (min-width: 1800px) {
+
+  .hero-grid {
+    gap: 100px;
+  }
+
+  .hero-image {
+    max-height: 700px;
+  }
+}
