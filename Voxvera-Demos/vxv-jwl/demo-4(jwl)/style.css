@@ -1,0 +1,2012 @@
+/* =========================================
+   ROOT
+========================================= */
+
+:root {
+
+    --ivory: #f6f2e9;
+    --ivory-dark: #e9e1d4;
+
+    --espresso: #241b17;
+    --espresso-light: #3c2b24;
+
+    --gold: #b38a43;
+    --gold-light: #d6b66f;
+
+    --white: #ffffff;
+    --black: #14100e;
+
+    --text: #29211d;
+    --muted: #766960;
+
+    --border: rgba(36, 27, 23, .14);
+
+    --serif: "Playfair Display", Georgia, serif;
+    --sans: "DM Sans", Arial, sans-serif;
+
+    --container: 1240px;
+
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background: var(--ivory);
+
+    color: var(--text);
+
+    font-family: var(--sans);
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+
+}
+
+
+img {
+
+    display: block;
+
+    width: 100%;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+button {
+
+    font: inherit;
+
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+
+    width: min(
+        calc(100% - 48px),
+        var(--container)
+    );
+
+    margin-inline: auto;
+
+}
+
+
+/* =========================================
+   TOPBAR
+========================================= */
+
+.topbar {
+
+    background: var(--espresso);
+
+    color: rgba(255,255,255,.7);
+
+    font-size: 9px;
+
+    letter-spacing: .2em;
+
+    text-transform: uppercase;
+
+}
+
+
+.topbar-inner {
+
+    min-height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.topbar a {
+
+    color: var(--gold-light);
+
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    position: absolute;
+
+    top: 38px;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 100;
+
+    color: white;
+
+}
+
+
+.nav-inner {
+
+    min-height: 94px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(255,255,255,.25);
+
+}
+
+
+/* BRAND */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+}
+
+
+.brand-symbol {
+
+    width: 49px;
+
+    height: 49px;
+
+    border: 1px solid var(--gold-light);
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    color: var(--gold-light);
+
+    font-family: var(--serif);
+
+    font-size: 16px;
+
+}
+
+
+.brand-copy strong {
+
+    display: block;
+
+    font-family: var(--serif);
+
+    font-size: 19px;
+
+    line-height: 1;
+
+    letter-spacing: .05em;
+
+}
+
+
+.brand-copy span {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--gold-light);
+
+    font-size: 8px;
+
+    letter-spacing: .35em;
+
+}
+
+
+/* NAV */
+
+.desktop-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 36px;
+
+    margin-left: auto;
+
+    margin-right: 38px;
+
+}
+
+
+.desktop-nav a {
+
+    font-size: 11px;
+
+    letter-spacing: .05em;
+
+    position: relative;
+
+}
+
+
+.desktop-nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -8px;
+
+    left: 0;
+
+    width: 0;
+
+    height: 1px;
+
+    background: var(--gold-light);
+
+    transition: .3s ease;
+
+}
+
+
+.desktop-nav a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* NAV CTA */
+
+.nav-cta {
+
+    padding: 11px 22px;
+
+    border: 1px solid rgba(255,255,255,.55);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+    text-transform: uppercase;
+
+    transition: .3s ease;
+
+}
+
+
+.nav-cta:hover {
+
+    background: white;
+
+    color: var(--espresso);
+
+}
+
+
+/* MENU */
+
+.menu-button {
+
+    display: none;
+
+    width: 42px;
+
+    height: 42px;
+
+    background: none;
+
+    border: 0;
+
+    cursor: pointer;
+
+}
+
+
+.menu-button span {
+
+    display: block;
+
+    width: 25px;
+
+    height: 1px;
+
+    background: white;
+
+    margin: 7px auto;
+
+    transition: .3s ease;
+
+}
+
+
+.menu-button.active span:first-child {
+
+    transform: translateY(4px) rotate(45deg);
+
+}
+
+
+.menu-button.active span:last-child {
+
+    transform: translateY(-4px) rotate(-45deg);
+
+}
+
+
+/* MOBILE MENU */
+
+.mobile-menu {
+
+    display: none;
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    position: relative;
+
+    min-height: 780px;
+
+    height: 100vh;
+
+    max-height: 950px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    color: white;
+
+}
+
+
+.hero-image {
+
+    position: absolute;
+
+    inset: 0;
+
+}
+
+
+.hero-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    filter: saturate(.65);
+
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(25,18,15,.9) 0%,
+            rgba(25,18,15,.7) 42%,
+            rgba(25,18,15,.18) 78%,
+            rgba(25,18,15,.4) 100%
+        );
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding-top: 100px;
+
+}
+
+
+.eyebrow {
+
+    margin-bottom: 22px;
+
+    color: var(--gold-light);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .25em;
+
+    text-transform: uppercase;
+
+}
+
+
+.eyebrow.dark {
+
+    color: var(--gold);
+
+}
+
+
+.hero h1 {
+
+    max-width: 1000px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(
+        68px,
+        10vw,
+        145px
+    );
+
+    font-weight: 500;
+
+    line-height: .82;
+
+    letter-spacing: -.06em;
+
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    padding-left: 8vw;
+
+    color: var(--gold-light);
+
+}
+
+
+.hero-text {
+
+    max-width: 440px;
+
+    margin-top: 42px;
+
+    color: rgba(255,255,255,.78);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+.hero-actions {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 32px;
+
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.button {
+
+    min-height: 50px;
+
+    padding: 0 25px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+    text-transform: uppercase;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        color .3s ease;
+
+}
+
+
+.button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+.button-gold {
+
+    background: var(--gold);
+
+    color: white;
+
+}
+
+
+.button-gold:hover {
+
+    background: var(--gold-light);
+
+    color: var(--espresso);
+
+}
+
+
+.button-outline {
+
+    border: 1px solid rgba(255,255,255,.6);
+
+    color: white;
+
+}
+
+
+.button-outline:hover {
+
+    background: white;
+
+    color: var(--espresso);
+
+}
+
+
+.button-dark {
+
+    background: var(--espresso);
+
+    color: white;
+
+}
+
+
+.button-dark:hover {
+
+    background: var(--gold);
+
+}
+
+
+.button-light {
+
+    background: white;
+
+    color: var(--espresso);
+
+}
+
+
+.button-light:hover {
+
+    background: var(--gold-light);
+
+}
+
+
+.button-contact-outline {
+
+    border: 1px solid rgba(255,255,255,.4);
+
+    color: white;
+
+}
+
+
+.button-contact-outline:hover {
+
+    background: white;
+
+    color: var(--espresso);
+
+}
+
+
+/* HERO META */
+
+.hero-meta {
+
+    position: absolute;
+
+    z-index: 3;
+
+    bottom: 34px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: min(
+        calc(100% - 48px),
+        var(--container)
+    );
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    color: rgba(255,255,255,.6);
+
+    font-size: 8px;
+
+    letter-spacing: .22em;
+
+}
+
+
+.meta-line {
+
+    width: 55px;
+
+    height: 1px;
+
+    background: var(--gold-light);
+
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.section {
+
+    padding: 130px 0;
+
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+
+    background: var(--ivory);
+
+}
+
+
+.intro-grid {
+
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    gap: 75px;
+
+}
+
+
+.section-index {
+
+    color: var(--gold);
+
+    font-family: var(--serif);
+
+    font-size: 18px;
+
+}
+
+
+.intro-content {
+
+    max-width: 850px;
+
+}
+
+
+.intro h2 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(
+        45px,
+        5.5vw,
+        76px
+    );
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    letter-spacing: -.04em;
+
+}
+
+
+.intro h2 em {
+
+    color: var(--gold);
+
+    font-style: normal;
+
+}
+
+
+.intro-content > p:not(.eyebrow) {
+
+    max-width: 640px;
+
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+}
+
+
+.text-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 32px;
+
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .13em;
+
+    text-transform: uppercase;
+
+}
+
+
+.text-link span {
+
+    color: var(--gold);
+
+    font-size: 18px;
+
+}
+
+
+/* =========================================
+   BRAND STATEMENT
+========================================= */
+
+.brand-statement {
+
+    padding: 150px 0;
+
+    background: var(--espresso);
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+.statement-label {
+
+    margin-bottom: 30px;
+
+    color: var(--gold-light);
+
+    font-size: 9px;
+
+    letter-spacing: .3em;
+
+}
+
+
+.brand-statement h2 {
+
+    max-width: 1000px;
+
+    margin-inline: auto;
+
+    font-family: var(--serif);
+
+    font-size: clamp(
+        50px,
+        7vw,
+        100px
+    );
+
+    font-weight: 500;
+
+    line-height: .98;
+
+    letter-spacing: -.05em;
+
+}
+
+
+.brand-statement em {
+
+    color: var(--gold-light);
+
+    font-style: italic;
+
+}
+
+
+/* =========================================
+   EXPERIENCE
+========================================= */
+
+.experience {
+
+    background: #eae3d8;
+
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 60px;
+
+    margin-bottom: 60px;
+
+}
+
+
+.section-heading h2 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(
+        44px,
+        5.5vw,
+        72px
+    );
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    letter-spacing: -.04em;
+
+}
+
+
+.section-heading h2 em {
+
+    color: var(--gold);
+
+    font-style: italic;
+
+}
+
+
+.heading-description {
+
+    max-width: 320px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+}
+
+
+/* EXPERIENCE CARDS */
+
+.experience-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1px;
+
+    background: var(--border);
+
+}
+
+
+.experience-card {
+
+    min-height: 360px;
+
+    padding: 38px;
+
+    background: var(--ivory);
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.featured-card {
+
+    background: var(--espresso);
+
+    color: white;
+
+}
+
+
+.card-number {
+
+    color: var(--gold);
+
+    font-family: var(--serif);
+
+    font-size: 14px;
+
+}
+
+
+.card-icon {
+
+    margin-top: auto;
+
+    color: var(--gold);
+
+    font-family: var(--serif);
+
+    font-size: 40px;
+
+}
+
+
+.experience-card h3 {
+
+    margin-top: 20px;
+
+    font-family: var(--serif);
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+}
+
+
+.experience-card p {
+
+    max-width: 250px;
+
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+.featured-card p {
+
+    color: rgba(255,255,255,.62);
+
+}
+
+
+/* =========================================
+   SHOWROOM
+========================================= */
+
+.showroom {
+
+    background: var(--ivory);
+
+}
+
+
+.showroom-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 90px;
+
+    align-items: center;
+
+}
+
+
+.showroom-image {
+
+    position: relative;
+
+    height: 680px;
+
+    background: #201916;
+
+    overflow: hidden;
+
+}
+
+
+.showroom-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+
+.image-label {
+
+    position: absolute;
+
+    left: 24px;
+
+    bottom: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 17px;
+
+    background: rgba(30,23,20,.9);
+
+    color: white;
+
+}
+
+
+.image-label span {
+
+    color: var(--gold-light);
+
+    font-family: var(--serif);
+
+}
+
+
+.image-label strong {
+
+    font-size: 9px;
+
+    letter-spacing: .13em;
+
+}
+
+
+.showroom-content h2 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(
+        52px,
+        6vw,
+        82px
+    );
+
+    font-weight: 500;
+
+    line-height: .94;
+
+    letter-spacing: -.045em;
+
+}
+
+
+.showroom-content h2 em {
+
+    color: var(--gold);
+
+    font-style: italic;
+
+}
+
+
+.showroom-content > p:not(.eyebrow) {
+
+    max-width: 470px;
+
+    margin-top: 28px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+}
+
+
+.store-details {
+
+    margin: 40px 0;
+
+}
+
+
+.store-detail {
+
+    display: flex;
+
+    gap: 18px;
+
+    padding: 19px 0;
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+.store-detail:last-child {
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.store-detail > span {
+
+    color: var(--gold);
+
+    font-family: var(--serif);
+
+    font-size: 13px;
+
+}
+
+
+.store-detail small {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--gold);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+
+}
+
+
+.store-detail p {
+
+    max-width: 430px;
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact {
+
+    padding: 115px 0;
+
+    background: var(--espresso);
+
+    color: white;
+
+}
+
+
+.contact-inner {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 70px;
+
+}
+
+
+.contact h2 {
+
+    max-width: 750px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(
+        52px,
+        6vw,
+        88px
+    );
+
+    font-weight: 500;
+
+    line-height: .94;
+
+    letter-spacing: -.05em;
+
+}
+
+
+.contact h2 em {
+
+    color: var(--gold-light);
+
+    font-style: italic;
+
+}
+
+
+.contact-action {
+
+    max-width: 340px;
+
+}
+
+
+.contact-action > p {
+
+    margin-bottom: 25px;
+
+    color: rgba(255,255,255,.62);
+
+    font-size: 14px;
+
+}
+
+
+.contact-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    background: var(--black);
+
+    color: white;
+
+}
+
+
+.footer-top {
+
+    min-height: 170px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+}
+
+
+.footer-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+}
+
+
+.footer-brand .brand-symbol {
+
+    width: 44px;
+
+    height: 44px;
+
+}
+
+
+.footer-brand .brand-copy strong {
+
+    font-size: 17px;
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    gap: 27px;
+
+}
+
+
+.footer-links a {
+
+    color: rgba(255,255,255,.58);
+
+    font-size: 10px;
+
+}
+
+
+.footer-links a:hover {
+
+    color: var(--gold-light);
+
+}
+
+
+.footer-phone {
+
+    color: var(--gold-light);
+
+    font-size: 11px;
+
+}
+
+
+.footer-bottom {
+
+    min-height: 65px;
+
+    border-top: 1px solid rgba(255,255,255,.1);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: rgba(255,255,255,.38);
+
+    font-size: 8px;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================
+   FLOATING CALL
+========================================= */
+
+.floating-call {
+
+    position: fixed;
+
+    right: 22px;
+
+    bottom: 22px;
+
+    z-index: 200;
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    background: var(--gold);
+
+    color: white;
+
+    font-size: 19px;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,.25);
+
+    transition: .3s ease;
+
+}
+
+
+.floating-call:hover {
+
+    transform: translateY(-4px);
+
+    background: var(--espresso-light);
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+
+    .desktop-nav,
+    .nav-cta {
+
+        display: none;
+
+    }
+
+
+    .menu-button {
+
+        display: block;
+
+    }
+
+
+    .mobile-menu {
+
+        display: flex;
+
+        position: absolute;
+
+        top: 94px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        background: var(--espresso);
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform: translateY(-15px);
+
+        transition: .3s ease;
+
+    }
+
+
+    .mobile-menu.active {
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: translateY(0);
+
+    }
+
+
+    .mobile-menu a {
+
+        color: white;
+
+        font-size: 14px;
+
+    }
+
+
+    .mobile-call {
+
+        padding-top: 18px;
+
+        border-top: 1px solid rgba(255,255,255,.15);
+
+        color: var(--gold-light) !important;
+
+    }
+
+
+    .intro-grid {
+
+        grid-template-columns: 60px 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    .showroom-grid {
+
+        gap: 45px;
+
+    }
+
+
+    .showroom-image {
+
+        height: 570px;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+
+    .container {
+
+        width: min(
+            calc(100% - 32px),
+            var(--container)
+        );
+
+    }
+
+
+    .topbar {
+
+        display: none;
+
+    }
+
+
+    .navbar {
+
+        top: 0;
+
+    }
+
+
+    .nav-inner {
+
+        min-height: 78px;
+
+    }
+
+
+    .mobile-menu {
+
+        top: 78px;
+
+    }
+
+
+    .hero {
+
+        min-height: 720px;
+
+        height: 100svh;
+
+        max-height: none;
+
+    }
+
+
+    .hero-image img {
+
+        object-position: center;
+
+    }
+
+
+    .hero-overlay {
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(25,18,15,.65),
+                rgba(25,18,15,.88)
+            );
+
+    }
+
+
+    .hero-content {
+
+        padding-top: 70px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: clamp(
+            58px,
+            17vw,
+            94px
+        );
+
+    }
+
+
+    .hero h1 span {
+
+        padding-left: 10vw;
+
+    }
+
+
+    .hero-text {
+
+        max-width: 320px;
+
+        margin-top: 30px;
+
+        font-size: 13px;
+
+    }
+
+
+    .hero-actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        max-width: 280px;
+
+    }
+
+
+    .hero-meta {
+
+        width: calc(100% - 32px);
+
+        bottom: 20px;
+
+        font-size: 7px;
+
+    }
+
+
+    .meta-line {
+
+        width: 25px;
+
+    }
+
+
+    .section {
+
+        padding: 85px 0;
+
+    }
+
+
+    .intro-grid {
+
+        display: block;
+
+    }
+
+
+    .section-index {
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .intro h2 {
+
+        font-size: clamp(
+            44px,
+            13vw,
+            64px
+        );
+
+    }
+
+
+    .brand-statement {
+
+        padding: 100px 0;
+
+    }
+
+
+    .brand-statement h2 {
+
+        font-size: clamp(
+            45px,
+            13vw,
+            67px
+        );
+
+    }
+
+
+    .section-heading {
+
+        display: block;
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: clamp(
+            43px,
+            12vw,
+            62px
+        );
+
+    }
+
+
+    .heading-description {
+
+        margin-top: 22px;
+
+    }
+
+
+    .experience-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .experience-card {
+
+        min-height: 300px;
+
+    }
+
+
+    .showroom-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .showroom-image {
+
+        order: -1;
+
+        height: auto;
+
+        aspect-ratio: 4 / 5;
+
+    }
+
+
+    .showroom-content h2 {
+
+        font-size: clamp(
+            50px,
+            14vw,
+            70px
+        );
+
+    }
+
+
+    .contact {
+
+        padding: 85px 0;
+
+    }
+
+
+    .contact-inner {
+
+        display: block;
+
+    }
+
+
+    .contact h2 {
+
+        font-size: clamp(
+            48px,
+            13vw,
+            68px
+        );
+
+    }
+
+
+    .contact-action {
+
+        margin-top: 45px;
+
+    }
+
+
+    .footer-top {
+
+        padding: 55px 0;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .footer-links {
+
+        flex-wrap: wrap;
+
+        gap: 17px 24px;
+
+    }
+
+
+    .footer-bottom {
+
+        min-height: 90px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        gap: 8px;
+
+    }
+
+
+    .floating-call {
+
+        right: 16px;
+
+        bottom: 16px;
+
+        width: 50px;
+
+        height: 50px;
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 390px) {
+
+
+    .brand-symbol {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+
+    .brand-copy strong {
+
+        font-size: 16px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 56px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 12px;
+
+    }
+
+}
