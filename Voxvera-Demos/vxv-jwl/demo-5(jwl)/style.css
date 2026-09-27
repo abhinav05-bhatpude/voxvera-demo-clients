@@ -1486,3 +1486,782 @@ button {
         gap: 8px;
     }
 }
+
+/* =========================================
+   RESPONSIVE FIXES
+   SHRI VARAD JEWELLERS
+========================================= */
+
+
+/* ---------- GLOBAL IMAGE SAFETY ---------- */
+
+img {
+    max-width: 100%;
+}
+
+.hero-image img,
+.about-image img,
+.experience-image img,
+.showroom-image img,
+.visual-item img {
+    display: block;
+}
+
+
+/* ---------- DESKTOP IMAGE BEHAVIOUR ---------- */
+
+.collection-image img {
+    object-fit: contain;
+    object-position: center;
+}
+
+.experience-image img,
+.about-image img,
+.showroom-image img,
+.visual-item img {
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ---------- HERO TITLE ---------- */
+
+.hero h1 {
+    max-width: 100%;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+
+    .container {
+        width: min(
+            calc(100% - 36px),
+            760px
+        );
+    }
+
+
+    /* NAVIGATION */
+
+    .desktop-nav,
+    .nav-cta {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    /* MOBILE MENU */
+
+    .mobile-menu {
+        position: absolute;
+
+        top: 92px;
+        left: 0;
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 18px;
+
+        padding: 25px 24px;
+
+        background: var(--brown);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        transition:
+            opacity .25s ease,
+            visibility .25s ease,
+            transform .25s ease;
+    }
+
+    .mobile-menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 680px;
+        height: 100svh;
+        max-height: 900px;
+    }
+
+    .hero-content {
+        padding-top: 70px;
+    }
+
+    .hero h1 {
+        font-size: clamp(
+            58px,
+            10vw,
+            95px
+        );
+
+        line-height: .88;
+
+        letter-spacing: -.055em;
+    }
+
+    .hero h1 span {
+        padding-left: 5vw;
+    }
+
+
+    /* GRID SECTIONS */
+
+    .intro-grid,
+    .experience-grid,
+    .about-grid,
+    .showroom-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .section-number {
+        display: none;
+    }
+
+
+    /* COLLECTION */
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-side {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+
+    .collection-image {
+        height: 580px;
+    }
+
+
+    /* IMAGES */
+
+    .experience-image,
+    .about-image,
+    .showroom-image {
+        width: 100%;
+        height: 520px;
+    }
+
+
+    /* GALLERY */
+
+    .visual-gallery {
+        height: 420px;
+    }
+
+
+    /* CTA */
+
+    .cta-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: calc(100% - 32px);
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+        top: 0;
+    }
+
+    .nav-inner {
+        height: 76px;
+    }
+
+    .mobile-menu {
+        top: 76px;
+    }
+
+
+    /* BRAND */
+
+    .brand {
+        gap: 9px;
+    }
+
+    .brand-mark {
+        width: 42px;
+        height: 42px;
+
+        font-size: 14px;
+    }
+
+    .brand-text strong {
+        font-size: 16px;
+    }
+
+    .brand-text span {
+        font-size: 7px;
+        letter-spacing: .27em;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 700px;
+        height: 100svh;
+        max-height: none;
+    }
+
+    .hero-content {
+        width: 100%;
+
+        padding-top: 55px;
+    }
+
+
+    .hero .eyebrow {
+        margin-bottom: 18px;
+
+        font-size: 8px;
+
+        letter-spacing: .19em;
+    }
+
+
+    /*
+       IMPORTANT:
+       Prevents JEWELLERS from
+       getting cut off on phones.
+    */
+
+    .hero h1 {
+        width: 100%;
+
+        font-size: clamp(
+            47px,
+            15vw,
+            70px
+        );
+
+        line-height: .88;
+
+        letter-spacing: -.055em;
+
+        white-space: normal;
+
+        overflow-wrap: break-word;
+    }
+
+
+    .hero h1 span {
+        padding-left: 0;
+
+        margin-top: 4px;
+
+        font-size: .9em;
+
+        white-space: nowrap;
+    }
+
+
+    .hero-description {
+        max-width: 320px;
+
+        margin-top: 28px;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* HERO BUTTONS */
+
+    .hero-actions {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+
+        margin-top: 28px;
+    }
+
+    .hero-actions .button {
+        width: 100%;
+
+        min-height: 52px;
+    }
+
+
+    /* HERO FOOTER */
+
+    .hero-footer {
+        display: none;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        padding: 75px 0;
+    }
+
+
+    /* HEADINGS */
+
+    .intro h2,
+    .section-heading h2,
+    .experience-content h2,
+    .about-content h2,
+    .showroom-content h2 {
+        font-size: clamp(
+            40px,
+            12vw,
+            54px
+        );
+
+        line-height: 1.02;
+    }
+
+
+    /* STATEMENT */
+
+    .statement {
+        padding: 85px 0;
+    }
+
+    .statement h2 {
+        font-size: clamp(
+            42px,
+            12vw,
+            58px
+        );
+    }
+
+
+    /* SECTION HEADING */
+
+    .section-heading {
+        display: block;
+
+        margin-bottom: 35px;
+    }
+
+    .section-heading > p {
+        margin-top: 22px;
+
+        font-size: 13px;
+    }
+
+
+    /* COLLECTION */
+
+    .collection-grid {
+        display: block;
+    }
+
+    .collection-feature {
+        margin-bottom: 16px;
+    }
+
+
+    /*
+       Jewellery poster:
+       DON'T CROP IT.
+    */
+
+    .collection-image {
+        width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+
+        background: #211719;
+    }
+
+    .collection-image img {
+        width: 100%;
+        height: auto;
+
+        max-height: 650px;
+
+        object-fit: contain;
+    }
+
+
+    .collection-info {
+        padding: 18px;
+    }
+
+
+    .collection-info h3 {
+        font-size: 23px;
+    }
+
+
+    /* COLLECTION SIDE */
+
+    .collection-side {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+
+    .small-image {
+        height: 300px;
+    }
+
+
+    .collection-dark {
+        min-height: 260px;
+
+        padding: 28px;
+    }
+
+
+    /* EXPERIENCE */
+
+    .experience-grid {
+        display: flex;
+
+        flex-direction: column;
+    }
+
+
+    .experience-image {
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 4 / 3;
+
+        overflow: hidden;
+    }
+
+    .experience-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    /* EXPERIENCE POINTS */
+
+    .experience-point {
+        gap: 18px;
+
+        margin-top: 28px;
+    }
+
+
+    /* ABOUT */
+
+    .about-grid {
+        display: flex;
+
+        flex-direction: column;
+    }
+
+
+    .about-image {
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 4 / 3;
+
+        overflow: hidden;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    .about-details {
+        flex-direction: column;
+
+        gap: 20px;
+
+        margin-top: 28px;
+    }
+
+
+    /* GALLERY */
+
+    .visual-gallery {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        height: auto;
+    }
+
+
+    .visual-item {
+        width: 100%;
+
+        height: 300px;
+    }
+
+
+    .visual-item img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    /* SHOWROOM */
+
+    .showroom-grid {
+        display: flex;
+
+        flex-direction: column;
+    }
+
+
+    .showroom-image {
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 4 / 3;
+
+        overflow: hidden;
+    }
+
+
+    .showroom-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    .store-detail {
+        gap: 15px;
+    }
+
+
+    .store-detail p {
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
+
+
+    /* CTA */
+
+    .cta {
+        padding: 75px 0;
+    }
+
+
+    .cta h2 {
+        font-size: clamp(
+            43px,
+            12vw,
+            58px
+        );
+    }
+
+
+    .cta-actions {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .cta-actions .button {
+        width: 100%;
+    }
+
+
+    /* FOOTER */
+
+    .footer-top {
+        padding: 45px 0;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .footer-links {
+        flex-wrap: wrap;
+
+        gap: 18px;
+    }
+
+
+    .footer-bottom {
+        padding: 20px 0;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+
+
+    /* FLOATING CALL */
+
+    .floating-call {
+        right: 16px;
+        bottom: 16px;
+
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .container {
+        width: calc(100% - 24px);
+    }
+
+
+    .hero h1 {
+        font-size: 45px;
+
+        letter-spacing: -.05em;
+    }
+
+
+    .hero h1 span {
+        font-size: .88em;
+    }
+
+
+    .hero-description {
+        font-size: 12px;
+
+        max-width: 280px;
+    }
+
+
+    .brand-text strong {
+        font-size: 14px;
+    }
+
+
+    .brand-mark {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .section {
+        padding: 65px 0;
+    }
+
+
+    .intro h2,
+    .section-heading h2,
+    .experience-content h2,
+    .about-content h2,
+    .showroom-content h2 {
+        font-size: 39px;
+    }
+
+
+    .statement h2 {
+        font-size: 40px;
+    }
+
+
+    .experience-image,
+    .about-image,
+    .showroom-image {
+        aspect-ratio: 1 / .85;
+    }
+
+}
+
+
+/* =========================================
+   LANDSCAPE PHONES
+========================================= */
+
+@media (
+    max-height: 600px
+) and (
+    orientation: landscape
+) {
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-content {
+        padding-top: 40px;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .hero-description {
+        margin-top: 18px;
+    }
+
+    .hero-actions {
+        margin-top: 18px;
+    }
+
+}
