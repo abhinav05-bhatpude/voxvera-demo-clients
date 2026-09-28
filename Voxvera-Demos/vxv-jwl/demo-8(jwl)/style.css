@@ -1,0 +1,3029 @@
+/* =========================================================
+   UTTAMCHAND NEMICHAND JAIN & SONS
+   RESPONSIVE PRODUCTION STYLESHEET
+========================================================= */
+
+
+/* =========================================================
+   01. VARIABLES
+========================================================= */
+
+:root {
+
+    --blue: #17465e;
+
+    --blue-dark: #0d2f40;
+
+    --blue-deep: #082330;
+
+    --blue-soft: #376b80;
+
+    --gold: #b99548;
+
+    --gold-light: #d8bd7a;
+
+    --gold-pale: #eee0b8;
+
+    --cream: #f6f2e9;
+
+    --ivory: #fbfaf7;
+
+    --wood: #6a4027;
+
+    --text: #282421;
+
+    --muted: #746e68;
+
+    --white: #ffffff;
+
+    --border: rgba(23, 70, 94, 0.14);
+
+    --serif:
+        "Cormorant Garamond",
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    --sans:
+        "Manrope",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    --container: 1240px;
+
+    --page-padding:
+        clamp(16px, 4vw, 40px);
+
+    --section-space:
+        clamp(75px, 10vw, 140px);
+
+}
+
+
+/* =========================================================
+   02. RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+    overflow-x: hidden;
+
+}
+
+body {
+
+    width: 100%;
+
+    min-width: 0;
+
+    overflow-x: hidden;
+
+    background: var(--ivory);
+
+    color: var(--text);
+
+    font-family: var(--sans);
+
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
+
+    text-rendering: optimizeLegibility;
+
+}
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+button {
+
+    font: inherit;
+
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+span {
+
+    overflow-wrap: break-word;
+
+}
+
+
+/* =========================================================
+   03. CONTAINER
+========================================================= */
+
+.container {
+
+    width:
+        min(
+            calc(100% - (var(--page-padding) * 2)),
+            var(--container)
+        );
+
+    margin-inline: auto;
+
+}
+
+
+/* =========================================================
+   04. TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3 {
+
+    font-family: var(--serif);
+
+    font-weight: 500;
+
+}
+
+em {
+
+    font-style: italic;
+
+}
+
+.eyebrow {
+
+    color: var(--gold);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.22em;
+
+    line-height: 1.4;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   05. HEADER
+========================================================= */
+
+.site-header {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    color: white;
+
+    transition:
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+.site-header.scrolled {
+
+    background:
+        rgba(13, 47, 64, 0.97);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.14);
+
+}
+
+
+.nav-container {
+
+    width:
+        min(
+            calc(100% - (var(--page-padding) * 2)),
+            var(--container)
+        );
+
+    min-height: 78px;
+
+    margin-inline: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+/* =========================================================
+   06. BRAND
+========================================================= */
+
+.brand {
+
+    min-width: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+}
+
+.brand-mark {
+
+    width: 47px;
+
+    height: 40px;
+
+    flex: 0 0 47px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid rgba(255,255,255,0.5);
+
+    color: white;
+
+    font-family: var(--serif);
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.04em;
+
+}
+
+.brand-copy {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1;
+
+}
+
+.brand-copy strong {
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.11em;
+
+    white-space: nowrap;
+
+}
+
+.brand-copy small {
+
+    margin-top: 5px;
+
+    color: var(--gold-light);
+
+    font-size: 7px;
+
+    letter-spacing: 0.25em;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   07. DESKTOP NAV
+========================================================= */
+
+.desktop-nav {
+
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: clamp(18px, 2.5vw, 34px);
+
+}
+
+.desktop-nav a {
+
+    position: relative;
+
+    color:
+        rgba(255,255,255,0.78);
+
+    font-size: 9px;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+}
+
+.desktop-nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -7px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: var(--gold-light);
+
+    transition: width 0.2s ease;
+
+}
+
+.desktop-nav a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   08. NAV CTA
+========================================================= */
+
+.nav-cta {
+
+    min-height: 44px;
+
+    padding-inline: 17px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid rgba(255,255,255,0.45);
+
+    color: white;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   09. MOBILE MENU TOGGLE
+========================================================= */
+
+.menu-toggle {
+
+    display: none;
+
+    width: 46px;
+
+    height: 46px;
+
+    flex: 0 0 46px;
+
+    margin-left: auto;
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+
+}
+
+.menu-toggle span {
+
+    display: block;
+
+    width: 24px;
+
+    height: 1px;
+
+    margin: 6px auto;
+
+    background: white;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+
+}
+
+.menu-toggle.active span:first-child {
+
+    transform:
+        translateY(3.5px)
+        rotate(45deg);
+
+}
+
+.menu-toggle.active span:last-child {
+
+    transform:
+        translateY(-3.5px)
+        rotate(-45deg);
+
+}
+
+
+/* =========================================================
+   10. MOBILE MENU
+========================================================= */
+
+.mobile-menu {
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    width: 100%;
+
+    padding:
+        10px
+        var(--page-padding)
+        25px;
+
+    background: var(--blue-deep);
+
+    border-top:
+        1px solid rgba(255,255,255,0.08);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform: translateY(-8px);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+
+}
+
+.mobile-menu.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+
+}
+
+.mobile-menu a {
+
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+
+    color:
+        rgba(255,255,255,0.86);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+}
+
+.mobile-menu .mobile-cta {
+
+    justify-content: center;
+
+    margin-top: 14px;
+
+    border: 0;
+
+    background: var(--gold);
+
+    color: var(--blue-deep);
+
+}
+
+
+/* =========================================================
+   11. HERO
+========================================================= */
+
+.hero {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100svh;
+
+    min-height: 100dvh;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    background: var(--blue-deep);
+
+    color: white;
+
+}
+
+.hero-image {
+
+    position: absolute;
+
+    inset: 0;
+
+}
+
+.hero-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+}
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8,35,48,0.95) 0%,
+            rgba(8,35,48,0.78) 38%,
+            rgba(8,35,48,0.32) 72%,
+            rgba(8,35,48,0.25) 100%
+        );
+
+}
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(
+            calc(100% - (var(--page-padding) * 2)),
+            var(--container)
+        );
+
+    margin-inline: auto;
+
+    padding-top:
+        clamp(90px, 12vh, 140px);
+
+}
+
+.hero-eyebrow {
+
+    margin-bottom: 19px;
+
+    color: var(--gold-light);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.19em;
+
+}
+
+.hero h1 {
+
+    width: min(100%, 900px);
+
+    font-size:
+        clamp(
+            55px,
+            9vw,
+            132px
+        );
+
+    line-height: 0.77;
+
+    letter-spacing: -0.055em;
+
+}
+
+.hero h1 span {
+
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--gold-pale);
+
+    font-size: 0.55em;
+
+    line-height: 0.98;
+
+    letter-spacing: -0.02em;
+
+}
+
+.hero-text {
+
+    width: min(100%, 440px);
+
+    margin-top: 25px;
+
+    color:
+        rgba(255,255,255,0.75);
+
+    font-size: 13px;
+
+    line-height: 1.85;
+
+}
+
+.hero-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 30px;
+
+}
+
+.hero-bottom {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom:
+        max(
+            18px,
+            env(safe-area-inset-bottom)
+        );
+
+    z-index: 3;
+
+    width:
+        min(
+            calc(100% - (var(--page-padding) * 2)),
+            var(--container)
+        );
+
+    margin-inline: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color:
+        rgba(255,255,255,0.62);
+
+    font-size: 8px;
+
+    letter-spacing: 0.13em;
+
+}
+
+.hero-divider {
+
+    width: 65px;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,0.3);
+
+}
+
+
+/* =========================================================
+   12. BUTTONS
+========================================================= */
+
+.button {
+
+    min-height: 51px;
+
+    padding-inline:
+        clamp(18px, 3vw, 27px);
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid transparent;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.11em;
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+
+}
+
+.button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+.button-gold {
+
+    background: var(--gold);
+
+    color: var(--blue-deep);
+
+}
+
+.button-gold:hover {
+
+    background: var(--gold-light);
+
+}
+
+.button-light {
+
+    border-color:
+        rgba(255,255,255,0.5);
+
+    color: white;
+
+}
+
+.button-light:hover {
+
+    background: white;
+
+    color: var(--blue-deep);
+
+}
+
+.button-dark {
+
+    background: var(--blue);
+
+    color: white;
+
+}
+
+.button-dark:hover {
+
+    background: var(--blue-soft);
+
+}
+
+.button-outline-dark {
+
+    border-color:
+        rgba(23,70,94,0.32);
+
+    color: var(--blue);
+
+}
+
+.button-outline-dark:hover {
+
+    background: var(--blue);
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   13. SECTIONS
+========================================================= */
+
+.section {
+
+    padding-block: var(--section-space);
+
+}
+
+
+/* =========================================================
+   14. INTRO
+========================================================= */
+
+.intro {
+
+    background: var(--ivory);
+
+}
+
+.intro-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        80px
+        minmax(0, 1.1fr)
+        minmax(250px, 0.8fr);
+
+    gap:
+        clamp(25px, 5vw, 65px);
+
+}
+
+.section-index {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+.section-index span {
+
+    color: var(--gold);
+
+    font-family: var(--serif);
+
+    font-size: 29px;
+
+}
+
+.section-index small {
+
+    color: var(--muted);
+
+    font-size: 7px;
+
+    letter-spacing: 0.16em;
+
+}
+
+.intro-title h2 {
+
+    max-width: 720px;
+
+    margin-top: 15px;
+
+    font-size:
+        clamp(
+            48px,
+            6vw,
+            85px
+        );
+
+    line-height: 0.88;
+
+    letter-spacing: -0.045em;
+
+}
+
+.intro-title h2 em {
+
+    display: block;
+
+    color: var(--blue);
+
+}
+
+.intro-copy {
+
+    padding-top: 42px;
+
+}
+
+.intro-copy p {
+
+    max-width: 410px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+}
+
+
+/* =========================================================
+   15. TEXT LINK
+========================================================= */
+
+.text-link {
+
+    width: fit-content;
+
+    max-width: 100%;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 23px;
+
+    padding-bottom: 5px;
+
+    border-bottom:
+        1px solid var(--gold);
+
+    color: var(--text);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+}
+
+.text-link span {
+
+    color: var(--gold);
+
+    font-size: 16px;
+
+}
+
+
+/* =========================================================
+   16. COLLECTION
+========================================================= */
+
+.collection {
+
+    background: white;
+
+}
+
+.section-heading {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    margin-bottom:
+        clamp(40px, 6vw, 65px);
+
+}
+
+.section-heading h2 {
+
+    max-width: 780px;
+
+    margin-top: 15px;
+
+    font-size:
+        clamp(
+            50px,
+            6vw,
+            88px
+        );
+
+    line-height: 0.86;
+
+    letter-spacing: -0.045em;
+
+}
+
+.section-heading h2 em {
+
+    display: block;
+
+    color: var(--blue);
+
+}
+
+.section-description {
+
+    width: min(100%, 360px);
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.85;
+
+}
+
+
+/* =========================================================
+   17. COLLECTION LAYOUT
+========================================================= */
+
+.collection-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(0, 0.75fr);
+
+    gap: 16px;
+
+    align-items: start;
+
+}
+
+.collection-feature,
+.collection-secondary {
+
+    min-width: 0;
+
+    background: var(--cream);
+
+    overflow: hidden;
+
+}
+
+.collection-feature .image-frame {
+
+    height: 690px;
+
+}
+
+.collection-secondary .image-frame {
+
+    height: 390px;
+
+}
+
+.image-frame {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #eee9df;
+
+}
+
+.image-frame img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    transition:
+        transform 0.5s ease;
+
+}
+
+.collection-feature:hover
+.image-frame img,
+.collection-secondary:hover
+.image-frame img {
+
+    transform: scale(1.025);
+
+}
+
+.collection-caption {
+
+    display: grid;
+
+    grid-template-columns: 36px 1fr;
+
+    gap: 15px;
+
+    padding:
+        23px
+        25px
+        28px;
+
+}
+
+.collection-caption > span {
+
+    color: var(--gold);
+
+    font-family: var(--serif);
+
+    font-size: 22px;
+
+}
+
+.collection-caption h3 {
+
+    font-size: 34px;
+
+    line-height: 0.9;
+
+}
+
+.collection-caption h3 em {
+
+    color: var(--blue);
+
+}
+
+.collection-caption p {
+
+    max-width: 400px;
+
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   18. HERITAGE
+========================================================= */
+
+.heritage {
+
+    background: var(--cream);
+
+}
+
+.heritage-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(300px, 0.9fr);
+
+    gap: 0;
+
+}
+
+.heritage-image {
+
+    min-width: 0;
+
+    overflow: hidden;
+
+}
+
+.heritage-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 610px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+.heritage-content {
+
+    padding:
+        clamp(40px, 6vw, 80px);
+
+    background: var(--blue);
+
+    color: white;
+
+}
+
+.heritage-content h2 {
+
+    margin-top: 18px;
+
+    font-size:
+        clamp(
+            50px,
+            5.8vw,
+            78px
+        );
+
+    line-height: 0.86;
+
+    letter-spacing: -0.045em;
+
+}
+
+.heritage-content h2 em {
+
+    display: block;
+
+    color: var(--gold-light);
+
+}
+
+.heritage-content > p:not(.eyebrow) {
+
+    margin-top: 25px;
+
+    color:
+        rgba(255,255,255,0.68);
+
+    font-size: 13px;
+
+    line-height: 1.85;
+
+}
+
+.heritage-content .button {
+
+    margin-top: 30px;
+
+}
+
+
+/* =========================================================
+   19. SHOWROOM
+========================================================= */
+
+.showroom {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.3fr)
+        minmax(320px, 0.7fr);
+
+    background: var(--ivory);
+
+}
+
+.showroom-visual {
+
+    min-width: 0;
+
+    min-height: 620px;
+
+    overflow: hidden;
+
+}
+
+.showroom-visual img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+.showroom-content {
+
+    padding:
+        clamp(40px, 6vw, 75px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background: var(--blue-deep);
+
+    color: white;
+
+}
+
+.showroom-content h2 {
+
+    margin-top: 18px;
+
+    font-size:
+        clamp(
+            50px,
+            6vw,
+            82px
+        );
+
+    line-height: 0.86;
+
+    letter-spacing: -0.045em;
+
+}
+
+.showroom-content h2 em {
+
+    display: block;
+
+    color: var(--gold-light);
+
+}
+
+.showroom-content > p:not(.eyebrow) {
+
+    margin-top: 25px;
+
+    color:
+        rgba(255,255,255,0.66);
+
+    font-size: 13px;
+
+    line-height: 1.85;
+
+}
+
+
+/* =========================================================
+   20. SHOWROOM LIST
+========================================================= */
+
+.showroom-list {
+
+    margin-top: 35px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.13);
+
+}
+
+.showroom-list > div {
+
+    display: grid;
+
+    grid-template-columns: 35px 1fr;
+
+    gap: 12px;
+
+    padding: 17px 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.13);
+
+}
+
+.showroom-list span {
+
+    color: var(--gold-light);
+
+    font-family: var(--serif);
+
+    font-size: 18px;
+
+}
+
+.showroom-list p {
+
+    color:
+        rgba(255,255,255,0.7);
+
+    font-size: 11px;
+
+}
+
+.showroom-content .button {
+
+    width: fit-content;
+
+    margin-top: 30px;
+
+}
+
+
+/* =========================================================
+   21. STATEMENT
+========================================================= */
+
+.statement {
+
+    position: relative;
+
+    min-height: 610px;
+
+    overflow: hidden;
+
+    background: var(--blue-deep);
+
+}
+
+.statement-image {
+
+    position: absolute;
+
+    inset: 0;
+
+}
+
+.statement-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+.statement-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8,35,48,0.91),
+            rgba(8,35,48,0.42)
+        );
+
+}
+
+.statement-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(
+            calc(100% - (var(--page-padding) * 2)),
+            var(--container)
+        );
+
+    min-height: 610px;
+
+    margin-inline: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+.statement-content h2 {
+
+    max-width: 780px;
+
+    margin-top: 18px;
+
+    color: white;
+
+    font-size:
+        clamp(
+            58px,
+            7vw,
+            105px
+        );
+
+    line-height: 0.84;
+
+    letter-spacing: -0.05em;
+
+}
+
+.statement-content h2 em {
+
+    display: block;
+
+    color: var(--gold-light);
+
+}
+
+
+/* =========================================================
+   22. VISIT
+========================================================= */
+
+.visit {
+
+    background: var(--ivory);
+
+}
+
+.visit-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(280px, 0.75fr);
+
+    gap:
+        clamp(50px, 8vw, 110px);
+
+}
+
+.visit-heading h2 {
+
+    max-width: 700px;
+
+    margin-top: 18px;
+
+    font-size:
+        clamp(
+            55px,
+            6.5vw,
+            95px
+        );
+
+    line-height: 0.85;
+
+    letter-spacing: -0.05em;
+
+}
+
+.visit-heading h2 em {
+
+    display: block;
+
+    color: var(--blue);
+
+}
+
+.visit-heading > p:not(.eyebrow) {
+
+    max-width: 450px;
+
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.85;
+
+}
+
+.visit-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 30px;
+
+}
+
+.visit-details {
+
+    border-top:
+        1px solid var(--border);
+
+}
+
+.detail {
+
+    padding: 25px 0;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+.detail > span {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--gold);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+
+}
+
+.detail p,
+.detail a {
+
+    display: block;
+
+    max-width: 400px;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   23. FINAL CTA
+========================================================= */
+
+.final-cta {
+
+    padding-block:
+        clamp(85px, 11vw, 145px);
+
+    background: var(--blue-deep);
+
+    color: white;
+
+}
+
+.final-cta-inner {
+
+    width:
+        min(
+            calc(100% - (var(--page-padding) * 2)),
+            1000px
+        );
+
+    margin-inline: auto;
+
+    text-align: center;
+
+}
+
+.final-cta h2 {
+
+    margin-top: 18px;
+
+    font-size:
+        clamp(
+            57px,
+            7vw,
+            105px
+        );
+
+    line-height: 0.84;
+
+    letter-spacing: -0.05em;
+
+}
+
+.final-cta h2 em {
+
+    display: block;
+
+    color: var(--gold-light);
+
+}
+
+.final-actions {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 40px;
+
+}
+
+
+/* =========================================================
+   24. FOOTER
+========================================================= */
+
+.footer {
+
+    padding:
+        70px 0
+        max(28px, env(safe-area-inset-bottom));
+
+    background: #071b25;
+
+    color: white;
+
+}
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(130px, 0.5fr)
+        minmax(150px, 0.5fr);
+
+    gap: 60px;
+
+    padding-bottom: 55px;
+
+}
+
+.footer-logo {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+}
+
+.footer-logo > span {
+
+    width: 44px;
+
+    height: 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid rgba(255,255,255,0.35);
+
+    font-family: var(--serif);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+.footer-logo > div {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.footer-logo strong {
+
+    font-size: 9px;
+
+    letter-spacing: 0.1em;
+
+}
+
+.footer-logo small {
+
+    margin-top: 4px;
+
+    color: var(--gold-light);
+
+    font-size: 6px;
+
+    letter-spacing: 0.2em;
+
+}
+
+.footer-brand > p {
+
+    margin-top: 18px;
+
+    color:
+        rgba(255,255,255,0.42);
+
+    font-family: var(--serif);
+
+    font-size: 19px;
+
+    font-style: italic;
+
+}
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+}
+
+.footer-column > span {
+
+    margin-bottom: 5px;
+
+    color: var(--gold-light);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+
+}
+
+.footer-column a {
+
+    color:
+        rgba(255,255,255,0.62);
+
+    font-size: 10px;
+
+}
+
+.footer-bottom {
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.08);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color:
+        rgba(255,255,255,0.3);
+
+    font-size: 8px;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   25. FLOATING CALL
+========================================================= */
+
+.floating-call {
+
+    position: fixed;
+
+    right:
+        max(
+            16px,
+            env(safe-area-inset-right)
+        );
+
+    bottom:
+        max(
+            16px,
+            env(safe-area-inset-bottom)
+        );
+
+    z-index: 900;
+
+    width: 52px;
+
+    height: 52px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+
+    color: var(--blue-deep);
+
+    box-shadow:
+        0 9px 25px rgba(0,0,0,0.2);
+
+}
+
+.floating-call span {
+
+    font-size: 17px;
+
+}
+
+
+/* =========================================================
+   26. 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .desktop-nav {
+
+        gap: 18px;
+
+    }
+
+    .desktop-nav a {
+
+        font-size: 8px;
+
+    }
+
+    .nav-cta {
+
+        padding-inline: 13px;
+
+    }
+
+    .collection-feature .image-frame {
+
+        height: 610px;
+
+    }
+
+}
+
+
+/* =========================================================
+   27. 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .desktop-nav,
+    .nav-cta {
+
+        display: none;
+
+    }
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+
+    .intro-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .section-index {
+
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 15px;
+
+    }
+
+
+    .section-heading {
+
+        display: block;
+
+    }
+
+    .section-description {
+
+        margin-top: 22px;
+
+    }
+
+
+    .heritage-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .heritage-image img {
+
+        min-height: 0;
+
+        aspect-ratio: 1.3 / 1;
+
+    }
+
+
+    .showroom {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .showroom-visual {
+
+        min-height: 0;
+
+        aspect-ratio: 1.35 / 1;
+
+    }
+
+
+    .visit-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .footer-brand {
+
+        grid-column: 1 / -1;
+
+    }
+
+}
+
+
+/* =========================================================
+   28. 700px
+========================================================= */
+
+@media (max-width: 700px) {
+
+    :root {
+
+        --page-padding: 18px;
+
+        --section-space: 76px;
+
+    }
+
+
+    .nav-container {
+
+        min-height: 70px;
+
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: 720px;
+
+        min-height: 100svh;
+
+        min-height: 100dvh;
+
+    }
+
+
+    .hero-overlay {
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(8,35,48,0.28) 0%,
+                rgba(8,35,48,0.52) 35%,
+                rgba(8,35,48,0.96) 100%
+            );
+
+    }
+
+
+    .hero-content {
+
+        padding-top: 105px;
+
+        padding-bottom: 105px;
+
+    }
+
+
+    .hero h1 {
+
+        width: 100%;
+
+        font-size:
+            clamp(
+                48px,
+                14.5vw,
+                78px
+            );
+
+        line-height: 0.8;
+
+    }
+
+
+    .hero h1 span {
+
+        margin-top: 7px;
+
+        font-size: 0.56em;
+
+        line-height: 0.96;
+
+    }
+
+
+    .hero-text {
+
+        max-width: 330px;
+
+        font-size: 12px;
+
+    }
+
+
+    .hero-actions {
+
+        width: min(100%, 340px);
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .hero-actions .button {
+
+        width: 100%;
+
+    }
+
+
+    .hero-bottom {
+
+        bottom: 16px;
+
+    }
+
+
+    .hero-bottom span:last-child,
+    .hero-divider {
+
+        display: none;
+
+    }
+
+
+    /* INTRO */
+
+    .intro-title h2,
+    .section-heading h2,
+    .visit-heading h2 {
+
+        font-size:
+            clamp(
+                44px,
+                13.5vw,
+                70px
+            );
+
+    }
+
+
+    /* COLLECTION */
+
+    .collection-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+    }
+
+
+    .collection-feature .image-frame {
+
+        height: auto;
+
+        aspect-ratio: 0.82 / 1;
+
+    }
+
+
+    .collection-secondary .image-frame {
+
+        height: auto;
+
+        aspect-ratio: 1 / 0.82;
+
+    }
+
+
+    .collection-caption {
+
+        padding:
+            20px
+            20px
+            25px;
+
+    }
+
+
+    .collection-caption h3 {
+
+        font-size: 31px;
+
+    }
+
+
+    /* HERITAGE */
+
+    .heritage-content {
+
+        padding:
+            52px
+            clamp(22px, 7vw, 38px);
+
+    }
+
+
+    .heritage-content h2 {
+
+        font-size:
+            clamp(
+                47px,
+                13.5vw,
+                70px
+            );
+
+    }
+
+
+    /* SHOWROOM */
+
+    .showroom-content {
+
+        padding:
+            52px
+            clamp(22px, 7vw, 38px);
+
+    }
+
+
+    .showroom-content h2 {
+
+        font-size:
+            clamp(
+                47px,
+                14vw,
+                70px
+            );
+
+    }
+
+
+    /* STATEMENT */
+
+    .statement {
+
+        min-height: 510px;
+
+    }
+
+
+    .statement-content {
+
+        min-height: 510px;
+
+    }
+
+
+    .statement-content h2 {
+
+        font-size:
+            clamp(
+                50px,
+                14vw,
+                76px
+            );
+
+    }
+
+
+    /* VISIT */
+
+    .visit-actions {
+
+        width: min(100%, 340px);
+
+        flex-direction: column;
+
+    }
+
+
+    .visit-actions .button {
+
+        width: 100%;
+
+    }
+
+
+    /* FINAL CTA */
+
+    .final-actions {
+
+        width: min(100%, 340px);
+
+        margin-inline: auto;
+
+        flex-direction: column;
+
+    }
+
+
+    .final-actions .button {
+
+        width: 100%;
+
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 42px;
+
+    }
+
+
+    .footer-brand {
+
+        grid-column: auto;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        gap: 8px;
+
+    }
+
+}
+
+
+/* =========================================================
+   29. 500px
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .brand-mark {
+
+        width: 40px;
+
+        height: 36px;
+
+        flex-basis: 40px;
+
+        font-size: 13px;
+
+    }
+
+
+    .brand-copy strong {
+
+        font-size: 8px;
+
+        letter-spacing: 0.08em;
+
+    }
+
+
+    .brand-copy small {
+
+        font-size: 5px;
+
+    }
+
+
+    .hero {
+
+        min-height: 700px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(
+                45px,
+                14.8vw,
+                68px
+            );
+
+    }
+
+
+    .hero h1 span {
+
+        font-size: 0.54em;
+
+    }
+
+
+    .hero-eyebrow {
+
+        font-size: 7px;
+
+        letter-spacing: 0.15em;
+
+    }
+
+
+    .button {
+
+        min-height: 49px;
+
+        padding-inline: 17px;
+
+        font-size: 8px;
+
+    }
+
+
+    .heritage-image img {
+
+        aspect-ratio: 1 / 0.82;
+
+    }
+
+
+    .showroom-visual {
+
+        aspect-ratio: 1 / 0.8;
+
+    }
+
+
+    .statement {
+
+        min-height: 470px;
+
+    }
+
+
+    .statement-content {
+
+        min-height: 470px;
+
+    }
+
+
+    .floating-call {
+
+        width: 50px;
+
+        height: 50px;
+
+    }
+
+}
+
+
+/* =========================================================
+   30. 390px
+========================================================= */
+
+@media (max-width: 390px) {
+
+    :root {
+
+        --page-padding: 15px;
+
+    }
+
+
+    .nav-container {
+
+        min-height: 66px;
+
+    }
+
+
+    .mobile-menu {
+
+        padding-inline: 15px;
+
+    }
+
+
+    .hero-content {
+
+        padding-top: 95px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(
+                42px,
+                14.2vw,
+                59px
+            );
+
+    }
+
+
+    .hero h1 span {
+
+        font-size: 0.52em;
+
+    }
+
+
+    .hero-text {
+
+        font-size: 11px;
+
+    }
+
+
+    .intro-title h2,
+    .section-heading h2,
+    .visit-heading h2 {
+
+        font-size:
+            clamp(
+                40px,
+                13.2vw,
+                57px
+            );
+
+    }
+
+
+    .collection-caption h3 {
+
+        font-size: 28px;
+
+    }
+
+
+    .heritage-content h2 {
+
+        font-size: 43px;
+
+    }
+
+
+    .showroom-content h2 {
+
+        font-size: 43px;
+
+    }
+
+
+    .statement-content h2 {
+
+        font-size: 44px;
+
+    }
+
+
+    .final-cta h2 {
+
+        font-size: 47px;
+
+    }
+
+}
+
+
+/* =========================================================
+   31. 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .brand-copy strong {
+
+        font-size: 7px;
+
+    }
+
+
+    .brand-copy small {
+
+        font-size: 4.5px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 41px;
+
+    }
+
+
+    .hero h1 span {
+
+        font-size: 21px;
+
+    }
+
+
+    .hero-text {
+
+        max-width: 270px;
+
+    }
+
+
+    .intro-title h2,
+    .section-heading h2,
+    .visit-heading h2 {
+
+        font-size: 38px;
+
+    }
+
+
+    .heritage-content h2 {
+
+        font-size: 40px;
+
+    }
+
+
+    .showroom-content h2 {
+
+        font-size: 40px;
+
+    }
+
+
+    .statement-content h2 {
+
+        font-size: 40px;
+
+    }
+
+
+    .final-cta h2 {
+
+        font-size: 41px;
+
+    }
+
+}
+
+
+/* =========================================================
+   32. LANDSCAPE MOBILE
+========================================================= */
+
+@media (
+    max-height: 600px
+) and (
+    orientation: landscape
+) {
+
+    .hero {
+
+        min-height: 620px;
+
+    }
+
+
+    .hero-content {
+
+        padding-top: 90px;
+
+        padding-bottom: 80px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(
+                46px,
+                8vw,
+                70px
+            );
+
+    }
+
+
+    .hero-text {
+
+        margin-top: 12px;
+
+    }
+
+
+    .hero-actions {
+
+        margin-top: 15px;
+
+        flex-direction: row;
+
+    }
+
+
+    .hero-actions .button {
+
+        width: auto;
+
+    }
+
+
+    .hero-bottom {
+
+        bottom: 9px;
+
+    }
+
+}
+
+
+/* =========================================================
+   33. VERY SHORT LANDSCAPE
+========================================================= */
+
+@media (
+    max-height: 500px
+) and (
+    orientation: landscape
+) {
+
+    .hero {
+
+        min-height: 550px;
+
+    }
+
+
+    .hero-text {
+
+        display: none;
+
+    }
+
+}
+
+
+/* =========================================================
+   34. TOUCH DEVICES
+========================================================= */
+
+@media (
+    hover: none
+) and (
+    pointer: coarse
+) {
+
+    .button:hover {
+
+        transform: none;
+
+    }
+
+
+    .collection-feature:hover
+    .image-frame img,
+    .collection-secondary:hover
+    .image-frame img {
+
+        transform: none;
+
+    }
+
+}
+
+
+/* =========================================================
+   35. REDUCED MOTION
+========================================================= */
+
+@media (
+    prefers-reduced-motion: reduce
+) {
+
+    html {
+
+        scroll-behavior: auto;
+
+    }
+
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+
+        scroll-behavior:
+            auto !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   36. SAFE AREA
+========================================================= */
+
+@supports (
+    padding: env(safe-area-inset-bottom)
+) {
+
+    .mobile-menu {
+
+        padding-bottom:
+            max(
+                25px,
+                env(safe-area-inset-bottom)
+            );
+
+    }
+
+}
+
+
+/* =========================================================
+   37. GRID SAFETY
+========================================================= */
+
+.intro-grid,
+.collection-layout,
+.heritage-grid,
+.showroom,
+.visit-grid,
+.footer-grid {
+
+    min-width: 0;
+
+}
+
+
+.intro-grid > *,
+.collection-layout > *,
+.heritage-grid > *,
+.showroom > *,
+.visit-grid > *,
+.footer-grid > * {
+
+    min-width: 0;
+
+}
+
+
+/* =========================================================
+   38. IMAGE SAFETY
+========================================================= */
+
+img {
+
+    max-width: 100%;
+
+}
+
+
+/* =========================================================
+   39. PRINT
+========================================================= */
+
+@media print {
+
+    .site-header,
+    .mobile-menu,
+    .floating-call,
+    .hero-actions {
+
+        display: none !important;
+
+    }
+
+    body {
+
+        background: white;
+
+        color: black;
+
+    }
+
+}
