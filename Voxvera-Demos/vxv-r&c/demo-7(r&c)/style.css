@@ -1,0 +1,151 @@
+/* =========================================
+   CAFÉ DURGA — STRONG BANNER BACKGROUND
+   ========================================= */
+
+body {
+  margin: 0;
+
+  /* Strong Café Durga banner-inspired background */
+  background:
+    linear-gradient(
+      135deg,
+      #39d353 0%,
+      #39d353 45%,
+      #ffd900 45%,
+      #ffd900 100%
+    );
+
+  background-attachment: fixed;
+
+  color: #101410;
+}
+
+
+/* Make sections transparent so the
+   green + yellow background remains visible */
+.hero,
+.menu-section,
+.about,
+.gallery,
+.contact {
+  background: transparent;
+}
+
+
+/* Add white/cream content cards instead
+   of making the whole page white */
+.menu-card,
+.contact-card,
+.hero-info-card {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+
+/* Hero area */
+.hero {
+  padding: 70px 0 90px;
+}
+
+
+/* About section */
+.about {
+  padding: 100px 0;
+}
+
+
+/* Gallery */
+.gallery {
+  padding: 100px 0;
+}
+
+
+/* Contact */
+.contact {
+  padding: 100px 0;
+}
+
+
+/* Keep the navigation banner-colored */
+.navbar {
+  background: #39d353;
+  border-bottom: 4px solid #ffd900;
+}
+
+
+/* Navigation text */
+.nav-links a {
+  color: #101410;
+}
+
+.nav-links a:hover {
+  color: #075b27;
+}
+
+
+/* Logo */
+.logo {
+  color: #101410;
+}
+
+
+/* Logo square */
+.logo-mark {
+  background: #ffd900;
+  color: #101410;
+
+  box-shadow: 4px 4px 0 #101410;
+}
+
+
+/* Hero badge */
+.hero-badge {
+  background: #ffd900;
+  color: #101410;
+
+  box-shadow: 5px 5px 0 #101410;
+}
+
+
+/* Hero heading */
+.hero h1 {
+  color: #101410;
+}
+
+.hero h1 span {
+  color: #075b27;
+}
+
+
+/* Section headings */
+.section-title {
+  color: #101410;
+}
+
+
+/* Section labels */
+.section-label {
+  color: #075b27;
+}
+
+.section-label::before {
+  background: #101410;
+}
+
+
+/* Brand strip */
+.brand-strip {
+  background: #101410;
+  color: #ffd900;
+}
+
+
+/* CTA stays dark for contrast */
+.cta {
+  background: #075b27;
+}
+
+
+/* Footer */
+.footer {
+  background: #101410;
+}

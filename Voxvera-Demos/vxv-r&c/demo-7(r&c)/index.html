@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Café Durga | Chhatrapati Sambhajinagar</title>
+
+  <meta
+    name="description"
+    content="Café Durga — coffee, food, snacks and good moments at Railway Station Road, Chhatrapati Sambhajinagar."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+
+    /* =====================================================
+       CAFÉ DURGA — BRAND COLORS
+       ===================================================== */
+
+    :root {
+      --green: #39d353;
+      --green-dark: #087a32;
+      --green-deep: #075b27;
+
+      --yellow: #ffd900;
+      --yellow-soft: #fff3a6;
+
+      --black: #101410;
+      --dark: #172019;
+      --dark-green: #102718;
+
+      --cream: #fffdf2;
+      --white: #ffffff;
+
+      --text: #171a16;
+      --muted: #65695f;
+
+      --border: #e3e5d8;
+    }
+
+
+    /* =====================================================
+       RESET
+       ===================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+
+    /* =====================================================
+       NAVBAR
+       ===================================================== */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 78px;
+
+      z-index: 1000;
+
+      background: rgba(255, 253, 242, 0.94);
+
+      backdrop-filter: blur(16px);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 1.45rem;
+      font-weight: 800;
+    }
+
+    .logo-mark {
+      width: 39px;
+      height: 39px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: var(--green);
+
+      color: var(--black);
+
+      font-weight: 800;
+      font-size: 0.9rem;
+
+      border: 3px solid var(--yellow);
+    }
+
+    .logo span {
+      color: var(--green-dark);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: #555b51;
+
+      font-size: 0.93rem;
+      font-weight: 600;
+
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--green-dark);
+    }
+
+    .nav-call {
+      padding: 11px 19px;
+
+      border-radius: 999px;
+
+      background: var(--green);
+
+      color: var(--black) !important;
+
+      font-weight: 800 !important;
+
+      box-shadow: 0 6px 20px rgba(57, 211, 83, 0.18);
+    }
+
+    .nav-call:hover {
+      background: var(--yellow);
+
+      color: var(--black) !important;
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero {
+      min-height: 100vh;
+
+      padding: 125px 0 65px;
+
+      display: flex;
+      align-items: center;
+
+      background:
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(57, 211, 83, 0.09),
+          transparent 30%
+        ),
+        var(--cream);
+    }
+
+    .hero-grid {
+      display: grid;
+
+      grid-template-columns: 0.9fr 1.1fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 550px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      margin-bottom: 20px;
+
+      color: var(--green-dark);
+
+      font-size: 0.76rem;
+
+      font-weight: 800;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+
+      width: 28px;
+      height: 3px;
+
+      border-radius: 10px;
+
+      background: var(--yellow);
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(3.5rem, 6.5vw, 6.3rem);
+
+      line-height: 0.96;
+
+      letter-spacing: -2px;
+
+      margin-bottom: 26px;
+    }
+
+    .hero h1 .green {
+      color: var(--green-dark);
+    }
+
+    .hero h1 .yellow {
+      color: #d0a900;
+    }
+
+    .hero-description {
+      max-width: 510px;
+
+      color: var(--muted);
+
+      font-size: 1.08rem;
+
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-bottom: 38px;
+    }
+
+    .btn {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 14px 22px;
+
+      border-radius: 999px;
+
+      font-weight: 800;
+
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: var(--green);
+
+      color: var(--black);
+
+      box-shadow: 0 8px 25px rgba(57, 211, 83, 0.18);
+    }
+
+    .btn-primary:hover {
+      background: var(--yellow);
+
+      transform: translateY(-3px);
+
+      box-shadow: 0 12px 30px rgba(255, 217, 0, 0.18);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--green-dark);
+
+      color: var(--green-dark);
+    }
+
+    .btn-outline:hover {
+      background: var(--green-dark);
+
+      color: white;
+    }
+
+
+    /* =====================================================
+       QUICK INFO
+       ===================================================== */
+
+    .quick-info {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 18px;
+    }
+
+    .quick-item {
+      display: flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      color: #656b61;
+
+      font-size: 0.86rem;
+
+      font-weight: 600;
+    }
+
+    .quick-icon {
+      width: 34px;
+      height: 34px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: var(--yellow-soft);
+
+      border: 1px solid #eadb6a;
+    }
+
+
+    /* =====================================================
+       HERO SHOP IMAGE
+       ===================================================== */
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-image-card {
+      position: relative;
+
+      padding: 12px;
+
+      background: white;
+
+      border-radius: 30px;
+
+      border: 2px solid var(--green);
+
+      box-shadow:
+        0 30px 80px rgba(25, 55, 28, 0.14);
+
+      transform: rotate(1deg);
+
+      transition: 0.4s ease;
+    }
+
+    .hero-image-card:hover {
+      transform: rotate(0deg) translateY(-5px);
+    }
+
+    .hero-image-card img {
+      height: 620px;
+
+      object-fit: cover;
+
+      border-radius: 21px;
+    }
+
+    .image-tag {
+      position: absolute;
+
+      left: 30px;
+      bottom: 30px;
+
+      max-width: 280px;
+
+      padding: 15px 19px;
+
+      background: rgba(255, 255, 255, 0.95);
+
+      backdrop-filter: blur(10px);
+
+      border-radius: 16px;
+
+      border-left: 5px solid var(--yellow);
+
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.14);
+    }
+
+    .image-tag strong {
+      display: block;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 1.1rem;
+    }
+
+    .image-tag span {
+      color: #6c7168;
+
+      font-size: 0.78rem;
+    }
+
+
+    /* =====================================================
+       GENERAL SECTIONS
+       ===================================================== */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      max-width: 700px;
+
+      margin: 0 auto 55px;
+
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+
+      line-height: 1.05;
+
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+
+    /* =====================================================
+       BRAND STRIP
+       ===================================================== */
+
+    .brand-strip {
+      background: var(--green);
+
+      border-top: 4px solid var(--yellow);
+
+      border-bottom: 4px solid var(--yellow);
+
+      overflow: hidden;
+    }
+
+    .brand-strip-inner {
+      min-height: 68px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 35px;
+
+      flex-wrap: wrap;
+
+      color: var(--black);
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.5px;
+
+      font-size: 0.82rem;
+    }
+
+    .brand-strip span {
+      display: flex;
+
+      align-items: center;
+
+      gap: 15px;
+    }
+
+    .brand-strip span::after {
+      content: "•";
+
+      color: var(--yellow);
+
+      font-size: 1.2rem;
+    }
+
+
+    /* =====================================================
+       MENU
+       ===================================================== */
+
+    .menu {
+      background: white;
+    }
+
+    .menu-grid {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 18px;
+    }
+
+    .menu-card {
+      position: relative;
+
+      min-height: 195px;
+
+      padding: 28px;
+
+      border-radius: 22px;
+
+      background: var(--cream);
+
+      border: 1px solid var(--border);
+
+      overflow: hidden;
+
+      transition: 0.25s ease;
+    }
+
+    .menu-card::after {
+      content: "";
+
+      position: absolute;
+
+      right: -25px;
+      bottom: -25px;
+
+      width: 90px;
+      height: 90px;
+
+      border-radius: 50%;
+
+      background: var(--yellow-soft);
+
+      z-index: 0;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-6px);
+
+      border-color: var(--green);
+
+      box-shadow:
+        0 18px 40px rgba(20, 80, 30, 0.08);
+    }
+
+    .menu-card > * {
+      position: relative;
+
+      z-index: 1;
+    }
+
+    .menu-number {
+      color: var(--green-dark);
+
+      font-size: 0.74rem;
+
+      font-weight: 800;
+
+      letter-spacing: 2px;
+    }
+
+    .menu-card h3 {
+      font-family: "Playfair Display", serif;
+
+      font-size: 1.5rem;
+
+      margin: 17px 0 7px;
+    }
+
+    .menu-card p {
+      color: #747970;
+
+      font-size: 0.9rem;
+    }
+
+
+    /* =====================================================
+       ABOUT
+       ===================================================== */
+
+    .about {
+      background: var(--dark-green);
+
+      color: white;
+    }
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .about-image {
+      padding: 9px;
+
+      background: var(--yellow);
+
+      border-radius: 27px;
+
+      transform: rotate(-1deg);
+
+      box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+    }
+
+    .about-image img {
+      height: 500px;
+
+      object-fit: cover;
+
+      border-radius: 20px;
+    }
+
+    .about-content .eyebrow {
+      color: var(--green);
+    }
+
+    .about-content .eyebrow::before {
+      background: var(--yellow);
+    }
+
+    .about-content h2 {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(2.7rem, 5vw, 4rem);
+
+      line-height: 1.03;
+
+      margin-bottom: 23px;
+    }
+
+    .about-content h2 span {
+      color: var(--yellow);
+    }
+
+    .about-content p {
+      color: #b9c4b8;
+
+      margin-bottom: 15px;
+    }
+
+
+    /* =====================================================
+       GALLERY
+       ===================================================== */
+
+    .gallery {
+      background: var(--cream);
+    }
+
+    .gallery-grid {
+      display: grid;
+
+      grid-template-columns: 1.3fr 0.7fr 0.7fr;
+
+      grid-template-rows: 270px 270px;
+
+      gap: 15px;
+    }
+
+    .gallery-item {
+      position: relative;
+
+      overflow: hidden;
+
+      border-radius: 19px;
+
+      border: 2px solid white;
+
+      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    }
+
+    .gallery-item:first-child {
+      grid-row: span 2;
+    }
+
+    .gallery-item::after {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background: linear-gradient(
+        transparent 65%,
+        rgba(0,0,0,0.18)
+      );
+
+      pointer-events: none;
+    }
+
+    .gallery-item img {
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+
+    /* =====================================================
+       CTA
+       ===================================================== */
+
+    .cta-section {
+      padding-top: 30px;
+
+      background: var(--cream);
+    }
+
+    .cta {
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 80px 30px;
+
+      text-align: center;
+
+      border-radius: 30px;
+
+      background: var(--black);
+
+      color: white;
+
+      border: 2px solid var(--green);
+    }
+
+    .cta::before {
+      content: "";
+
+      position: absolute;
+
+      width: 220px;
+      height: 220px;
+
+      right: -80px;
+      top: -80px;
+
+      border-radius: 50%;
+
+      background: rgba(57, 211, 83, 0.15);
+    }
+
+    .cta::after {
+      content: "";
+
+      position: absolute;
+
+      width: 150px;
+      height: 150px;
+
+      left: -60px;
+      bottom: -70px;
+
+      border-radius: 50%;
+
+      background: rgba(255, 217, 0, 0.12);
+    }
+
+    .cta > * {
+      position: relative;
+
+      z-index: 1;
+    }
+
+    .cta .eyebrow {
+      color: var(--green);
+    }
+
+    .cta .eyebrow::before {
+      background: var(--yellow);
+    }
+
+    .cta h2 {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+
+      line-height: 1.05;
+
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #b9c0b6;
+
+      margin-bottom: 30px;
+    }
+
+    .action-buttons {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+    .action-btn {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      min-width: 175px;
+
+      padding: 14px 21px;
+
+      border-radius: 999px;
+
+      font-weight: 800;
+
+      transition: 0.25s ease;
+    }
+
+    .action-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .map-btn {
+      background: var(--yellow);
+
+      color: var(--black);
+    }
+
+    .call-btn {
+      background: var(--green);
+
+      color: var(--black);
+    }
+
+    .whatsapp-btn {
+      border: 2px solid var(--green);
+
+      color: var(--green);
+    }
+
+    .whatsapp-btn:hover {
+      background: var(--green);
+
+      color: var(--black);
+    }
+
+
+    /* =====================================================
+       CONTACT
+       ===================================================== */
+
+    .contact {
+      background: white;
+    }
+
+    .contact-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .contact-card {
+      padding: 30px;
+
+      background: var(--cream);
+
+      border-radius: 20px;
+
+      border: 1px solid var(--border);
+
+      transition: 0.25s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-4px);
+
+      border-color: var(--green);
+    }
+
+    .contact-label {
+      display: block;
+
+      color: var(--green-dark);
+
+      font-size: 0.74rem;
+
+      font-weight: 800;
+
+      letter-spacing: 1.5px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 10px;
+    }
+
+    .contact-card h3 {
+      font-size: 0.98rem;
+
+      font-weight: 600;
+
+      color: #454a42;
+    }
+
+    .contact-card a:hover {
+      color: var(--green-dark);
+    }
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    footer {
+      padding: 30px 0;
+
+      text-align: center;
+
+      background: var(--black);
+
+      color: #858d82;
+
+      font-size: 0.88rem;
+    }
+
+    footer strong {
+      color: var(--green);
+    }
+
+
+    /* =====================================================
+       MOBILE
+       ===================================================== */
+
+    @media (max-width: 950px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+      }
+
+      .hero-content {
+        max-width: 750px;
+      }
+
+      .hero-image-card img {
+        height: 550px;
+      }
+
+      .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      section {
+        padding: 75px 0;
+      }
+
+      .hero {
+        padding-top: 105px;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+
+        letter-spacing: -1px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .quick-info {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+      .hero-image-card {
+        transform: none;
+      }
+
+      .hero-image-card:hover {
+        transform: none;
+      }
+
+      .hero-image-card img {
+        height: 450px;
+      }
+
+      .image-tag {
+        left: 24px;
+        right: 24px;
+
+        bottom: 24px;
+
+        max-width: none;
+      }
+
+      .brand-strip-inner {
+        gap: 12px;
+
+        font-size: 0.7rem;
+      }
+
+      .brand-strip span::after {
+        display: none;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image img {
+        height: 400px;
+      }
+
+      .about-content h2 {
+        font-size: 2.7rem;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-rows: 250px 180px 180px;
+      }
+
+      .gallery-item:first-child {
+        grid-column: span 2;
+
+        grid-row: span 1;
+      }
+
+      .action-buttons {
+        flex-direction: column;
+      }
+
+      .action-btn {
+        width: 100%;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
+
+  <nav>
+
+    <div class="container nav-inner">
+
+      <a href="#" class="logo">
+
+        <span class="logo-mark">
+          CD
+        </span>
+
+        Café <span>Durga</span>
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a href="#menu">
+          Menu
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#gallery">
+          Gallery
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+        <a
+          href="tel:+918055718055"
+          class="nav-call"
+        >
+          📞 Call Now
+        </a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =====================================================
+       HERO / FIRST SCREEN
+       ===================================================== -->
+
+  <header class="hero">
+
+    <div class="container hero-grid">
+
+
+      <!-- LEFT CONTENT -->
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          Café Durga · Chhatrapati Sambhajinagar
+        </div>
+
+
+        <h1>
+
+          Coffee.
+          <br>
+
+          Food.
+          <br>
+
+          <span class="green">
+            Good
+          </span>
+
+          <span class="yellow">
+            Moments.
+          </span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+          A relaxed place for great coffee,
+          delicious food, conversations and
+          memorable moments.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+          <a
+            href="#menu"
+            class="btn btn-primary"
+          >
+            Explore Menu
+          </a>
+
+
+          <a
+            href="https://maps.app.goo.gl/d285NhPNVjrFU1qy8"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline"
+          >
+            📍 Get Directions
+          </a>
+
+        </div>
+
+
+        <div class="quick-info">
+
+
+          <div class="quick-item">
+
+            <span class="quick-icon">
+              ☕
+            </span>
+
+            Café & Food
+
+          </div>
+
+
+          <div class="quick-item">
+
+            <span class="quick-icon">
+              📍
+            </span>
+
+            Railway Station Road
+
+          </div>
+
+
+          <div class="quick-item">
+
+            <span class="quick-icon">
+              🕐
+            </span>
+
+            10 AM – 12 AM
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT SHOP IMAGE -->
+
+      <div class="hero-visual">
+
+        <div class="hero-image-card">
+
+          <img
+            src="assets/cafe-durga-cover.jpg"
+            alt="Café Durga shop"
+          >
+
+
+          <div class="image-tag">
+
+            <strong>
+              Welcome to Café Durga
+            </strong>
+
+            <span>
+              Tapdiya Complex · Railway Station Road
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       BRAND STRIP
+       ===================================================== -->
+
+  <div class="brand-strip">
+
+    <div class="container brand-strip-inner">
+
+      <span>
+        Coffee
+      </span>
+
+      <span>
+        Food
+      </span>
+
+      <span>
+        Snacks
+      </span>
+
+      <span>
+        Good Vibes
+      </span>
+
+      <span>
+        Café Durga
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       MENU
+       ===================================================== -->
+
+  <section
+    class="menu"
+    id="menu"
+  >
+
+    <div class="container">
+
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          Our Favourites
+        </div>
+
+        <h2>
+          Something for every craving.
+        </h2>
+
+        <p>
+          A glimpse of what you can enjoy at Café Durga.
+        </p>
+
+      </div>
+
+
+      <div class="menu-grid">
+
+
+        <article class="menu-card">
+
+          <span class="menu-number">
+            01
+          </span>
+
+          <h3>
+            Cold Coffee
+          </h3>
+
+          <p>
+            A chilled coffee treat for your café break.
+          </p>
+
+        </article>
+
+
+        <article class="menu-card">
+
+          <span class="menu-number">
+            02
+          </span>
+
+          <h3>
+            Pizza
+          </h3>
+
+          <p>
+            A delicious option to enjoy with friends.
+          </p>
+
+        </article>
+
+
+        <article class="menu-card">
+
+          <span class="menu-number">
+            03
+          </span>
+
+          <h3>
+            Nachos
+          </h3>
+
+          <p>
+            A crunchy snack perfect for sharing.
+          </p>
+
+        </article>
+
+
+        <article class="menu-card">
+
+          <span class="menu-number">
+            04
+          </span>
+
+          <h3>
+            Café Specials
+          </h3>
+
+          <p>
+            Explore more food and beverages at Café Durga.
+          </p>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       ABOUT
+       ===================================================== -->
+
+  <section
+    class="about"
+    id="about"
+  >
+
+    <div class="container about-grid">
+
+
+      <div class="about-image">
+
+        <img
+          src="assets/cafe-durga-interior.jpg"
+          alt="Café Durga interior"
+        >
+
+      </div>
+
+
+      <div class="about-content">
+
+        <div class="eyebrow">
+          About Café Durga
+        </div>
+
+
+        <h2>
+
+          A place to
+          <span>
+            slow down.
+          </span>
+
+        </h2>
+
+
+        <p>
+
+          Café Durga is a café destination on
+          Railway Station Road in
+          Chhatrapati Sambhajinagar.
+
+        </p>
+
+
+        <p>
+
+          Whether you're meeting friends,
+          enjoying coffee, grabbing a snack
+          or spending time together,
+          Café Durga is made for good moments.
+
+        </p>
+
+
+        <a
+          href="tel:+918055718055"
+          class="btn btn-primary"
+        >
+          📞 Call Café Durga
+        </a>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       GALLERY
+       ===================================================== -->
+
+  <section
+    class="gallery"
+    id="gallery"
+  >
+
+    <div class="container">
+
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          Gallery
+        </div>
+
+        <h2>
+          A glimpse of Café Durga.
+        </h2>
+
+        <p>
+          See the café, the food and the atmosphere.
+        </p>
+
+      </div>
+
+
+      <div class="gallery-grid">
+
+
+        <div class="gallery-item">
+
+          <img
+            src="assets/cafe-durga-cover.jpg"
+            alt="Café Durga exterior"
+          >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="assets/cafe-durga-cold-coffee.jpg"
+            alt="Cold coffee at Café Durga"
+          >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="assets/cafe-durga-interior.jpg"
+            alt="Café Durga interior"
+          >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="assets/cafe-durga-nachos.jpg"
+            alt="Nachos at Café Durga"
+          >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="assets/cafe-durga-pizza.jpg"
+            alt="Pizza at Café Durga"
+          >
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CTA
+       ===================================================== -->
+
+  <section class="cta-section">
+
+    <div class="container">
+
+
+      <div class="cta">
+
+
+        <div class="eyebrow">
+          Visit Café Durga
+        </div>
+
+
+        <h2>
+          Your next coffee break starts here.
+        </h2>
+
+
+        <p>
+          Find us, call us or send us a WhatsApp message.
+        </p>
+
+
+        <div class="action-buttons">
+
+
+          <!-- GOOGLE MAPS -->
+
+          <a
+            href="https://maps.app.goo.gl/d285NhPNVjrFU1qy8"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="action-btn map-btn"
+          >
+            📍 Get Directions
+          </a>
+
+
+          <!-- CALL -->
+
+          <a
+            href="tel:+918055718055"
+            class="action-btn call-btn"
+          >
+            📞 Call Now
+          </a>
+
+
+          <!-- WHATSAPP -->
+
+          <a
+            href="https://wa.me/918055718055"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="action-btn whatsapp-btn"
+          >
+            💬 WhatsApp
+          </a>
+
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CONTACT
+       ===================================================== -->
+
+  <section
+    class="contact"
+    id="contact"
+  >
+
+    <div class="container">
+
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          Find Us
+        </div>
+
+        <h2>
+          Come say hello.
+        </h2>
+
+        <p>
+          Visit Café Durga on Railway Station Road.
+        </p>
+
+      </div>
+
+
+      <div class="contact-grid">
+
+
+        <!-- LOCATION -->
+
+        <div class="contact-card">
+
+          <span class="contact-label">
+            📍 Location
+          </span>
+
+
+          <h3>
+
+            <a
+              href="https://maps.app.goo.gl/d285NhPNVjrFU1qy8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              Tapdiya Complex,
+              Railway Station Road,
+              Chhatrapati Sambhajinagar
+
+            </a>
+
+          </h3>
+
+        </div>
+
+
+        <!-- PHONE -->
+
+        <div class="contact-card">
+
+          <span class="contact-label">
+            📞 Phone
+          </span>
+
+
+          <h3>
+
+            <a href="tel:+918055718055">
+
+              +91 80557 18055
+
+            </a>
+
+          </h3>
+
+        </div>
+
+
+        <!-- HOURS -->
+
+        <div class="contact-card">
+
+          <span class="contact-label">
+            🕐 Opening Hours
+          </span>
+
+
+          <h3>
+
+            Every Day
+            <br>
+
+            10:00 AM – 12:00 AM
+
+          </h3>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- EXTRA ACTIONS -->
+
+      <div
+        class="action-buttons"
+        style="margin-top: 40px;"
+      >
+
+
+        <a
+          href="https://maps.app.goo.gl/d285NhPNVjrFU1qy8"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="action-btn map-btn"
+        >
+          📍 Open Google Maps
+        </a>
+
+
+        <a
+          href="tel:+918055718055"
+          class="action-btn call-btn"
+        >
+          📞 Call Café Durga
+        </a>
+
+
+        <a
+          href="https://wa.me/918055718055"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="action-btn whatsapp-btn"
+        >
+          💬 WhatsApp
+        </a>
+
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer>
+
+    <div class="container">
+
+      © 2026 <strong>Café Durga</strong>
+      · Chhatrapati Sambhajinagar
+
+    </div>
+
+  </footer>
+
+
+</body>
+</html>
