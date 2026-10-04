@@ -1,0 +1,3937 @@
+/* =========================================================
+   TATHASTU RESTAURANT
+   Production Responsive Stylesheet
+========================================================= */
+
+
+/* =========================================================
+   01. ROOT VARIABLES
+========================================================= */
+
+:root {
+
+    --green-deep: #173d2b;
+    --green-dark: #102c20;
+    --green-mid: #24563d;
+    --green-soft: #e7eee8;
+
+    --cream: #f5f0e7;
+    --cream-light: #fbf8f2;
+    --cream-dark: #e9e0d2;
+
+    --gold: #b99a5b;
+    --gold-light: #d2b97b;
+
+    --brown: #3d2b20;
+    --brown-soft: #705a48;
+
+    --text: #1c241f;
+    --text-soft: #626860;
+    --text-light: #f7f4ed;
+
+    --white: #ffffff;
+    --black: #101412;
+
+    --border: rgba(23, 61, 43, 0.14);
+    --border-light: rgba(255, 255, 255, 0.16);
+
+    --shadow-sm:
+        0 8px 24px rgba(16, 44, 32, 0.08);
+
+    --shadow-md:
+        0 18px 45px rgba(16, 44, 32, 0.12);
+
+    --shadow-lg:
+        0 30px 80px rgba(16, 44, 32, 0.16);
+
+    --page-width: 1240px;
+
+    --page-padding: clamp(
+        20px,
+        4vw,
+        64px
+    );
+
+    --header-height: 82px;
+
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 26px;
+
+    --transition:
+        280ms cubic-bezier(.2, .8, .2, 1);
+
+}
+
+
+/* =========================================================
+   02. RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+
+body {
+    margin: 0;
+
+    min-width: 320px;
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.65;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+img {
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+button {
+    border: 0;
+
+    background: none;
+
+    padding: 0;
+
+    cursor: pointer;
+}
+
+
+a {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+p,
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+
+h1,
+h2,
+h3 {
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-weight: 500;
+
+    line-height: 1.05;
+}
+
+
+::selection {
+    background: var(--green-deep);
+    color: var(--white);
+}
+
+
+/* =========================================================
+   03. GLOBAL CONTAINER
+========================================================= */
+
+.container {
+
+    width: min(
+        var(--page-width),
+        calc(100% - (var(--page-padding) * 2))
+    );
+
+    margin-inline: auto;
+
+}
+
+
+.section {
+
+    padding-block:
+        clamp(80px, 10vw, 150px);
+
+}
+
+
+/* =========================================================
+   04. HEADER
+========================================================= */
+
+.site-header {
+
+    position: fixed;
+
+    inset:
+        0 0 auto 0;
+
+    z-index: 1000;
+
+    height: var(--header-height);
+
+    background:
+        rgba(245, 240, 231, 0.94);
+
+    border-bottom:
+        1px solid var(--border);
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+
+}
+
+
+.header-inner {
+
+    width: min(
+        var(--page-width),
+        calc(100% - (var(--page-padding) * 2))
+    );
+
+    height: 100%;
+
+    margin-inline: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+
+}
+
+
+.brand {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+
+}
+
+
+.brand-mark {
+
+    width: 42px;
+
+    height: 42px;
+
+    border:
+        1px solid var(--green-deep);
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    position: relative;
+
+}
+
+
+.brand-mark::before {
+
+    content: "";
+
+    width: 18px;
+
+    height: 22px;
+
+    border:
+        1.5px solid var(--green-deep);
+
+    border-radius:
+        70% 30% 70% 30%;
+
+    transform:
+        rotate(-45deg);
+
+}
+
+
+.brand-mark span {
+
+    position: absolute;
+
+    width: 1px;
+
+    height: 25px;
+
+    background:
+        var(--green-deep);
+
+    transform:
+        rotate(45deg);
+
+}
+
+
+.brand-name {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1;
+
+}
+
+
+.brand-name strong {
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 20px;
+
+    letter-spacing: .08em;
+
+}
+
+
+.brand-name small {
+
+    margin-top: 5px;
+
+    color: var(--text-soft);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+
+}
+
+
+.desktop-nav {
+
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: clamp(
+        20px,
+        3vw,
+        42px
+    );
+
+}
+
+
+.desktop-nav a {
+
+    position: relative;
+
+    color: var(--text-soft);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        color var(--transition);
+
+}
+
+
+.desktop-nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 100%;
+
+    bottom: -6px;
+
+    height: 1px;
+
+    background:
+        var(--green-deep);
+
+    transition:
+        right var(--transition);
+
+}
+
+
+.desktop-nav a:hover {
+
+    color:
+        var(--green-deep);
+
+}
+
+
+.desktop-nav a:hover::after {
+
+    right: 0;
+
+}
+
+
+.header-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding:
+        0 22px;
+
+    border-radius: 999px;
+
+    background:
+        var(--green-deep);
+
+    color:
+        var(--white);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition:
+        transform var(--transition),
+        background var(--transition);
+
+}
+
+
+.header-button:hover {
+
+    background:
+        var(--green-dark);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.menu-toggle {
+
+    display: none;
+
+    width: 46px;
+
+    height: 46px;
+
+    margin-left: auto;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 50%;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.menu-toggle span {
+
+    width: 18px;
+
+    height: 1.5px;
+
+    background:
+        var(--green-deep);
+
+    transition:
+        transform var(--transition);
+
+}
+
+
+.mobile-menu {
+
+    display: none;
+
+}
+
+
+/* =========================================================
+   05. HERO
+========================================================= */
+
+.hero {
+
+    min-height: 100svh;
+
+    padding-top:
+        calc(
+            var(--header-height) + 40px
+        );
+
+    padding-bottom: 50px;
+
+    background:
+        var(--cream);
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.hero-inner {
+
+    width: min(
+        var(--page-width),
+        calc(100% - (var(--page-padding) * 2))
+    );
+
+    margin-inline: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, .9fr)
+        minmax(0, 1.1fr);
+
+    align-items: center;
+
+    gap:
+        clamp(40px, 7vw, 110px);
+
+}
+
+
+.hero-content {
+
+    max-width: 600px;
+
+}
+
+
+.eyebrow {
+
+    margin-bottom: 20px;
+
+    color:
+        var(--green-deep);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: .2em;
+
+}
+
+
+.hero h1 {
+
+    margin-bottom: 24px;
+
+    color:
+        var(--green-deep);
+
+    font-size:
+        clamp(
+            70px,
+            10vw,
+            145px
+        );
+
+    line-height: .82;
+
+    letter-spacing:
+        -.055em;
+
+}
+
+
+.hero-description {
+
+    max-width: 440px;
+
+    margin-bottom: 32px;
+
+    color:
+        var(--text-soft);
+
+    font-size:
+        clamp(
+            17px,
+            2vw,
+            21px
+        );
+
+    line-height: 1.55;
+
+}
+
+
+.hero-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+
+.button {
+
+    min-height: 50px;
+
+    padding:
+        0 25px;
+
+    border-radius: 999px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition);
+
+}
+
+
+.button-primary {
+
+    background:
+        var(--green-deep);
+
+    color:
+        var(--white);
+
+}
+
+
+.button-primary:hover {
+
+    background:
+        var(--green-dark);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.button-secondary {
+
+    border:
+        1px solid var(--green-deep);
+
+    color:
+        var(--green-deep);
+
+    background:
+        transparent;
+
+}
+
+
+.button-secondary:hover {
+
+    background:
+        var(--green-deep);
+
+    color:
+        var(--white);
+
+}
+
+
+.hero-note {
+
+    margin-top: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color:
+        var(--text-soft);
+
+    font-size: 11px;
+
+    letter-spacing: .04em;
+
+}
+
+
+.note-line {
+
+    width: 35px;
+
+    height: 1px;
+
+    background:
+        var(--gold);
+
+}
+
+
+/* =========================================================
+   06. HERO IMAGE
+========================================================= */
+
+.hero-image {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    justify-self: end;
+
+}
+
+
+.image-frame {
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    border-radius:
+        var(--radius-lg);
+
+    background:
+        var(--cream-dark);
+
+    box-shadow:
+        var(--shadow-lg);
+
+}
+
+
+.image-frame img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 700ms
+        cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+.image-frame:hover img {
+
+    transform:
+        scale(1.025);
+
+}
+
+
+.image-caption {
+
+    margin-top: 13px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color:
+        var(--text-soft);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .14em;
+
+}
+
+
+/* =========================================================
+   07. SECTION LABEL
+========================================================= */
+
+.section-label {
+
+    margin-bottom: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color:
+        var(--green-deep);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+
+}
+
+
+.section-label span:first-child {
+
+    color:
+        var(--gold);
+
+}
+
+
+.section-label.light {
+
+    color:
+        rgba(255,255,255,.72);
+
+}
+
+
+.section-label.light span:first-child {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+/* =========================================================
+   08. ABOUT
+========================================================= */
+
+.about {
+
+    background:
+        var(--cream-light);
+
+}
+
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(0, .9fr);
+
+    gap:
+        clamp(40px, 8vw, 130px);
+
+    align-items: start;
+
+}
+
+
+.about h2 {
+
+    max-width: 700px;
+
+    margin-bottom: 0;
+
+    color:
+        var(--green-deep);
+
+    font-size:
+        clamp(
+            48px,
+            6vw,
+            82px
+        );
+
+    letter-spacing:
+        -.045em;
+
+}
+
+
+.about h2 em {
+
+    display: block;
+
+    color:
+        var(--gold);
+
+    font-style: normal;
+
+}
+
+
+.about-copy {
+
+    max-width: 520px;
+
+}
+
+
+.about-copy p {
+
+    margin-bottom: 22px;
+
+    color:
+        var(--text-soft);
+
+    font-size: 16px;
+
+}
+
+
+.about-copy p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* =========================================================
+   09. FOOD SECTION
+========================================================= */
+
+.food-section {
+
+    background:
+        var(--cream);
+
+}
+
+
+.food-heading {
+
+    margin-bottom: 55px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        .7fr;
+
+    gap: 50px;
+
+    align-items: end;
+
+}
+
+
+.food-heading h2 {
+
+    margin-bottom: 0;
+
+    color:
+        var(--green-deep);
+
+    font-size:
+        clamp(
+            52px,
+            6vw,
+            88px
+        );
+
+    letter-spacing:
+        -.05em;
+
+}
+
+
+.food-heading h2 em {
+
+    display: block;
+
+    color:
+        var(--gold);
+
+    font-style: normal;
+
+}
+
+
+.food-heading p {
+
+    max-width: 440px;
+
+    margin-bottom: 5px;
+
+    color:
+        var(--text-soft);
+
+}
+
+
+/* =========================================================
+   10. FOOD GRID
+========================================================= */
+
+.food-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.25fr
+        .75fr;
+
+    gap: 22px;
+
+}
+
+
+.food-card {
+
+    min-width: 0;
+
+}
+
+
+.food-card-large {
+
+    grid-row: span 2;
+
+}
+
+
+.food-image {
+
+    width: 100%;
+
+    height: 350px;
+
+    overflow: hidden;
+
+    border-radius:
+        var(--radius-md);
+
+    background:
+        var(--cream-dark);
+
+}
+
+
+.food-card-large .food-image {
+
+    height: 100%;
+
+    min-height: 620px;
+
+}
+
+
+.food-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 650ms
+        cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+.food-card:hover .food-image img {
+
+    transform:
+        scale(1.035);
+
+}
+
+
+.food-card-content {
+
+    padding:
+        18px 2px 8px;
+
+}
+
+
+.food-card-content > span {
+
+    color:
+        var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .16em;
+
+}
+
+
+.food-card-content h3 {
+
+    margin:
+        7px 0 5px;
+
+    color:
+        var(--green-deep);
+
+    font-size:
+        clamp(
+            22px,
+            2.5vw,
+            32px
+        );
+
+}
+
+
+.food-card-content p {
+
+    margin: 0;
+
+    color:
+        var(--text-soft);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   11. BRAND STORY
+========================================================= */
+
+.brand-story {
+
+    padding-block:
+        clamp(80px, 10vw, 150px);
+
+    background:
+        var(--green-deep);
+
+    color:
+        var(--text-light);
+
+}
+
+
+.brand-story-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, .9fr)
+        minmax(0, 1.1fr);
+
+    gap:
+        clamp(45px, 8vw, 120px);
+
+    align-items: center;
+
+}
+
+
+.brand-image {
+
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    border-radius:
+        var(--radius-lg);
+
+    background:
+        var(--green-dark);
+
+}
+
+
+.brand-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+
+.brand-content {
+
+    max-width: 610px;
+
+}
+
+
+.small-heading {
+
+    margin-bottom: 20px;
+
+    color:
+        var(--gold-light);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .2em;
+
+}
+
+
+.brand-content h2 {
+
+    margin-bottom: 28px;
+
+    color:
+        var(--white);
+
+    font-size:
+        clamp(
+            46px,
+            6vw,
+            82px
+        );
+
+    letter-spacing:
+        -.045em;
+
+}
+
+
+.brand-content p {
+
+    max-width: 520px;
+
+    margin-bottom: 40px;
+
+    color:
+        rgba(255,255,255,.72);
+
+    font-size: 16px;
+
+}
+
+
+.brand-signature {
+
+    color:
+        var(--gold-light);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 34px;
+
+    letter-spacing: .08em;
+
+}
+
+
+/* =========================================================
+   12. SPACE SECTION
+========================================================= */
+
+.space-section {
+
+    padding-block:
+        clamp(80px, 10vw, 150px);
+
+    background:
+        var(--green-dark);
+
+    color:
+        var(--white);
+
+}
+
+
+.space-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(0, .85fr);
+
+    gap:
+        clamp(45px, 8vw, 120px);
+
+    align-items: center;
+
+}
+
+
+.space-image {
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    border-radius:
+        var(--radius-lg);
+
+}
+
+
+.space-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+
+.space-content {
+
+    max-width: 560px;
+
+}
+
+
+.space-content h2 {
+
+    margin-bottom: 26px;
+
+    color:
+        var(--white);
+
+    font-size:
+        clamp(
+            48px,
+            5.5vw,
+            78px
+        );
+
+    letter-spacing:
+        -.045em;
+
+}
+
+
+.space-content > p:not(.small-heading) {
+
+    margin-bottom: 40px;
+
+    color:
+        rgba(255,255,255,.68);
+
+}
+
+
+.space-details {
+
+    display: grid;
+
+    gap: 16px;
+
+}
+
+
+.space-detail {
+
+    padding-bottom: 16px;
+
+    border-bottom:
+        1px solid var(--border-light);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+}
+
+
+.space-detail span {
+
+    color:
+        var(--gold-light);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+}
+
+
+.space-detail strong {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   13. INTERIOR SHOWCASE
+========================================================= */
+
+.interior-showcase {
+
+    padding-block:
+        clamp(80px, 10vw, 150px);
+
+    background:
+        var(--cream-light);
+
+}
+
+
+.showcase-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        .8fr
+        1.2fr;
+
+    gap:
+        clamp(45px, 8vw, 120px);
+
+    align-items: center;
+
+}
+
+
+.showcase-content {
+
+    max-width: 520px;
+
+}
+
+
+.showcase-content h2 {
+
+    margin-bottom: 25px;
+
+    color:
+        var(--green-deep);
+
+    font-size:
+        clamp(
+            48px,
+            5.5vw,
+            76px
+        );
+
+    letter-spacing:
+        -.045em;
+
+}
+
+
+.showcase-content h2 em {
+
+    display: block;
+
+    color:
+        var(--gold);
+
+    font-style: normal;
+
+}
+
+
+.showcase-content > p:not(.small-heading) {
+
+    margin-bottom: 35px;
+
+    color:
+        var(--text-soft);
+
+}
+
+
+.showcase-image {
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    border-radius:
+        var(--radius-lg);
+
+    box-shadow:
+        var(--shadow-md);
+
+}
+
+
+.showcase-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+
+.text-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color:
+        var(--green-deep);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.text-link span {
+
+    font-size: 20px;
+
+    transition:
+        transform var(--transition);
+
+}
+
+
+.text-link:hover span {
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/* =========================================================
+   14. STATEMENT
+========================================================= */
+
+.statement {
+
+    min-height: 520px;
+
+    padding:
+        80px var(--page-padding);
+
+    background:
+        var(--cream-dark);
+
+    display: grid;
+
+    place-items: center;
+
+    text-align: center;
+
+}
+
+
+.statement-inner {
+
+    max-width: 900px;
+
+}
+
+
+.statement-brand {
+
+    display: block;
+
+    margin-bottom: 22px;
+
+    color:
+        var(--gold);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: .3em;
+
+}
+
+
+.statement h2 {
+
+    margin-bottom: 20px;
+
+    color:
+        var(--green-deep);
+
+    font-size:
+        clamp(
+            52px,
+            7vw,
+            100px
+        );
+
+    letter-spacing:
+        -.055em;
+
+}
+
+
+.statement p {
+
+    margin: 0;
+
+    color:
+        var(--brown-soft);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            20px,
+            2.5vw,
+            28px
+        );
+
+}
+
+
+/* =========================================================
+   15. VISIT
+========================================================= */
+
+.visit {
+
+    background:
+        var(--cream-light);
+
+}
+
+
+.visit-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap:
+        clamp(45px, 9vw, 130px);
+
+}
+
+
+.visit-heading h2 {
+
+    margin-bottom: 25px;
+
+    color:
+        var(--green-deep);
+
+    font-size:
+        clamp(
+            52px,
+            6vw,
+            86px
+        );
+
+    letter-spacing:
+        -.05em;
+
+}
+
+
+.visit-heading h2 em {
+
+    display: block;
+
+    color:
+        var(--gold);
+
+    font-style: normal;
+
+}
+
+
+.visit-heading > p {
+
+    max-width: 470px;
+
+    color:
+        var(--text-soft);
+
+}
+
+
+.visit-details {
+
+    display: grid;
+
+    gap: 28px;
+
+}
+
+
+.detail-block {
+
+    padding-bottom: 25px;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.detail-label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color:
+        var(--gold);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+
+}
+
+
+.detail-block p {
+
+    max-width: 500px;
+
+    margin: 0;
+
+    color:
+        var(--text);
+
+    font-size: 15px;
+
+}
+
+
+.detail-block a {
+
+    color:
+        var(--green-deep);
+
+    font-weight: 700;
+
+}
+
+
+.visit-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    padding-top: 5px;
+
+}
+
+
+/* =========================================================
+   16. FINAL CTA
+========================================================= */
+
+.final-cta {
+
+    padding:
+        clamp(90px, 12vw, 170px)
+        var(--page-padding);
+
+    background:
+        var(--green-deep);
+
+    color:
+        var(--white);
+
+    text-align: center;
+
+}
+
+
+.final-cta .eyebrow {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+.final-cta h2 {
+
+    margin-bottom: 38px;
+
+    color:
+        var(--white);
+
+    font-size:
+        clamp(
+            60px,
+            8vw,
+            115px
+        );
+
+    letter-spacing:
+        -.06em;
+
+}
+
+
+.final-cta h2 em {
+
+    color:
+        var(--gold-light);
+
+    font-style: normal;
+
+}
+
+
+.cta-button {
+
+    min-height: 52px;
+
+    padding:
+        0 28px;
+
+    border:
+        1px solid rgba(255,255,255,.35);
+
+    border-radius: 999px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    color:
+        var(--white);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition);
+
+}
+
+
+.cta-button span {
+
+    font-size: 20px;
+
+}
+
+
+.cta-button:hover {
+
+    background:
+        var(--white);
+
+    color:
+        var(--green-deep);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =========================================================
+   17. FOOTER
+========================================================= */
+
+.site-footer {
+
+    padding:
+        50px 0 30px;
+
+    background:
+        var(--green-dark);
+
+    color:
+        var(--white);
+
+}
+
+
+.footer-top {
+
+    padding-bottom: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    border-bottom:
+        1px solid var(--border-light);
+
+}
+
+
+.footer-brand {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.footer-brand .brand-mark {
+
+    border-color:
+        rgba(255,255,255,.7);
+
+}
+
+
+.footer-brand .brand-mark::before {
+
+    border-color:
+        rgba(255,255,255,.7);
+
+}
+
+
+.footer-brand .brand-mark span {
+
+    background:
+        rgba(255,255,255,.7);
+
+}
+
+
+.footer-brand .brand-name strong {
+
+    color:
+        var(--white);
+
+}
+
+
+.footer-brand .brand-name small {
+
+    color:
+        rgba(255,255,255,.55);
+
+}
+
+
+.footer-top > p {
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.6);
+
+    font-size: 13px;
+
+}
+
+
+.footer-bottom {
+
+    padding-top: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    color:
+        rgba(255,255,255,.48);
+
+    font-size: 11px;
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 22px;
+
+}
+
+
+.footer-links a {
+
+    transition:
+        color var(--transition);
+
+}
+
+
+.footer-links a:hover {
+
+    color:
+        var(--white);
+
+}
+
+
+/* =========================================================
+   18. FLOATING CALL
+========================================================= */
+
+.floating-call {
+
+    position: fixed;
+
+    right: 24px;
+
+    bottom:
+        calc(
+            24px +
+            env(safe-area-inset-bottom)
+        );
+
+    z-index: 900;
+
+    width: 58px;
+
+    height: 58px;
+
+    border-radius: 50%;
+
+    background:
+        var(--green-deep);
+
+    color:
+        var(--white);
+
+    display: grid;
+
+    place-items: center;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.2);
+
+    transition:
+        transform var(--transition);
+
+}
+
+
+.floating-call:hover {
+
+    transform:
+        translateY(-4px);
+
+}
+
+
+.floating-call span {
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .04em;
+
+}
+
+
+/* =========================================================
+   19. TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .desktop-nav {
+
+        gap: 22px;
+
+    }
+
+
+    .header-button {
+
+        padding-inline: 18px;
+
+    }
+
+
+    .hero-inner {
+
+        gap: 45px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(
+                65px,
+                10vw,
+                105px
+            );
+
+    }
+
+
+    .food-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .food-card-large {
+
+        grid-column:
+            1 / -1;
+
+        grid-row:
+            auto;
+
+    }
+
+
+    .food-card-large .food-image {
+
+        min-height: 450px;
+
+        height: 450px;
+
+    }
+
+}
+
+
+/* =========================================================
+   20. TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 900px) {
+
+    :root {
+
+        --header-height: 72px;
+
+    }
+
+
+    .desktop-nav,
+    .header-button {
+
+        display: none;
+
+    }
+
+
+    .menu-toggle {
+
+        display: flex;
+
+    }
+
+
+    .mobile-menu {
+
+        position: fixed;
+
+        top: var(--header-height);
+
+        left: 0;
+
+        right: 0;
+
+        padding:
+            20px var(--page-padding) 28px;
+
+        background:
+            var(--cream-light);
+
+        border-bottom:
+            1px solid var(--border);
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 4px;
+
+        transform:
+            translateY(-120%);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transition:
+            transform var(--transition),
+            opacity var(--transition),
+            visibility var(--transition);
+
+    }
+
+
+    .mobile-menu.active {
+
+        transform:
+            translateY(0);
+
+        opacity: 1;
+
+        visibility: visible;
+
+    }
+
+
+    .mobile-menu a {
+
+        min-height: 50px;
+
+        padding:
+            0 4px;
+
+        display: flex;
+
+        align-items: center;
+
+        color:
+            var(--green-deep);
+
+        border-bottom:
+            1px solid var(--border);
+
+        font-size: 15px;
+
+        font-weight: 600;
+
+    }
+
+
+    .hero {
+
+        min-height: auto;
+
+        padding-top:
+            calc(
+                var(--header-height) + 50px
+            );
+
+        padding-bottom: 70px;
+
+    }
+
+
+    .hero-inner {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .hero-content {
+
+        max-width: 720px;
+
+    }
+
+
+    .hero-image {
+
+        max-width: none;
+
+        justify-self: stretch;
+
+    }
+
+
+    .about-grid,
+    .brand-story-grid,
+    .space-grid,
+    .showcase-grid,
+    .visit-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .brand-content,
+    .space-content,
+    .showcase-content {
+
+        max-width: 720px;
+
+    }
+
+
+    .brand-image {
+
+        max-width: 600px;
+
+    }
+
+
+    .showcase-content {
+
+        order: 1;
+
+    }
+
+
+    .showcase-image {
+
+        order: 2;
+
+    }
+
+
+    .food-heading {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .food-heading p {
+
+        max-width: 600px;
+
+    }
+
+}
+
+
+/* =========================================================
+   21. MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    :root {
+
+        --page-padding: 18px;
+
+        --header-height: 68px;
+
+    }
+
+
+    body {
+
+        font-size: 15px;
+
+    }
+
+
+    .section {
+
+        padding-block:
+            78px;
+
+    }
+
+
+    .container,
+    .header-inner,
+    .hero-inner {
+
+        width:
+            calc(
+                100% -
+                (var(--page-padding) * 2)
+            );
+
+    }
+
+
+    /* HEADER */
+
+    .site-header {
+
+        height:
+            var(--header-height);
+
+    }
+
+
+    .brand-mark {
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
+
+    .brand-name strong {
+
+        font-size: 18px;
+
+    }
+
+
+    .brand-name small {
+
+        font-size: 7px;
+
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: auto;
+
+        padding-top:
+            calc(
+                var(--header-height) + 38px
+            );
+
+        padding-bottom: 60px;
+
+        display: block;
+
+    }
+
+
+    .hero-inner {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 42px;
+
+    }
+
+
+    .hero-content {
+
+        max-width: none;
+
+    }
+
+
+    .eyebrow {
+
+        margin-bottom: 15px;
+
+        font-size: 9px;
+
+    }
+
+
+    .hero h1 {
+
+        margin-bottom: 20px;
+
+        font-size:
+            clamp(
+                62px,
+                19vw,
+                96px
+            );
+
+        line-height: .82;
+
+    }
+
+
+    .hero-description {
+
+        max-width: 390px;
+
+        margin-bottom: 26px;
+
+        font-size: 17px;
+
+    }
+
+
+    .hero-actions {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .button {
+
+        width: 100%;
+
+        min-height: 52px;
+
+    }
+
+
+    .hero-note {
+
+        margin-top: 25px;
+
+    }
+
+
+    /* HERO IMAGE */
+
+    .hero-image {
+
+        width: 100%;
+
+        max-width: none;
+
+    }
+
+
+    .image-frame {
+
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 4 / 3;
+
+        border-radius:
+            20px;
+
+        box-shadow:
+            var(--shadow-md);
+
+    }
+
+
+    .image-frame img {
+
+        object-fit: contain;
+
+        background:
+            var(--cream-dark);
+
+    }
+
+
+    .image-caption {
+
+        font-size: 8px;
+
+    }
+
+
+    /* SECTION LABEL */
+
+    .section-label {
+
+        margin-bottom: 38px;
+
+        font-size: 9px;
+
+    }
+
+
+    /* ABOUT */
+
+    .about h2 {
+
+        font-size:
+            clamp(
+                45px,
+                13vw,
+                68px
+            );
+
+    }
+
+
+    .about-copy p {
+
+        font-size: 15px;
+
+    }
+
+
+    /* BRAND */
+
+    .brand-story {
+
+        padding-block: 78px;
+
+    }
+
+
+    .brand-image {
+
+        width: 100%;
+
+        max-width: none;
+
+        aspect-ratio:
+            4 / 5;
+
+    }
+
+
+    .brand-content h2 {
+
+        font-size:
+            clamp(
+                44px,
+                13vw,
+                66px
+            );
+
+    }
+
+
+    /* FOOD */
+
+    .food-heading h2 {
+
+        font-size:
+            clamp(
+                46px,
+                13vw,
+                68px
+            );
+
+    }
+
+
+    .food-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 35px;
+
+    }
+
+
+    .food-card-large {
+
+        grid-column:
+            auto;
+
+    }
+
+
+    .food-card-large .food-image,
+    .food-image {
+
+        height: auto;
+
+        min-height: 0;
+
+        aspect-ratio: 4 / 3;
+
+    }
+
+
+    .food-image img {
+
+        object-fit: cover;
+
+    }
+
+
+    .food-card-content {
+
+        padding-top: 15px;
+
+    }
+
+
+    /* SPACE */
+
+    .space-section {
+
+        padding-block: 78px;
+
+    }
+
+
+    .space-image {
+
+        aspect-ratio:
+            4 / 3;
+
+        border-radius:
+            20px;
+
+    }
+
+
+    .space-content h2 {
+
+        font-size:
+            clamp(
+                45px,
+                13vw,
+                68px
+            );
+
+    }
+
+
+    /* SHOWCASE */
+
+    .interior-showcase {
+
+        padding-block: 78px;
+
+    }
+
+
+    .showcase-content h2 {
+
+        font-size:
+            clamp(
+                45px,
+                13vw,
+                68px
+            );
+
+    }
+
+
+    .showcase-image {
+
+        aspect-ratio:
+            4 / 3;
+
+        border-radius:
+            20px;
+
+    }
+
+
+    /* STATEMENT */
+
+    .statement {
+
+        min-height:
+            440px;
+
+        padding:
+            70px var(--page-padding);
+
+    }
+
+
+    .statement h2 {
+
+        font-size:
+            clamp(
+                48px,
+                14vw,
+                74px
+            );
+
+    }
+
+
+    /* VISIT */
+
+    .visit-heading h2 {
+
+        font-size:
+            clamp(
+                48px,
+                14vw,
+                74px
+            );
+
+    }
+
+
+    .visit-actions {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    /* FINAL CTA */
+
+    .final-cta {
+
+        padding-block:
+            100px;
+
+    }
+
+
+    .final-cta h2 {
+
+        font-size:
+            clamp(
+                55px,
+                16vw,
+                82px
+            );
+
+    }
+
+
+    /* FOOTER */
+
+    .footer-top {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .footer-bottom {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .footer-links {
+
+        gap:
+            15px;
+
+    }
+
+
+    /* FLOATING BUTTON */
+
+    .floating-call {
+
+        right: 17px;
+
+        bottom:
+            calc(
+                17px +
+                env(safe-area-inset-bottom)
+            );
+
+        width: 54px;
+
+        height: 54px;
+
+    }
+
+}
+
+
+/* =========================================================
+   22. SMALL PHONES
+========================================================= */
+
+@media (max-width: 390px) {
+
+    :root {
+
+        --page-padding: 15px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(
+                58px,
+                19vw,
+                72px
+            );
+
+    }
+
+
+    .hero-description {
+
+        font-size: 16px;
+
+    }
+
+
+    .image-frame {
+
+        aspect-ratio:
+            4 / 3;
+
+        border-radius:
+            16px;
+
+    }
+
+
+    .brand-content h2,
+    .space-content h2,
+    .showcase-content h2,
+    .about h2,
+    .food-heading h2 {
+
+        font-size:
+            clamp(
+                42px,
+                13vw,
+                58px
+            );
+
+    }
+
+
+    .statement h2 {
+
+        font-size:
+            clamp(
+                44px,
+                14vw,
+                62px
+            );
+
+    }
+
+
+    .visit-heading h2 {
+
+        font-size:
+            clamp(
+                44px,
+                14vw,
+                62px
+            );
+
+    }
+
+
+    .final-cta h2 {
+
+        font-size:
+            clamp(
+                50px,
+                16vw,
+                70px
+            );
+
+    }
+
+
+    .floating-call {
+
+        width: 50px;
+
+        height: 50px;
+
+        right: 14px;
+
+    }
+
+}
+
+
+/* =========================================================
+   23. VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 350px) {
+
+    .brand-name small {
+
+        display: none;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 57px;
+
+    }
+
+
+    .hero-note {
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .hero-note span:last-child {
+
+        max-width: 190px;
+
+    }
+
+
+    .button {
+
+        padding-inline: 18px;
+
+    }
+
+}
+
+
+/* =========================================================
+   24. LANDSCAPE MOBILE
+========================================================= */
+
+@media (
+    max-width: 900px
+) and (
+    orientation: landscape
+) {
+
+    .hero {
+
+        padding-top:
+            calc(
+                var(--header-height) + 30px
+            );
+
+    }
+
+
+    .hero-inner {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        display: grid;
+
+        align-items: center;
+
+    }
+
+
+    .hero-image {
+
+        order: 2;
+
+    }
+
+
+    .hero-content {
+
+        order: 1;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(
+                52px,
+                10vw,
+                82px
+            );
+
+    }
+
+
+    .image-frame {
+
+        aspect-ratio:
+            4 / 3;
+
+    }
+
+}
+
+
+/* =========================================================
+   25. TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) {
+
+    .image-frame:hover img,
+    .food-card:hover .food-image img {
+
+        transform: none;
+
+    }
+
+
+    .header-button:hover,
+    .button:hover,
+    .cta-button:hover {
+
+        transform: none;
+
+    }
+
+}
+
+
+/* =========================================================
+   26. REDUCED MOTION
+========================================================= */
+
+@media (
+    prefers-reduced-motion: reduce
+) {
+
+    html {
+
+        scroll-behavior: auto;
+
+    }
+
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+
+        scroll-behavior:
+            auto !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   27. SAFE AREA SUPPORT
+========================================================= */
+
+@supports (
+    padding: env(safe-area-inset-bottom)
+) {
+
+    .site-footer {
+
+        padding-bottom:
+            calc(
+                30px +
+                env(safe-area-inset-bottom)
+            );
+
+    }
+
+}
+
+
+/* =========================================================
+   28. ACCESSIBILITY
+========================================================= */
+
+:focus-visible {
+
+    outline:
+        2px solid var(--gold);
+
+    outline-offset:
+        4px;
+
+}
+
+
+@media (prefers-contrast: more) {
+
+    .text-link,
+    .desktop-nav a,
+    .detail-block a {
+
+        text-decoration:
+            underline;
+
+        text-underline-offset:
+            4px;
+
+    }
+
+}
+
+/* =========================================================
+   TATHASTU TYPOGRAPHY FIX
+   Fixes compressed / uneven restaurant name rendering
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   MAIN BRAND NAME
+--------------------------------------------------------- */
+
+.brand-name strong {
+    font-family: "DM Sans", Arial, sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.08em;
+
+    color: var(--green-deep);
+
+    white-space: nowrap;
+
+    display: block;
+}
+
+
+/* ---------------------------------------------------------
+   HERO TATHASTU
+--------------------------------------------------------- */
+
+.hero h1 {
+    font-family: "DM Sans", Arial, sans-serif;
+
+    font-weight: 700;
+
+    font-size: clamp(
+        72px,
+        9vw,
+        132px
+    );
+
+    line-height: 0.9;
+
+    letter-spacing: 0.035em;
+
+    color: var(--green-deep);
+
+    white-space: nowrap;
+
+    margin: 0 0 26px;
+
+    word-spacing: normal;
+
+    text-rendering: geometricPrecision;
+}
+
+
+/* ---------------------------------------------------------
+   BRAND STORY / SIGNATURE
+--------------------------------------------------------- */
+
+.brand-signature {
+    font-family: "DM Sans", Arial, sans-serif;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.12em;
+
+    color: var(--gold-light);
+
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------------------------------
+   STATEMENT BRAND
+--------------------------------------------------------- */
+
+.statement-brand {
+    display: block;
+
+    font-family: "DM Sans", Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.28em;
+
+    color: var(--gold);
+
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------------------------------
+   FINAL CTA TATHASTU
+--------------------------------------------------------- */
+
+.final-cta h2 em {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-style: italic;
+
+    letter-spacing: 0;
+
+    color: var(--gold-light);
+
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER BRAND
+--------------------------------------------------------- */
+
+.footer-brand .brand-name strong {
+    font-family: "DM Sans", Arial, sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    color: var(--white);
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .hero h1 {
+        font-family: "DM Sans", Arial, sans-serif;
+
+        font-size: clamp(
+            58px,
+            17vw,
+            86px
+        );
+
+        font-weight: 700;
+
+        line-height: 0.9;
+
+        letter-spacing: 0.025em;
+
+        white-space: nowrap;
+
+        margin-bottom: 22px;
+    }
+
+
+    .brand-name strong {
+        font-size: 18px;
+
+        letter-spacing: 0.07em;
+    }
+
+
+    .brand-signature {
+        font-size: 27px;
+
+        letter-spacing: 0.10em;
+    }
+
+
+    .statement-brand {
+        font-size: 10px;
+
+        letter-spacing: 0.22em;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   SMALL PHONES
+--------------------------------------------------------- */
+
+@media (max-width: 390px) {
+
+    .hero h1 {
+        font-size: 56px;
+
+        letter-spacing: 0.018em;
+
+        line-height: 0.92;
+    }
+
+
+    .brand-name strong {
+        font-size: 17px;
+
+        letter-spacing: 0.055em;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   VERY SMALL PHONES
+--------------------------------------------------------- */
+
+@media (max-width: 350px) {
+
+    .hero h1 {
+        font-size: 51px;
+
+        letter-spacing: 0.01em;
+    }
+
+}
+/* =========================================================
+   TATHASTU NAVBAR BRAND FIX
+========================================================= */
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    flex-shrink: 0;
+
+    min-width: max-content;
+}
+
+
+/* Brand icon */
+
+.brand-mark {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    border: 1px solid var(--green-deep);
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    position: relative;
+}
+
+
+/* Brand text wrapper */
+
+.brand-name {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    min-width: max-content;
+
+    line-height: 1;
+}
+
+
+/* Main TATHASTU text */
+
+.brand-name strong {
+    display: block;
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.045em;
+
+    color: var(--green-deep);
+
+    white-space: nowrap;
+
+    margin: 0;
+}
+
+
+/* Restaurant subtitle */
+
+.brand-name small {
+    display: block;
+
+    margin-top: 6px;
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.20em;
+
+    color: var(--text-soft);
+
+    white-space: nowrap;
+
+    margin-left: 1px;
+}
+
+
+/* =========================================================
+   MOBILE NAVBAR
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .brand {
+        gap: 10px;
+    }
+
+
+    .brand-mark {
+        width: 38px;
+        height: 38px;
+
+        flex-basis: 38px;
+    }
+
+
+    .brand-name strong {
+        font-size: 18px;
+
+        letter-spacing: 0.035em;
+    }
+
+
+    .brand-name small {
+        margin-top: 5px;
+
+        font-size: 6.5px;
+
+        letter-spacing: 0.17em;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .brand {
+        gap: 8px;
+    }
+
+
+    .brand-mark {
+        width: 35px;
+        height: 35px;
+
+        flex-basis: 35px;
+    }
+
+
+    .brand-name strong {
+        font-size: 17px;
+
+        letter-spacing: 0.025em;
+    }
+
+
+    .brand-name small {
+        font-size: 6px;
+
+        letter-spacing: 0.14em;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 350px) {
+
+    .brand-mark {
+        width: 33px;
+        height: 33px;
+
+        flex-basis: 33px;
+    }
+
+
+    .brand-name strong {
+        font-size: 16px;
+    }
+
+
+    .brand-name small {
+        display: none;
+    }
+
+}
+
+/* =========================================
+   TATHASTU HERO IMAGE — CLEAN VERSION
+========================================= */
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    max-width: 540px;
+    height: 560px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background: #eee9df;
+
+    box-shadow:
+        0 24px 60px rgba(20, 35, 30, 0.14);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* IMAGE FRAME */
+
+.hero-image .image-frame {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+}
+
+
+/* ACTUAL IMAGE */
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    /* IMPORTANT:
+       Remove any artificial colour effect */
+    filter: none;
+
+    opacity: 1;
+
+    transform: none;
+
+    transition: transform 0.6s ease;
+}
+
+
+/* SUBTLE HOVER */
+
+.hero-image:hover img {
+    transform: scale(1.025);
+}
+
+
+/* REMOVE BLUE / DARK OVERLAY */
+
+.hero-image::before,
+.hero-image::after,
+.hero-image .image-frame::before,
+.hero-image .image-frame::after {
+    content: none !important;
+}
+
+
+/* IMAGE CAPTION */
+
+.image-caption {
+    position: absolute;
+
+    left: 20px;
+    right: 20px;
+    bottom: 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+.image-caption span:first-child {
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    color: #183f35;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.image-caption span:last-child {
+    padding: 8px 12px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    color: #183f35;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .hero-image {
+        max-width: 500px;
+        height: 500px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .hero-image {
+        width: 100%;
+        max-width: none;
+
+        height: auto;
+
+        aspect-ratio: 4 / 3;
+
+        border-radius: 18px;
+
+        box-shadow:
+            0 16px 40px rgba(20, 35, 30, 0.12);
+    }
+
+
+    .hero-image .image-frame {
+        border-radius: 18px;
+    }
+
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+    }
+
+
+    .image-caption {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+    }
+
+
+    .image-caption span:first-child {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .image-caption span:last-child {
+        font-size: 8px;
+        padding: 7px 9px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 390px) {
+
+    .hero-image {
+        aspect-ratio: 4 / 3;
+        border-radius: 14px;
+        margin-left: 150px;
+    }
+
+
+    .hero-image .image-frame {
+        border-radius: 14px;
+        margin-left: 15px;
+    }
+
+}
