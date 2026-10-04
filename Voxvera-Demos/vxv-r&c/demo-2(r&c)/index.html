@@ -1,1221 +1,595 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta charset="UTF-8">
+  <title>CHÉRI | Café & Eatery</title>
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+  <meta
+    name="description"
+    content="CHÉRI Café & Eatery — Good food, warm conversations and moments worth staying for."
+  />
 
-    <meta
-        name="description"
-        content="CHÉRI Café & Eatery — a warm place for good food, coffee and memorable moments."
-    >
-
-    <meta
-        name="theme-color"
-        content="#f5efe7"
-    >
-
-    <title>CHÉRI | Café & Eatery</title>
-
-
-    <!-- Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
-        rel="stylesheet"
-    >
-
-
-    <!-- Stylesheet -->
-
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 
 <body>
 
+  <!-- =====================================================
+       NAVIGATION
+  ====================================================== -->
 
-    <!-- ==================================================
-         HEADER
-    =================================================== -->
+  <header class="navbar">
+    <div class="nav-container">
 
-    <header class="site-header">
+      <a href="#home" class="logo">
+        CHÉRI
+      </a>
 
-        <div class="header-inner">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#food">Food</a></li>
+          <li><a href="#space">Space</a></li>
+          <li><a href="#visit">Visit</a></li>
+        </ul>
+      </nav>
 
+      <a
+        href="https://maps.app.goo.gl/c3Rn6pQjqK5hx43S9"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="nav-cta"
+      >
+        Visit Us
+      </a>
 
-            <!-- Brand -->
-
-            <a
-                href="#home"
-                class="brand"
-                aria-label="CHÉRI Café & Eatery home"
-            >
-
-                <span class="brand-mark">
-                    <span></span>
-                </span>
-
-
-                <span class="brand-text">
-
-                    <strong>CHÉRI</strong>
-
-                    <small>
-                        CAFÉ & EATERY
-                    </small>
-
-                </span>
-
-            </a>
+    </div>
+  </header>
 
 
+  <main>
 
-            <!-- Desktop Navigation -->
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-            <nav
-                class="desktop-nav"
-                aria-label="Primary navigation"
-            >
+    <section class="hero" id="home">
 
-                <a href="#home">
-                    Home
-                </a>
+      <div class="hero-content">
 
-                <a href="#about">
-                    About
-                </a>
+        <span class="eyebrow">
+          CAFÉ & EATERY
+        </span>
 
-                <a href="#food">
-                    Food
-                </a>
+        <h1>
+          CHÉRI
+        </h1>
 
-                <a href="#space">
-                    Space
-                </a>
+        <p>
+          A place for good food, warm conversations and
+          moments worth staying for.
+        </p>
 
-                <a href="#visit">
-                    Visit
-                </a>
+        <div class="hero-actions">
 
-            </nav>
+          <a href="#food" class="btn btn-primary">
+            Explore the Food
+          </a>
 
+          <a
+            href="#visit"
+            class="btn btn-secondary"
+          >
+            Visit CHÉRI
+          </a>
 
+        </div>
 
-            <!-- Header CTA -->
-
-            <a
-                href="#visit"
-                class="header-button"
-            >
-                Visit Us
-            </a>
-
+      </div>
 
 
-            <!-- Mobile Menu Button -->
+      <div class="hero-note">
+        Come in. Sit down. Stay awhile.
+      </div>
 
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                type="button"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-controls="mobileMenu"
-            >
 
-                <span></span>
+      <div class="hero-image">
+        <img
+          src="assets/cheri-storefront.jpg"
+          alt="CHÉRI Café & Eatery storefront"
+        />
+      </div>
 
-                <span></span>
+    </section>
 
-            </button>
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section class="about section" id="about">
+
+      <div class="section-intro">
+
+        <span class="eyebrow">
+          01 — ABOUT CHÉRI
+        </span>
+
+        <h2>
+          More than a café.
+          <br />
+          A place to feel at home.
+        </h2>
+
+        <p>
+          "Chéri" means "dear" or "darling" in French —
+          a name that reflects the warmth and closeness
+          behind the café.
+        </p>
+
+        <p>
+          CHÉRI brings together food, conversation and
+          a comfortable atmosphere for people who want
+          to slow down and enjoy the moment.
+        </p>
+
+        <a href="#space" class="text-link">
+          Discover the space →
+        </a>
+
+      </div>
+
+
+      <div class="about-image">
+
+        <img
+          src="assets/cheri-brand.jpg"
+          alt="CHÉRI Café & Eatery brand artwork"
+        />
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         NAME / BRAND
+    ====================================================== -->
+
+    <section class="brand-story section">
+
+      <div class="brand-story-content">
+
+        <span class="eyebrow">
+          THE NAME
+        </span>
+
+        <h2>
+          Dear moments,
+          <br />
+          beautifully made.
+        </h2>
+
+        <p>
+          The name CHÉRI carries a sense of affection,
+          closeness and care — the same feeling we want
+          every guest to experience here.
+        </p>
+
+      </div>
+
+
+      <div class="brand-word">
+        CHÉRI
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SPACE
+    ====================================================== -->
+
+    <section class="space section" id="space">
+
+      <div class="space-content">
+
+        <span class="eyebrow">
+          02 — THE SPACE
+        </span>
+
+        <span class="small-heading">
+          TAKE YOUR TIME
+        </span>
+
+        <h2>
+          A space made
+          <br />
+          for staying.
+        </h2>
+
+        <p>
+          Warm interiors, comfortable seating and a
+          relaxed atmosphere come together to create
+          a place where you can simply settle in.
+        </p>
+
+
+        <div class="space-points">
+
+          <div>
+            <span>01</span>
+            <p>Warm interiors</p>
+          </div>
+
+          <div>
+            <span>02</span>
+            <p>Relaxed atmosphere</p>
+          </div>
+
+          <div>
+            <span>03</span>
+            <p>Good company</p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="space-image">
+
+        <img
+          src="assets/cheri-interior.jpg"
+          alt="Interior seating area at CHÉRI Café & Eatery"
+        />
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOD
+    ====================================================== -->
+
+    <section class="food section" id="food">
+
+      <div class="food-header">
+
+        <span class="eyebrow">
+          03 — FROM THE TABLE
+        </span>
+
+        <h2>
+          Good food.
+          <br />
+          Good mood.
+        </h2>
+
+        <p>
+          Food made for relaxed meals, casual catch-ups
+          and moments worth sharing.
+        </p>
+
+      </div>
+
+
+      <div class="food-feature">
+
+        <div class="food-image">
+
+          <img
+            src="assets/cheri-food-1.jpg"
+            alt="Food served at CHÉRI Café & Eatery"
+          />
+
+        </div>
+
+        <div class="food-copy">
+
+          <span>01</span>
+
+          <h3>
+            Made to share.
+          </h3>
+
+        </div>
+
+      </div>
+
+
+      <div class="food-feature reverse">
+
+        <div class="food-image">
+
+          <img
+            src="assets/cheri-food-2.jpg"
+            alt="Platter served at CHÉRI Café & Eatery"
+          />
+
+        </div>
+
+        <div class="food-copy">
+
+          <span>02</span>
+
+          <h3>
+            Something for the table.
+          </h3>
+
+        </div>
+
+      </div>
+
+
+      <div class="food-gallery">
+
+        <div class="food-gallery-item">
+
+          <img
+            src="assets/cheri-food-3.jpg"
+            alt="Food at CHÉRI Café & Eatery"
+          />
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         EXPERIENCE
+    ====================================================== -->
+
+    <section class="experience section">
+
+      <div class="experience-inner">
+
+        <span class="eyebrow">
+          04 — THE EXPERIENCE
+        </span>
+
+        <h2>
+          Come for the food.
+          <br />
+          Stay for the feeling.
+        </h2>
+
+        <p>
+          Whether it is a quick bite, a relaxed meal or
+          a long conversation, CHÉRI gives you a space
+          to slow down.
+        </p>
+
+        <a
+          href="https://maps.app.goo.gl/c3Rn6pQjqK5hx43S9"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-link"
+        >
+          Find CHÉRI →
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         VISIT
+    ====================================================== -->
+
+    <section class="visit section" id="visit">
+
+      <div class="visit-inner">
+
+        <div class="visit-heading">
+
+          <span class="eyebrow">
+            05 — VISIT CHÉRI
+          </span>
+
+          <h2>
+            Your table
+            <br />
+            is waiting.
+          </h2>
+
+          <p>
+            Drop by CHÉRI for food, coffee and a little
+            time away from the rush.
+          </p>
 
         </div>
 
 
+        <div class="visit-details">
 
-        <!-- Mobile Navigation -->
+          <!-- LOCATION -->
 
-        <div
-            class="mobile-menu"
-            id="mobileMenu"
-        >
+          <a
+            class="visit-detail"
+            href="https://maps.app.goo.gl/c3Rn6pQjqK5hx43S9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
 
-            <a href="#home">
-                Home
-            </a>
+            <span class="detail-label">
+              LOCATION
+            </span>
 
-            <a href="#about">
-                About
-            </a>
+            <span class="detail-value">
+              1st Floor, CK Tower,<br />
+              Dashmesh Nagar Road,<br />
+              Near Tapadiya Innovations School,<br />
+              New Usmanpura,<br />
+              Chhatrapati Sambhajinagar,<br />
+              Maharashtra 431001
+            </span>
 
-            <a href="#food">
-                Food
-            </a>
+            <span class="detail-action">
+              Get Directions →
+            </span>
 
-            <a href="#space">
-                Space
-            </a>
+          </a>
 
-            <a href="#visit">
-                Visit
-            </a>
+
+          <!-- HOURS -->
+
+          <div class="visit-detail">
+
+            <span class="detail-label">
+              HOURS
+            </span>
+
+            <span class="detail-value">
+              11:00 AM – 12:00 AM
+            </span>
+
+          </div>
+
+
+          <!-- PHONE -->
+
+          <a
+            class="visit-detail"
+            href="tel:+917588672309"
+          >
+
+            <span class="detail-label">
+              PHONE
+            </span>
+
+            <span class="detail-value">
+              +91 75886 72309
+            </span>
+
+            <span class="detail-action">
+              Call CHÉRI →
+            </span>
+
+          </a>
 
         </div>
 
-    </header>
+      </div>
 
+    </section>
 
 
-    <!-- ==================================================
-         MAIN
-    =================================================== -->
+    <!-- =====================================================
+         FINAL CTA
+    ====================================================== -->
 
-    <main>
+    <section class="final-cta">
 
+      <div class="final-cta-inner">
 
-        <!-- ==================================================
-             HERO
-        =================================================== -->
+        <span class="eyebrow">
+          CAFÉ & EATERY
+        </span>
 
-        <section
-            class="hero"
-            id="home"
-        >
+        <h2>
+          See you at CHÉRI.
+        </h2>
 
-            <div class="hero-inner">
+        <p>
+          Good food. Good company. Good moments.
+        </p>
 
+        <div class="final-actions">
 
-                <!-- Hero Content -->
+          <a
+            href="https://maps.app.goo.gl/c3Rn6pQjqK5hx43S9"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            Find Us →
+          </a>
 
-                <div class="hero-content">
-
-
-                    <p class="eyebrow">
-                        CAFÉ & EATERY
-                    </p>
-
-
-                    <h1>
-                        CHÉRI
-                    </h1>
-
-
-                    <p class="hero-subtitle">
-                        A place for good food,
-                        warm conversations
-                        and moments worth staying for.
-                    </p>
-
-
-                    <div class="hero-actions">
-
-                        <a
-                            href="#food"
-                            class="button button-primary"
-                        >
-                            Explore the Food
-                        </a>
-
-
-                        <a
-                            href="#visit"
-                            class="button button-secondary"
-                        >
-                            Visit CHÉRI
-                        </a>
-
-                    </div>
-
-
-                    <div class="hero-note">
-
-                        <span class="hero-note-line"></span>
-
-                        <span>
-                            Come in. Sit down. Stay awhile.
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Hero Storefront Image -->
-
-                <div class="hero-image">
-
-                    <div class="hero-image-frame">
-
-                        <img
-                            src="assets/cheri-storefront.jpg"
-                            alt="CHÉRI Café & Eatery storefront"
-                            width="1600"
-                            height="1067"
-                            fetchpriority="high"
-                        >
-
-                    </div>
-
-
-                    <div class="hero-image-caption">
-
-                        <span>
-                            01
-                        </span>
-
-                        <span>
-                            CHÉRI CAFÉ & EATERY
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             ABOUT
-        =================================================== -->
-
-        <section
-            class="about section"
-            id="about"
-        >
-
-            <div class="container">
-
-
-                <div class="section-label">
-
-                    <span>
-                        01
-                    </span>
-
-                    <span>
-                        ABOUT CHÉRI
-                    </span>
-
-                </div>
-
-
-
-                <div class="about-grid">
-
-
-                    <div class="about-heading">
-
-                        <h2>
-                            More than a café.
-                            <em>
-                                A place to feel at home.
-                            </em>
-                        </h2>
-
-                    </div>
-
-
-
-                    <div class="about-copy">
-
-                        <p>
-                            "Chéri" means "dear" or
-                            "darling" in French — a name
-                            that reflects the warmth and
-                            closeness behind the café.
-                        </p>
-
-
-                        <p>
-                            CHÉRI brings together food,
-                            conversation and a comfortable
-                            atmosphere for people who want
-                            to slow down and enjoy the moment.
-                        </p>
-
-
-                        <a
-                            href="#space"
-                            class="text-link"
-                        >
-                            Discover the space
-                            <span>→</span>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             BRAND / STORY IMAGE
-        =================================================== -->
-
-        <section class="brand-story">
-
-            <div class="container">
-
-                <div class="brand-story-grid">
-
-
-                    <div class="brand-story-image">
-
-                        <img
-                            src="assets/cheri-brand.jpg"
-                            alt="CHÉRI Café & Eatery brand artwork"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-
-                    <div class="brand-story-content">
-
-                        <p class="small-heading">
-                            THE NAME
-                        </p>
-
-
-                        <h2>
-                            Dear moments,
-                            beautifully made.
-                        </h2>
-
-
-                        <p>
-                            The name CHÉRI carries a sense
-                            of affection, closeness and care —
-                            the same feeling we want every
-                            guest to experience here.
-                        </p>
-
-
-                        <span class="story-mark">
-                            CHÉRI
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             SPACE
-        =================================================== -->
-
-        <section
-            class="space section"
-            id="space"
-        >
-
-            <div class="container">
-
-
-                <div class="section-label">
-
-                    <span>
-                        02
-                    </span>
-
-                    <span>
-                        THE SPACE
-                    </span>
-
-                </div>
-
-
-
-                <div class="space-grid">
-
-
-                    <div class="space-content">
-
-                        <p class="small-heading">
-                            TAKE YOUR TIME
-                        </p>
-
-
-                        <h2>
-                            A space made
-                            for staying.
-                        </h2>
-
-
-                        <p>
-                            Warm interiors, comfortable
-                            seating and a relaxed atmosphere
-                            come together to create a place
-                            where you can simply settle in.
-                        </p>
-
-
-                        <div class="space-details">
-
-
-                            <div class="space-detail">
-
-                                <span>
-                                    01
-                                </span>
-
-                                <strong>
-                                    Warm interiors
-                                </strong>
-
-                            </div>
-
-
-                            <div class="space-detail">
-
-                                <span>
-                                    02
-                                </span>
-
-                                <strong>
-                                    Relaxed atmosphere
-                                </strong>
-
-                            </div>
-
-
-                            <div class="space-detail">
-
-                                <span>
-                                    03
-                                </span>
-
-                                <strong>
-                                    Good company
-                                </strong>
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="space-image">
-
-                        <img
-                            src="assets/cheri-interior.jpg"
-                            alt="Interior seating area at CHÉRI Café & Eatery"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             FOOD
-        =================================================== -->
-
-        <section
-            class="food section"
-            id="food"
-        >
-
-            <div class="container">
-
-
-                <div class="section-label">
-
-                    <span>
-                        03
-                    </span>
-
-                    <span>
-                        FROM THE TABLE
-                    </span>
-
-                </div>
-
-
-
-                <div class="food-heading">
-
-
-                    <div>
-
-                        <h2>
-                            Good food.
-                            <em>
-                                Good mood.
-                            </em>
-                        </h2>
-
-                    </div>
-
-
-                    <p>
-                        Food made for relaxed meals,
-                        casual catch-ups and moments
-                        worth sharing.
-                    </p>
-
-                </div>
-
-
-
-                <!-- Food Gallery -->
-
-                <div class="food-gallery">
-
-
-                    <!-- Food Image 1 -->
-
-                    <article class="food-card food-card-large">
-
-                        <div class="food-image">
-
-                            <img
-                                src="assets/cheri-food-1.jpg"
-                                alt="Burger and tacos served at CHÉRI Café & Eatery"
-                                loading="lazy"
-                            >
-
-                        </div>
-
-
-                        <div class="food-card-content">
-
-                            <span>
-                                01
-                            </span>
-
-                            <h3>
-                                Made to share.
-                            </h3>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- Food Image 2 -->
-
-                    <article class="food-card">
-
-                        <div class="food-image">
-
-                            <img
-                                src="assets/cheri-food-2.jpg"
-                                alt="Platter served at CHÉRI Café & Eatery"
-                                loading="lazy"
-                            >
-
-                        </div>
-
-
-                        <div class="food-card-content">
-
-                            <span>
-                                02
-                            </span>
-
-                            <h3>
-                                Something for the table.
-                            </h3>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             FOOD STATEMENT
-        =================================================== -->
-
-        <section class="food-statement">
-
-            <div class="container">
-
-                <p>
-                    GOOD FOOD
-                </p>
-
-                <h2>
-                    Made for
-                    <em>good moments.</em>
-                </h2>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             EXPERIENCE
-        =================================================== -->
-
-        <section class="experience section">
-
-            <div class="container">
-
-
-                <div class="experience-grid">
-
-
-                    <div class="experience-image">
-
-                        <img
-                            src="assets/cheri-food-3.jpg"
-                            alt="Food served at CHÉRI Café & Eatery"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-
-
-                    <div class="experience-content">
-
-
-                        <div class="section-label">
-
-                            <span>
-                                04
-                            </span>
-
-                            <span>
-                                THE EXPERIENCE
-                            </span>
-
-                        </div>
-
-
-                        <h2>
-                            Come for the food.
-                            <em>
-                                Stay for the feeling.
-                            </em>
-                        </h2>
-
-
-                        <p>
-                            Whether it is a quick bite,
-                            a relaxed meal or a long
-                            conversation, CHÉRI gives
-                            you a space to slow down.
-                        </p>
-
-
-                        <a
-                            href="#visit"
-                            class="text-link"
-                        >
-                            Find CHÉRI
-                            <span>→</span>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             VISIT
-        =================================================== -->
-
-        <section
-            class="visit section"
-            id="visit"
-        >
-
-            <div class="container">
-
-
-                <div class="section-label">
-
-                    <span>
-                        05
-                    </span>
-
-                    <span>
-                        VISIT CHÉRI
-                    </span>
-
-                </div>
-
-
-
-                <div class="visit-grid">
-
-
-                    <div class="visit-heading">
-
-                        <h2>
-                            Your table
-                            is waiting.
-                        </h2>
-
-
-                        <p>
-                            Drop by CHÉRI for food,
-                            coffee and a little time
-                            away from the rush.
-                        </p>
-
-                    </div>
-
-
-
-                    <div class="visit-details">
-
-
-                        <!-- Location -->
-
-                        <div class="detail-block">
-
-                            <span class="detail-label">
-                                LOCATION
-                            </span>
-
-
-                            <p>
-                                V87Q+3X5, 4-13-693,
-                                Shrikrishna Nagar,
-                                Ulkanagari,
-                                Chhatrapati Sambhajinagar,
-                                Maharashtra 431009
-                            </p>
-
-                        </div>
-
-
-
-                        <!-- Hours -->
-
-                        <div class="detail-block">
-
-                            <span class="detail-label">
-                                HOURS
-                            </span>
-
-
-                            <p>
-                                12:00 PM – 2:00 AM
-                            </p>
-
-                        </div>
-
-
-
-                        <!-- Phone -->
-
-                        <div class="detail-block">
-
-                            <span class="detail-label">
-                                PHONE
-                            </span>
-
-
-                            <p>
-
-                                <a
-                                    href="tel:+919922822247"
-                                >
-                                    +91 99228 22247
-                                </a>
-
-                            </p>
-
-                        </div>
-
-
-
-                        <!-- Buttons -->
-
-                        <div class="visit-actions">
-
-
-                            <a
-                                href="https://maps.app.goo.gl/JZp73nMHn4DVCJw7A"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="button button-primary"
-                            >
-                                Get Directions
-                            </a>
-
-
-                            <a
-                                href="tel:+919922822247"
-                                class="button button-secondary"
-                            >
-                                Call CHÉRI
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             FINAL CTA
-        =================================================== -->
-
-        <section class="final-cta">
-
-            <div class="container">
-
-                <p class="eyebrow">
-                    CAFÉ & EATERY
-                </p>
-
-
-                <h2>
-                    See you at
-                    <em>CHÉRI.</em>
-                </h2>
-
-
-                <a
-                    href="https://maps.app.goo.gl/JZp73nMHn4DVCJw7A"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="cta-button"
-                >
-                    Find Us
-                    <span>→</span>
-                </a>
-
-            </div>
-
-        </section>
-
-
-    </main>
-
-
-
-    <!-- ==================================================
-         FOOTER
-    =================================================== -->
-
-    <footer class="site-footer">
-
-        <div class="container">
-
-
-            <div class="footer-top">
-
-
-                <a
-                    href="#home"
-                    class="footer-brand"
-                >
-
-                    <span class="brand-mark">
-                        <span></span>
-                    </span>
-
-
-                    <span class="brand-text">
-
-                        <strong>
-                            CHÉRI
-                        </strong>
-
-                        <small>
-                            CAFÉ & EATERY
-                        </small>
-
-                    </span>
-
-                </a>
-
-
-                <p>
-                    Good food.
-                    Good company.
-                    Good moments.
-                </p>
-
-            </div>
-
-
-
-            <div class="footer-bottom">
-
-                <span>
-                    © 2026 CHÉRI Café & Eatery
-                </span>
-
-
-                <div class="footer-links">
-
-                    <a href="#home">
-                        Home
-                    </a>
-
-                    <a href="#about">
-                        About
-                    </a>
-
-                    <a href="#food">
-                        Food
-                    </a>
-
-                    <a href="#space">
-                        Space
-                    </a>
-
-                    <a href="#visit">
-                        Visit
-                    </a>
-
-                </div>
-
-            </div>
+          <a
+            href="tel:+917588672309"
+            class="btn btn-secondary"
+          >
+            Call CHÉRI
+          </a>
 
         </div>
 
-    </footer>
+      </div>
+
+    </section>
+
+  </main>
 
 
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
 
-    <!-- ==================================================
-         FLOATING CALL BUTTON
-    =================================================== -->
+  <footer class="footer">
 
-    <a
-        href="tel:+919922822247"
-        class="floating-call"
-        aria-label="Call CHÉRI Café & Eatery"
-    >
-        Call
-    </a>
+    <div class="footer-inner">
 
+      <div class="footer-brand">
+        CAFÉ & EATERY
+      </div>
 
+      <div class="footer-tagline">
+        Good food. Good company. Good moments.
+      </div>
 
-    <!-- ==================================================
-         JAVASCRIPT
-    =================================================== -->
+      <div class="footer-links">
 
-    <script>
+        <a href="#home">
+          Home
+        </a>
 
-        /*
-         * Mobile navigation
-         */
+        <a href="#about">
+          About
+        </a>
 
-        const menuToggle =
-            document.getElementById("menuToggle");
+        <a href="#food">
+          Food
+        </a>
 
-        const mobileMenu =
-            document.getElementById("mobileMenu");
+        <a href="#space">
+          Space
+        </a>
 
+        <a href="#visit">
+          Visit
+        </a>
 
-        menuToggle.addEventListener(
-            "click",
-            function () {
+      </div>
 
-                const isOpen =
-                    menuToggle.getAttribute(
-                        "aria-expanded"
-                    ) === "true";
+      <div class="footer-copy">
+        © 2026 CHÉRI Café & Eatery
+      </div>
 
+    </div>
 
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    String(!isOpen)
-                );
-
-
-                mobileMenu.classList.toggle(
-                    "active"
-                );
-
-            }
-        );
+  </footer>
 
 
+  <!-- =====================================================
+       MOBILE CALL BUTTON
+  ====================================================== -->
 
-        /*
-         * Close mobile menu after
-         * selecting a navigation link.
-         */
-
-        const mobileLinks =
-            mobileMenu.querySelectorAll("a");
-
-
-        mobileLinks.forEach(
-            function (link) {
-
-                link.addEventListener(
-                    "click",
-                    function () {
-
-                        mobileMenu.classList.remove(
-                            "active"
-                        );
-
-
-                        menuToggle.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-                    }
-                );
-
-            }
-        );
-
-
-
-        /*
-         * Close menu when clicking outside.
-         */
-
-        document.addEventListener(
-            "click",
-            function (event) {
-
-                const clickedInsideMenu =
-                    mobileMenu.contains(event.target);
-
-                const clickedToggle =
-                    menuToggle.contains(event.target);
-
-
-                if (
-                    !clickedInsideMenu &&
-                    !clickedToggle
-                ) {
-
-                    mobileMenu.classList.remove(
-                        "active"
-                    );
-
-
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-                }
-
-            }
-        );
-
-
-
-        /*
-         * Smooth internal scrolling.
-         */
-
-        document.querySelectorAll(
-            'a[href^="#"]'
-        ).forEach(
-            function (anchor) {
-
-                anchor.addEventListener(
-                    "click",
-                    function (event) {
-
-                        const targetId =
-                            this.getAttribute("href");
-
-
-                        if (
-                            targetId === "#" ||
-                            !targetId
-                        ) {
-                            return;
-                        }
-
-
-                        const target =
-                            document.querySelector(
-                                targetId
-                            );
-
-
-                        if (target) {
-
-                            event.preventDefault();
-
-
-                            target.scrollIntoView({
-                                behavior: "smooth",
-                                block: "start"
-                            });
-
-                        }
-
-                    }
-                );
-
-            }
-        );
-
-    </script>
+  <a
+    href="tel:+917588672309"
+    class="mobile-call"
+    aria-label="Call CHÉRI"
+  >
+    Call
+  </a>
 
 
 </body>
-
 </html>
