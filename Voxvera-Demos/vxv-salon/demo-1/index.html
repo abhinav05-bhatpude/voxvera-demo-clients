@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luxe Studio | Your Style. Your Confidence.</title>
+  <meta name="description" content="Luxe Studio is a unisex salon and beauty studio offering hair and grooming, skin and beauty, and makeup and bridal services. (Fictional demo website.)">
+  <meta name="theme-color" content="#202020">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23202020'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23B89572'%3EL%3C/text%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="demo-bar" role="note">
+    Demo website for a fictional salon. All business details, prices and testimonials are illustrative samples.
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home" aria-label="Luxe Studio, back to top">
+        <span class="logo-mark" aria-hidden="true">L</span>
+        <span>Luxe Studio</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn--gold nav-cta" href="#booking">Book Appointment</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Unisex salon &amp; beauty studio</p>
+          <h1 id="hero-title">Your Style.<br><em>Your Confidence.</em></h1>
+          <p class="lead">Hair, skin, grooming and makeup in one calm, considered space. We take the time to understand how you want to look and feel, then make it effortless.</p>
+          <div class="hero-actions">
+            <a class="btn btn--dark" href="#booking">Book Appointment</a>
+            <a class="link-arrow" href="#services">Explore services</a>
+          </div>
+          <ul class="hero-meta" aria-label="Service areas">
+            <li>Hair &amp; Grooming</li>
+            <li>Skin &amp; Beauty</li>
+            <li>Makeup &amp; Bridal</li>
+          </ul>
+        </div>
+
+        <figure class="hero-media reveal reveal-img" data-delay="150">
+          <div class="media">
+            <img src="assets/luxe-hero.jpg" alt="Luxe Studio premium salon interior" fetchpriority="high" decoding="async">
+          </div>
+          <figcaption>The Luxe Studio salon floor</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Services</p>
+          <h2 id="services-title">Three disciplines, one standard of care.</h2>
+          <p class="lead">Every visit begins with a conversation, so the result suits your face, your routine and the occasion.</p>
+        </header>
+
+        <article class="service" aria-labelledby="service-hair-title">
+          <div class="service-media reveal reveal-img">
+            <div class="media media--tall">
+              <img src="assets/luxe-hair-styling.jpg" alt="Stylist cutting and blow-drying a client's hair at Luxe Studio" loading="lazy" decoding="async">
+            </div>
+            <div class="media media--inset">
+              <img src="assets/luxe-mens-grooming.jpg" alt="Men's haircut and beard grooming at Luxe Studio" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="service-body reveal" data-delay="120">
+            <span class="service-num" aria-hidden="true">01</span>
+            <h3 id="service-hair-title">Hair &amp; Grooming</h3>
+            <p>Precision cutting, colour and blow-dry artistry, alongside considered grooming for men. Shape, texture and finish are tailored to you.</p>
+            <ul class="service-list">
+              <li>Cuts and styling for all hair types</li>
+              <li>Colour, toning and gloss treatments</li>
+              <li>Men's haircuts and beard sculpting</li>
+              <li>Scalp and conditioning rituals</li>
+            </ul>
+            <a class="link-arrow" href="#booking" data-service="hair-grooming">Book hair &amp; grooming</a>
+          </div>
+        </article>
+
+        <article class="service service--reverse" aria-labelledby="service-skin-title">
+          <div class="service-media reveal reveal-img">
+            <div class="media media--tall">
+              <img src="assets/luxe-skincare.jpg" alt="Facial skincare treatment being performed at Luxe Studio" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="service-body reveal" data-delay="120">
+            <span class="service-num" aria-hidden="true">02</span>
+            <h3 id="service-skin-title">Skin &amp; Beauty</h3>
+            <p>Facials and skin rituals that start with a proper consultation. Calm, effective care to leave skin balanced, hydrated and glowing.</p>
+            <ul class="service-list">
+              <li>Signature and deep-cleansing facials</li>
+              <li>Hydration and brightening treatments</li>
+              <li>Brow and lash care</li>
+              <li>Hand and foot rituals</li>
+            </ul>
+            <a class="link-arrow" href="#booking" data-service="skin-beauty">Book skin &amp; beauty</a>
+          </div>
+        </article>
+
+        <article class="service" aria-labelledby="service-makeup-title">
+          <div class="service-media reveal reveal-img">
+            <div class="media media--tall">
+              <img src="assets/luxe-makeup.jpg" alt="Makeup artist applying bridal makeup at Luxe Studio" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="service-body reveal" data-delay="120">
+            <span class="service-num" aria-hidden="true">03</span>
+            <h3 id="service-makeup-title">Makeup &amp; Bridal</h3>
+            <p>From soft daytime polish to full bridal artistry, with a trial beforehand so that on the day there are no surprises, only confidence.</p>
+            <ul class="service-list">
+              <li>Event and evening makeup</li>
+              <li>Bridal trial and wedding-day makeup</li>
+              <li>Hair and makeup packages</li>
+              <li>Bridal party styling</li>
+            </ul>
+            <a class="link-arrow" href="#booking" data-service="makeup-bridal">Book makeup &amp; bridal</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FEATURED TREATMENTS -->
+    <section class="section treatments" id="treatments" aria-labelledby="treatments-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow eyebrow--light">Featured treatments</p>
+          <h2 id="treatments-title">A few favourites.</h2>
+          <p class="demo-tag">Demo content: sample prices and durations, to be replaced before publishing.</p>
+        </header>
+
+        <ul class="treatment-list">
+          <li class="treatment reveal">
+            <div class="t-main">
+              <span class="t-cat">Hair &amp; Grooming</span>
+              <h3>Signature Cut &amp; Style</h3>
+            </div>
+            <p class="t-desc">Consultation, precision cut, wash and finish. <span class="t-time">About 60 min</span></p>
+            <span class="t-price"><span class="price-from">from</span> <span class="price">₹1,200</span></span>
+            <a class="btn btn--small" href="#booking" data-service="hair-grooming" data-treatment="Signature Cut &amp; Style" aria-label="Book Signature Cut and Style">Book</a>
+          </li>
+          <li class="treatment reveal">
+            <div class="t-main">
+              <span class="t-cat">Hair &amp; Grooming</span>
+              <h3>Beard Sculpt &amp; Hot Towel</h3>
+            </div>
+            <p class="t-desc">Shape, line-up and a warm towel finish with conditioning oil. <span class="t-time">About 40 min</span></p>
+            <span class="t-price"><span class="price-from">from</span> <span class="price">₹700</span></span>
+            <a class="btn btn--small" href="#booking" data-service="hair-grooming" data-treatment="Beard Sculpt &amp; Hot Towel" aria-label="Book Beard Sculpt and Hot Towel">Book</a>
+          </li>
+          <li class="treatment reveal">
+            <div class="t-main">
+              <span class="t-cat">Skin &amp; Beauty</span>
+              <h3>Hydrating Radiance Facial</h3>
+            </div>
+            <p class="t-desc">Cleanse, exfoliate, mask and massage for fresh, even skin. <span class="t-time">About 60 min</span></p>
+            <span class="t-price"><span class="price-from">from</span> <span class="price">₹2,400</span></span>
+            <a class="btn btn--small" href="#booking" data-service="skin-beauty" data-treatment="Hydrating Radiance Facial" aria-label="Book Hydrating Radiance Facial">Book</a>
+          </li>
+          <li class="treatment reveal">
+            <div class="t-main">
+              <span class="t-cat">Skin &amp; Beauty</span>
+              <h3>Gold Glow Skin Ritual</h3>
+            </div>
+            <p class="t-desc">Our longest facial, with a skin analysis and a take-home plan. <span class="t-time">About 90 min</span></p>
+            <span class="t-price"><span class="price-from">from</span> <span class="price">₹3,200</span></span>
+            <a class="btn btn--small" href="#booking" data-service="skin-beauty" data-treatment="Gold Glow Skin Ritual" aria-label="Book Gold Glow Skin Ritual">Book</a>
+          </li>
+          <li class="treatment reveal">
+            <div class="t-main">
+              <span class="t-cat">Makeup &amp; Bridal</span>
+              <h3>Evening Glam Makeup</h3>
+            </div>
+            <p class="t-desc">Skin prep and full makeup designed for photographs and long nights. <span class="t-time">About 75 min</span></p>
+            <span class="t-price"><span class="price-from">from</span> <span class="price">₹3,500</span></span>
+            <a class="btn btn--small" href="#booking" data-service="makeup-bridal" data-treatment="Evening Glam Makeup" aria-label="Book Evening Glam Makeup">Book</a>
+          </li>
+          <li class="treatment reveal">
+            <div class="t-main">
+              <span class="t-cat">Makeup &amp; Bridal</span>
+              <h3>Bridal Trial &amp; Wedding Day</h3>
+            </div>
+            <p class="t-desc">A full trial session plus makeup and hair on your wedding day. <span class="t-time">Trial 2 hrs · Day-of 3 hrs</span></p>
+            <span class="t-price"><span class="price-from">from</span> <span class="price">₹18,000</span></span>
+            <a class="btn btn--small" href="#booking" data-service="makeup-bridal" data-treatment="Bridal Trial &amp; Wedding Day" aria-label="Book Bridal Trial and Wedding Day">Book</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-media reveal reveal-img">
+          <div class="media media--tall">
+            <img src="assets/luxe-reception.jpg" alt="Luxe Studio reception area and salon interior design" loading="lazy" decoding="async">
+          </div>
+        </div>
+
+        <div class="about-body">
+          <header class="reveal">
+            <p class="eyebrow">About Luxe Studio</p>
+            <h2 id="about-title">Personal style, made with care.</h2>
+          </header>
+          <p class="lead reveal" data-delay="80">We believe great hair, healthy skin and a confident look are personal. There is no single trend that suits everyone, so we start by listening.</p>
+          <p class="reveal" data-delay="120">Luxe Studio is a unisex salon and beauty studio designed to feel unhurried. Our team blends technical skill with an honest eye, so every cut, treatment and finish reflects who you are, from a sharp everyday grooming routine to your wedding morning.</p>
+
+          <dl class="pillars">
+            <div class="pillar reveal" data-delay="80">
+              <dt>Personal style</dt>
+              <dd>Looks built around your features, texture and lifestyle, not the latest trend.</dd>
+            </div>
+            <div class="pillar reveal" data-delay="140">
+              <dt>Considered grooming</dt>
+              <dd>Clean, precise haircuts and beard work for men, with finishing details that last.</dd>
+            </div>
+            <div class="pillar reveal" data-delay="200">
+              <dt>Beauty that lasts</dt>
+              <dd>Skin-first treatments and makeup designed to look good and feel comfortable.</dd>
+            </div>
+            <div class="pillar reveal" data-delay="260">
+              <dt>The experience</dt>
+              <dd>A calm space, clear communication and enough time, from the first hello to the last mirror check.</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Gallery</p>
+          <h2 id="gallery-title">Inside the studio.</h2>
+          <p class="lead">Select any image to view it larger. Use the arrow keys or swipe to move between photographs.</p>
+        </header>
+
+        <div class="gallery-grid">
+          <button class="gallery-item reveal" type="button" data-gallery-item data-caption="Hair cutting and styling" aria-label="Open image: hair cutting and styling">
+            <span class="media"><img src="assets/luxe-hair-styling.jpg" alt="Stylist cutting and blow-drying a client's hair at Luxe Studio" loading="lazy" decoding="async"></span>
+            <span class="gallery-cap">Hair cutting &amp; styling</span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-gallery-item data-caption="Skincare treatments" aria-label="Open image: skincare treatments" data-delay="80">
+            <span class="media"><img src="assets/luxe-skincare.jpg" alt="Facial skincare treatment being performed at Luxe Studio" loading="lazy" decoding="async"></span>
+            <span class="gallery-cap">Skincare treatments</span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-gallery-item data-caption="Makeup and bridal" aria-label="Open image: makeup and bridal" data-delay="120">
+            <span class="media"><img src="assets/luxe-makeup.jpg" alt="Makeup artist applying bridal makeup at Luxe Studio" loading="lazy" decoding="async"></span>
+            <span class="gallery-cap">Makeup &amp; bridal</span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-gallery-item data-caption="Men's haircut and beard grooming" aria-label="Open image: men's haircut and beard grooming">
+            <span class="media"><img src="assets/luxe-mens-grooming.jpg" alt="Men's haircut and beard grooming at Luxe Studio" loading="lazy" decoding="async"></span>
+            <span class="gallery-cap">Men's grooming</span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-gallery-item data-caption="Reception and interior design" aria-label="Open image: reception and interior design" data-delay="80">
+            <span class="media"><img src="assets/luxe-reception.jpg" alt="Luxe Studio reception area and salon interior design" loading="lazy" decoding="async"></span>
+            <span class="gallery-cap">Reception &amp; interiors</span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-gallery-item data-caption="The salon floor" aria-label="Open image: the salon floor" data-delay="120">
+            <span class="media"><img src="assets/luxe-hero.jpg" alt="Luxe Studio premium salon interior" loading="lazy" decoding="async"></span>
+            <span class="gallery-cap">The salon floor</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS (ILLUSTRATIVE) -->
+    <section class="section testimonials" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Kind words</p>
+          <h2 id="testimonials-title">What clients might say.</h2>
+          <p class="demo-tag">Illustrative demo content: these are sample testimonials, not real customer reviews. Replace with genuine, permissioned reviews before publishing.</p>
+        </header>
+
+        <div class="quote-grid">
+          <figure class="quote reveal">
+            <span class="quote-badge">Demo testimonial</span>
+            <blockquote><p>It was exactly the cut I described, only better. I left feeling like myself, just sharper.</p></blockquote>
+            <figcaption>Sample client · Hair &amp; Grooming</figcaption>
+          </figure>
+          <figure class="quote reveal" data-delay="120">
+            <span class="quote-badge">Demo testimonial</span>
+            <blockquote><p>A calm, unhurried space. The skin consultation was thorough and the facial was the best part of my week.</p></blockquote>
+            <figcaption>Sample client · Skin &amp; Beauty</figcaption>
+          </figure>
+          <figure class="quote reveal" data-delay="240">
+            <span class="quote-badge">Demo testimonial</span>
+            <blockquote><p>The bridal trial took every worry away. On the day, the makeup looked flawless from morning to night.</p></blockquote>
+            <figcaption>Sample client · Makeup &amp; Bridal</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & BOOKING -->
+    <section class="section contact" id="contact" aria-labelledby="booking-title">
+      <div class="container" id="booking">
+        <header class="section-head reveal">
+          <p class="eyebrow">Contact &amp; booking</p>
+          <h2 id="booking-title">Book your visit.</h2>
+          <p class="lead">Tell us what you have in mind and a preferred time. We will confirm your appointment personally.</p>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p class="demo-tag">Demo content: all contact details and hours below are placeholders. Replace them with the salon's real information.</p>
+
+            <h3>Visit us</h3>
+            <!-- REPLACE: salon address -->
+            <address class="placeholder">[Street address]<br>[City, State / Region, Postal code]</address>
+            <a class="link-arrow" id="directions-link" href="#contact" data-directions>Get directions</a>
+
+            <h3>Get in touch</h3>
+            <ul class="contact-list">
+              <!-- REPLACE: phone and email -->
+              <li><span class="label">Phone</span> <span class="placeholder">[+00 00000 00000]</span></li>
+              <li><span class="label">Email</span> <span class="placeholder">[hello@your-salon-domain]</span></li>
+              <li><span class="label">WhatsApp</span> <span class="placeholder">[set number in script.js]</span></li>
+            </ul>
+            <a class="btn btn--outline btn--wa" href="#booking" data-whatsapp-link>Book on WhatsApp</a>
+
+            <h3>Opening hours <span class="sample">(sample)</span></h3>
+            <!-- REPLACE: opening hours -->
+            <table class="hours">
+              <caption class="sr-only">Sample opening hours</caption>
+              <tbody>
+                <tr><th scope="row">Monday – Friday</th><td>10:00 – 19:00</td></tr>
+                <tr><th scope="row">Saturday</th><td>10:00 – 18:00</td></tr>
+                <tr><th scope="row">Sunday</th><td>Closed</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="booking-wrap reveal" data-delay="120">
+            <form id="booking-form" class="booking-form" novalidate aria-labelledby="booking-title">
+              <p class="form-note">Demo form: requests are not sent anywhere until you connect a booking service or backend. Fields marked <span aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="name">Full name <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                  <input id="name" name="name" type="text" autocomplete="name" required aria-required="true" aria-describedby="name-error">
+                  <p class="field-error" id="name-error"></p>
+                </div>
+                <div class="field">
+                  <label for="phone">Phone <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                  <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-required="true" aria-describedby="phone-error">
+                  <p class="field-error" id="phone-error"></p>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="email">Email <span class="optional">(optional)</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error">
+                <p class="field-error" id="email-error"></p>
+              </div>
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="service">Service <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                  <select id="service" name="service" required aria-required="true" aria-describedby="service-error">
+                    <option value="" selected disabled>Select a service</option>
+                    <option value="hair-grooming">Hair &amp; Grooming</option>
+                    <option value="skin-beauty">Skin &amp; Beauty</option>
+                    <option value="makeup-bridal">Makeup &amp; Bridal</option>
+                  </select>
+                  <p class="field-error" id="service-error"></p>
+                </div>
+                <div class="field">
+                  <label for="treatment">Treatment of interest <span class="optional">(optional)</span></label>
+                  <input id="treatment" name="treatment" type="text" autocomplete="off" placeholder="e.g. Signature Cut &amp; Style">
+                  <p class="field-error" id="treatment-error"></p>
+                </div>
+              </div>
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="date">Preferred date <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                  <input id="date" name="date" type="date" required aria-required="true" aria-describedby="date-error">
+                  <p class="field-error" id="date-error"></p>
+                </div>
+                <div class="field">
+                  <label for="time">Preferred time <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                  <select id="time" name="time" required aria-required="true" aria-describedby="time-error">
+                    <option value="" selected disabled>Select a time</option>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="11:00 AM">11:00 AM</option>
+                    <option value="12:00 PM">12:00 PM</option>
+                    <option value="1:00 PM">1:00 PM</option>
+                    <option value="2:00 PM">2:00 PM</option>
+                    <option value="3:00 PM">3:00 PM</option>
+                    <option value="4:00 PM">4:00 PM</option>
+                    <option value="5:00 PM">5:00 PM</option>
+                    <option value="6:00 PM">6:00 PM</option>
+                  </select>
+                  <p class="field-error" id="time-error"></p>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="notes">Notes <span class="optional">(optional)</span></label>
+                <textarea id="notes" name="notes" rows="3" aria-describedby="notes-error"></textarea>
+                <p class="field-error" id="notes-error"></p>
+              </div>
+
+              <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+
+              <div class="form-actions">
+                <button class="btn btn--dark" type="submit">Request appointment</button>
+                <button class="btn btn--outline btn--wa" type="button" id="form-whatsapp">Send on WhatsApp</button>
+              </div>
+            </form>
+
+            <div id="form-success" class="form-success" hidden tabindex="-1">
+              <p class="eyebrow">Demo confirmation</p>
+              <h3>Thank you, <span id="success-name"></span>.</h3>
+              <p>Your request has been recorded in this demo. On a live site, this is where the studio would confirm your appointment by phone or message.</p>
+              <dl class="summary" id="success-summary"></dl>
+              <div class="form-actions">
+                <button class="btn btn--gold btn--wa" type="button" id="success-whatsapp">Confirm on WhatsApp</button>
+                <button class="btn btn--outline" type="button" id="book-another">New request</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo logo--light" href="#home" aria-label="Luxe Studio, back to top">
+          <span class="logo-mark" aria-hidden="true">L</span>
+          <span>Luxe Studio</span>
+        </a>
+        <p>Your Style. Your Confidence.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="footer-note">Luxe Studio is a fictional business created for demonstration. Sample prices, hours, contact details and testimonials are illustrative only.</p>
+    </div>
+    <div class="container footer-base">
+      <p>&copy; <span id="year">2026</span> Luxe Studio (demo). All rights reserved.</p>
+      <a href="#home" class="to-top">Back to top</a>
+    </div>
+  </footer>
+
+  <!-- Image viewer for the gallery -->
+  <dialog id="lightbox" class="lightbox" aria-label="Gallery image viewer">
+    <div class="lightbox-stage">
+      <button class="lightbox-close" type="button" aria-label="Close image viewer">&times;</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">&#8249;</button>
+      <figure class="lightbox-figure">
+        <img class="lightbox-img" src="" alt="">
+        <figcaption><span class="lightbox-caption"></span> <span class="lightbox-count"></span></figcaption>
+      </figure>
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">&#8250;</button>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
