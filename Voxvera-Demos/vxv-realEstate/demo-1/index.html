@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UrbanKey Properties | Find Your Place. Build Your Future.</title>
+  <meta name="description" content="UrbanKey Properties is a fictional real estate brand, created as a demonstration website for property discovery and enquiries. All listings are illustrative.">
+  <meta name="theme-color" content="#172C25">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23172C25'/%3E%3Cpath d='M16 46V26l16-12 16 12v20H38V34H26v12z' fill='%23C9B78C'/%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="demo-bar" role="note">
+    Fictional demonstration website. All properties, prices, locations, measurements, amenities and contact details are illustrative sample data.
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home" aria-label="UrbanKey Properties, back to top">
+        <svg class="logo-mark" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true" focusable="false">
+          <rect x="1" y="1" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M9 30V17l11-8 11 8v13h-7v-8h-8v8z" fill="currentColor"/>
+          <circle cx="20" cy="19" r="2.2" fill="#C9B78C"/>
+        </svg>
+        <span class="logo-text">UrbanKey <span>Properties</span></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#properties">Properties</a></li>
+          <li><a href="#property-types">Property Types</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn--dark nav-cta" href="#properties">Explore Properties</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="media hero-bg">
+        <img src="assets/estate-hero.jpg" alt="Contemporary residential property exterior at dusk" fetchpriority="high" decoding="async">
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow--gold">UrbanKey Properties</p>
+          <h1 id="hero-title">Find a Property That <em>Moves You Forward.</em></h1>
+          <p class="lead">Explore thoughtfully selected homes, apartments, commercial spaces, and investment opportunities.</p>
+          <div class="hero-actions">
+            <a class="btn btn--gold" href="#properties">Explore Properties</a>
+            <a class="btn btn--ghost" href="#enquiry">Enquire About a Property</a>
+          </div>
+        </div>
+
+        <form id="search-form" class="search-panel" aria-labelledby="search-title" novalidate>
+          <div class="search-head">
+            <h2 id="search-title">Search sample listings</h2>
+            <p>Illustrative demo data: all locations and prices are samples.</p>
+          </div>
+          <div class="search-fields">
+            <div class="search-field">
+              <label for="search-type">Property type</label>
+              <select id="search-type" name="type">
+                <option value="">Any type</option>
+                <option value="apartment">Apartments</option>
+                <option value="villa">Villas &amp; Houses</option>
+                <option value="plot">Residential Plots</option>
+                <option value="commercial">Commercial Spaces</option>
+              </select>
+            </div>
+            <div class="search-field">
+              <label for="search-location">Location <span class="sample">(sample)</span></label>
+              <select id="search-location" name="location">
+                <option value="">Any location</option>
+                <option value="Riverside District">Riverside District</option>
+                <option value="Hillcrest Heights">Hillcrest Heights</option>
+                <option value="Central Business District">Central Business District</option>
+                <option value="Greenfield Township">Greenfield Township</option>
+                <option value="Lakeview Quarter">Lakeview Quarter</option>
+              </select>
+            </div>
+            <div class="search-field">
+              <label for="search-budget">Budget range <span class="sample">(illustrative)</span></label>
+              <select id="search-budget" name="budget">
+                <option value="">Any budget</option>
+                <option value="0-50">Under ₹50 L</option>
+                <option value="50-100">₹50 L – ₹1 Cr</option>
+                <option value="100-200">₹1 Cr – ₹2 Cr</option>
+                <option value="200-500">₹2 Cr – ₹5 Cr</option>
+                <option value="500-">Above ₹5 Cr</option>
+              </select>
+            </div>
+            <div class="search-actions">
+              <button class="btn btn--dark" type="submit">Search</button>
+              <button class="btn-text" type="button" id="search-reset">Reset</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FEATURED PROPERTIES -->
+    <section class="section properties" id="properties" aria-labelledby="properties-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Featured properties</p>
+          <h2 id="properties-title">Selected homes and spaces.</h2>
+          <p class="demo-tag">Illustrative demo listings: these properties are not real and are not available for sale. Names, locations, prices and measurements are samples.</p>
+        </header>
+
+        <div class="filter-bar reveal">
+          <div class="chips" role="group" aria-label="Filter by property type">
+            <button class="chip" type="button" data-type="" aria-pressed="true">All</button>
+            <button class="chip" type="button" data-type="apartment" aria-pressed="false">Apartments</button>
+            <button class="chip" type="button" data-type="villa" aria-pressed="false">Villas &amp; Houses</button>
+            <button class="chip" type="button" data-type="plot" aria-pressed="false">Residential Plots</button>
+            <button class="chip" type="button" data-type="commercial" aria-pressed="false">Commercial Spaces</button>
+          </div>
+          <p class="results-count" id="results-count" role="status" aria-live="polite"></p>
+        </div>
+
+        <div class="listing-grid" id="listing-grid">
+
+          <article class="listing reveal" id="listing-aurelia" data-id="aurelia" data-type="apartment" data-location="Riverside District" data-price="145" data-area="1,450 sq ft" data-beds="3" data-baths="2" data-enq="buying">
+            <div class="media listing-media">
+              <img src="assets/estate-apartments.jpg" alt="Modern apartment complex with balconies and landscaped grounds" loading="lazy" decoding="async">
+              <span class="tag">Apartment complex</span>
+            </div>
+            <div class="listing-body">
+              <p class="listing-loc">Riverside District <span>· sample location</span></p>
+              <h3>Aurelia Residences</h3>
+              <p class="listing-price"><span class="price">₹1.45 Cr</span> <span class="price-note">illustrative price</span></p>
+              <ul class="specs">
+                <li>3 Beds</li>
+                <li>2 Baths</li>
+                <li>1,450 sq ft <small>(illustrative)</small></li>
+              </ul>
+              <div class="listing-actions">
+                <button class="btn btn--dark" type="button" data-details="aurelia" aria-label="View details: Aurelia Residences">View Details</button>
+                <a class="btn btn--outline" href="#enquiry" data-listing="aurelia" aria-label="Enquire now: Aurelia Residences">Enquire Now</a>
+              </div>
+            </div>
+            <div class="listing-details" hidden>
+              <p class="d-desc">A sample mid-rise apartment complex near a riverside promenade. This illustrative listing shows how layout, finishes and building facilities could be presented to a buyer.</p>
+              <ul class="d-amenities">
+                <li>Covered parking</li>
+                <li>Fitness studio</li>
+                <li>Landscaped courtyard</li>
+                <li>Lift access</li>
+                <li>Security desk</li>
+                <li>Children's play area</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="listing reveal" id="listing-cedar-ridge" data-id="cedar-ridge" data-type="villa" data-location="Hillcrest Heights" data-price="540" data-area="3,800 sq ft" data-beds="4" data-baths="5" data-enq="buying">
+            <div class="media listing-media">
+              <img src="assets/estate-villa.jpg" alt="Premium villa with a private garden and swimming pool" loading="lazy" decoding="async">
+              <span class="tag">Premium villa</span>
+            </div>
+            <div class="listing-body">
+              <p class="listing-loc">Hillcrest Heights <span>· sample location</span></p>
+              <h3>Cedar Ridge Villa</h3>
+              <p class="listing-price"><span class="price">₹5.40 Cr</span> <span class="price-note">illustrative price</span></p>
+              <ul class="specs">
+                <li>4 Beds</li>
+                <li>5 Baths</li>
+                <li>3,800 sq ft <small>(illustrative)</small></li>
+              </ul>
+              <div class="listing-actions">
+                <button class="btn btn--dark" type="button" data-details="cedar-ridge" aria-label="View details: Cedar Ridge Villa">View Details</button>
+                <a class="btn btn--outline" href="#enquiry" data-listing="cedar-ridge" aria-label="Enquire now: Cedar Ridge Villa">Enquire Now</a>
+              </div>
+            </div>
+            <div class="listing-details" hidden>
+              <p class="d-desc">A sample hillside villa with generous living spaces and a private garden. Illustrative content for demonstrating how a premium listing could be described.</p>
+              <ul class="d-amenities">
+                <li>Private garden</li>
+                <li>Swimming pool</li>
+                <li>Home office</li>
+                <li>Two-car garage</li>
+                <li>Covered terrace</li>
+                <li>Smart-home wiring</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="listing reveal" id="listing-meridian" data-id="meridian" data-type="commercial" data-location="Central Business District" data-price="320" data-area="2,100 sq ft" data-enq="commercial">
+            <div class="media listing-media">
+              <img src="assets/estate-commercial.jpg" alt="Modern commercial office building in a business district" loading="lazy" decoding="async">
+              <span class="tag">Commercial property</span>
+            </div>
+            <div class="listing-body">
+              <p class="listing-loc">Central Business District <span>· sample location</span></p>
+              <h3>Meridian Business Suites</h3>
+              <p class="listing-price"><span class="price">₹3.20 Cr</span> <span class="price-note">illustrative price</span></p>
+              <ul class="specs">
+                <li>Office floor</li>
+                <li>2,100 sq ft <small>(illustrative)</small></li>
+              </ul>
+              <div class="listing-actions">
+                <button class="btn btn--dark" type="button" data-details="meridian" aria-label="View details: Meridian Business Suites">View Details</button>
+                <a class="btn btn--outline" href="#enquiry" data-listing="meridian" aria-label="Enquire now: Meridian Business Suites">Enquire Now</a>
+              </div>
+            </div>
+            <div class="listing-details" hidden>
+              <p class="d-desc">A sample office floor in a mixed-use commercial building. Illustrative content showing how a commercial listing could present space, access and building services.</p>
+              <ul class="d-amenities">
+                <li>Open-plan floor</li>
+                <li>Reception lobby</li>
+                <li>Meeting rooms</li>
+                <li>Backup power</li>
+                <li>Visitor parking</li>
+                <li>Internet-ready</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="listing reveal" id="listing-greenfield-gardens" data-id="greenfield-gardens" data-type="apartment" data-location="Greenfield Township" data-price="78" data-area="from 920 sq ft" data-beds="2–3" data-baths="2" data-enq="buying">
+            <div class="media listing-media">
+              <img src="assets/estate-development.jpg" alt="New residential development with modern homes and green spaces" loading="lazy" decoding="async">
+              <span class="tag">New development</span>
+            </div>
+            <div class="listing-body">
+              <p class="listing-loc">Greenfield Township <span>· sample location</span></p>
+              <h3>Greenfield Gardens</h3>
+              <p class="listing-price"><span class="price"><small>from</small> ₹78 L</span> <span class="price-note">illustrative price</span></p>
+              <ul class="specs">
+                <li>2–3 Beds</li>
+                <li>2 Baths</li>
+                <li>from 920 sq ft <small>(illustrative)</small></li>
+              </ul>
+              <div class="listing-actions">
+                <button class="btn btn--dark" type="button" data-details="greenfield-gardens" aria-label="View details: Greenfield Gardens">View Details</button>
+                <a class="btn btn--outline" href="#enquiry" data-listing="greenfield-gardens" aria-label="Enquire now: Greenfield Gardens">Enquire Now</a>
+              </div>
+            </div>
+            <div class="listing-details" hidden>
+              <p class="d-desc">A sample new residential development of low-rise homes arranged around shared green spaces. Illustrative content showing how a project, its phases and its facilities could be introduced.</p>
+              <ul class="d-amenities">
+                <li>Clubhouse</li>
+                <li>Shared green spaces</li>
+                <li>Cycle paths</li>
+                <li>EV charging provision</li>
+                <li>Rainwater harvesting</li>
+                <li>Community garden</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="listing reveal" id="listing-terrace-garden" data-id="terrace-garden" data-type="villa" data-location="Greenfield Township" data-price="210" data-area="2,000 sq ft" data-beds="3" data-baths="3" data-enq="buying">
+            <div class="media listing-media">
+              <img src="assets/estate-interior.jpg" alt="Bright modern home interior with open living space" loading="lazy" decoding="async">
+              <span class="tag">House</span>
+            </div>
+            <div class="listing-body">
+              <p class="listing-loc">Greenfield Township <span>· sample location</span></p>
+              <h3>Terrace Garden Home</h3>
+              <p class="listing-price"><span class="price">₹2.10 Cr</span> <span class="price-note">illustrative price</span></p>
+              <ul class="specs">
+                <li>3 Beds</li>
+                <li>3 Baths</li>
+                <li>2,000 sq ft <small>(illustrative)</small></li>
+              </ul>
+              <div class="listing-actions">
+                <button class="btn btn--dark" type="button" data-details="terrace-garden" aria-label="View details: Terrace Garden Home">View Details</button>
+                <a class="btn btn--outline" href="#enquiry" data-listing="terrace-garden" aria-label="Enquire now: Terrace Garden Home">Enquire Now</a>
+              </div>
+            </div>
+            <div class="listing-details" hidden>
+              <p class="d-desc">A sample family house with an open-plan interior and a rooftop terrace. Illustrative content showing how interiors and finishes could be described.</p>
+              <ul class="d-amenities">
+                <li>Rooftop terrace</li>
+                <li>Modular kitchen</li>
+                <li>Large windows</li>
+                <li>Study nook</li>
+                <li>Covered parking</li>
+                <li>Garden</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="listing reveal" id="listing-lakeview-plots" data-id="lakeview-plots" data-type="plot" data-location="Lakeview Quarter" data-price="38" data-area="2,400 sq ft plot" data-enq="buying">
+            <div class="media listing-media">
+              <img src="assets/estate-development.jpg" alt="Planned residential development area with new homes and open land" loading="lazy" decoding="async">
+              <span class="tag">Residential plot</span>
+            </div>
+            <div class="listing-body">
+              <p class="listing-loc">Lakeview Quarter <span>· sample location</span></p>
+              <h3>Lakeview Plots</h3>
+              <p class="listing-price"><span class="price">₹38 L</span> <span class="price-note">illustrative price</span></p>
+              <ul class="specs">
+                <li>Residential plot</li>
+                <li>2,400 sq ft <small>(illustrative)</small></li>
+              </ul>
+              <div class="listing-actions">
+                <button class="btn btn--dark" type="button" data-details="lakeview-plots" aria-label="View details: Lakeview Plots">View Details</button>
+                <a class="btn btn--outline" href="#enquiry" data-listing="lakeview-plots" aria-label="Enquire now: Lakeview Plots">Enquire Now</a>
+              </div>
+            </div>
+            <div class="listing-details" hidden>
+              <p class="d-desc">A sample layout of residential plots in a planned community. Illustrative content showing how plot size, access and infrastructure could be presented.</p>
+              <ul class="d-amenities">
+                <li>Gated layout</li>
+                <li>Wide internal roads</li>
+                <li>Street lighting</li>
+                <li>Drainage</li>
+                <li>Park zone</li>
+                <li>Water and power connections</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="listing reveal" id="listing-harbour-point" data-id="harbour-point" data-type="commercial" data-location="Lakeview Quarter" data-price="115" data-area="850 sq ft" data-enq="commercial">
+            <div class="media listing-media">
+              <img src="assets/estate-commercial.jpg" alt="Commercial building with ground-floor retail frontage" loading="lazy" decoding="async">
+              <span class="tag">Commercial space</span>
+            </div>
+            <div class="listing-body">
+              <p class="listing-loc">Lakeview Quarter <span>· sample location</span></p>
+              <h3>Harbour Point Retail Space</h3>
+              <p class="listing-price"><span class="price">₹1.15 Cr</span> <span class="price-note">illustrative price</span></p>
+              <ul class="specs">
+                <li>Ground-floor retail</li>
+                <li>850 sq ft <small>(illustrative)</small></li>
+              </ul>
+              <div class="listing-actions">
+                <button class="btn btn--dark" type="button" data-details="harbour-point" aria-label="View details: Harbour Point Retail Space">View Details</button>
+                <a class="btn btn--outline" href="#enquiry" data-listing="harbour-point" aria-label="Enquire now: Harbour Point Retail Space">Enquire Now</a>
+              </div>
+            </div>
+            <div class="listing-details" hidden>
+              <p class="d-desc">A sample ground-floor retail unit with street frontage. Illustrative content showing how a small commercial listing could be described.</p>
+              <ul class="d-amenities">
+                <li>Street frontage</li>
+                <li>Flexible fit-out layout</li>
+                <li>Loading access</li>
+                <li>Signage space</li>
+                <li>Visitor parking</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="no-results" id="no-results" hidden>
+          <h3>No sample listings match those filters.</h3>
+          <p>Try a different type, location or budget, or clear the filters to see all sample listings.</p>
+          <button class="btn btn--dark" type="button" id="clear-filters">Clear filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROPERTY TYPES -->
+    <section class="section types" id="property-types" aria-labelledby="types-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow eyebrow--gold">Property types</p>
+          <h2 id="types-title">Browse by the kind of space you need.</h2>
+          <p class="lead">Choose a category to see the matching sample listings.</p>
+        </header>
+
+        <ul class="type-list">
+          <li class="reveal">
+            <a class="type-row" href="#properties" data-category="apartment">
+              <span class="type-num" aria-hidden="true">01</span>
+              <span class="type-main">
+                <span class="type-name">Apartments</span>
+                <span class="type-desc">Apartment complexes and new residential developments.</span>
+              </span>
+              <span class="type-count"><span data-count-type="apartment"></span> sample listings</span>
+              <span class="type-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+          <li class="reveal" data-delay="80">
+            <a class="type-row" href="#properties" data-category="villa">
+              <span class="type-num" aria-hidden="true">02</span>
+              <span class="type-main">
+                <span class="type-name">Villas &amp; Houses</span>
+                <span class="type-desc">Private homes, from family houses to premium villas.</span>
+              </span>
+              <span class="type-count"><span data-count-type="villa"></span> sample listings</span>
+              <span class="type-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+          <li class="reveal" data-delay="160">
+            <a class="type-row" href="#properties" data-category="plot">
+              <span class="type-num" aria-hidden="true">03</span>
+              <span class="type-main">
+                <span class="type-name">Residential Plots</span>
+                <span class="type-desc">Land in planned communities, ready to build on.</span>
+              </span>
+              <span class="type-count"><span data-count-type="plot"></span> sample listings</span>
+              <span class="type-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+          <li class="reveal" data-delay="240">
+            <a class="type-row" href="#properties" data-category="commercial">
+              <span class="type-num" aria-hidden="true">04</span>
+              <span class="type-main">
+                <span class="type-name">Commercial Spaces</span>
+                <span class="type-desc">Offices and retail units for businesses of different sizes.</span>
+              </span>
+              <span class="type-count"><span data-count-type="commercial"></span> sample listings</span>
+              <span class="type-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- WHY URBANKEY -->
+    <section class="section why" id="why-urbankey" aria-labelledby="why-title">
+      <div class="container why-grid">
+        <header class="why-head reveal">
+          <p class="eyebrow">Why UrbanKey</p>
+          <h2 id="why-title">Property discovery, made simpler.</h2>
+          <p class="lead">This is the focus proposed for the UrbanKey demo brand: an experience built around what buyers and renters actually need to know.</p>
+        </header>
+
+        <ol class="why-list">
+          <li class="why-item reveal">
+            <span class="why-num" aria-hidden="true">01</span>
+            <div>
+              <h3>Clear property information</h3>
+              <p>Type, location, price, size and amenities are shown up front, so you can compare options without hunting for the basics.</p>
+            </div>
+          </li>
+          <li class="why-item reveal" data-delay="80">
+            <span class="why-num" aria-hidden="true">02</span>
+            <div>
+              <h3>A convenient discovery experience</h3>
+              <p>Search by type, location and budget, or browse by category, and open full details in one step.</p>
+            </div>
+          </li>
+          <li class="why-item reveal" data-delay="160">
+            <span class="why-num" aria-hidden="true">03</span>
+            <div>
+              <h3>Direct enquiry opportunities</h3>
+              <p>Ask about a property from its listing, through the enquiry form or on WhatsApp, with the property already selected.</p>
+            </div>
+          </li>
+          <li class="why-item reveal" data-delay="240">
+            <span class="why-num" aria-hidden="true">04</span>
+            <div>
+              <h3>Residential and commercial options</h3>
+              <p>Apartments, houses, plots and commercial spaces in one place, for buyers, renters and businesses.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-media reveal reveal-img">
+          <div class="media media--tall">
+            <img src="assets/estate-interior.jpg" alt="Bright modern home interior with open living space" loading="lazy" decoding="async">
+          </div>
+        </div>
+
+        <div class="about-body">
+          <header class="reveal">
+            <p class="eyebrow">About UrbanKey Properties</p>
+            <h2 id="about-title">Find your place. Build your future.</h2>
+          </header>
+          <p class="lead reveal" data-delay="80">UrbanKey Properties is a fictional demo brand, created to show how a property business could make discovery and enquiries easier.</p>
+          <p class="reveal" data-delay="120">The idea is simple: present homes, plots and commercial spaces clearly, let people filter to what matters to them, and make it easy to start a conversation. Everything on this site is sample content for a prospective client to replace.</p>
+          <p class="demo-tag reveal" data-delay="160">Demo content: the brand story, listings and details are illustrative and describe no real business or property.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENQUIRY -->
+    <section class="section enquiry" id="enquiry" aria-labelledby="enquiry-title">
+      <div class="container enquiry-grid">
+        <header class="enquiry-head reveal">
+          <p class="eyebrow">Enquire</p>
+          <h2 id="enquiry-title">Ask about a property.</h2>
+          <p class="lead">Tell us what you are looking for and we will get back to you with next steps.</p>
+          <p class="demo-tag" id="form-mode-note">Front-end demo: this form does not transmit enquiries anywhere until a form service or backend is connected.</p>
+        </header>
+
+        <div class="form-wrap reveal" data-delay="120">
+          <form id="enquiry-form" class="enquiry-form" novalidate aria-labelledby="enquiry-title">
+            <p class="form-note">Fields marked <span aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="full-name">Full name <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                <input id="full-name" name="fullName" type="text" autocomplete="name" required aria-required="true" aria-describedby="full-name-error">
+                <p class="field-error" id="full-name-error"></p>
+              </div>
+              <div class="field">
+                <label for="phone">Phone number <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-required="true" aria-describedby="phone-error">
+                <p class="field-error" id="phone-error"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email address <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-required="true" aria-describedby="email-error">
+              <p class="field-error" id="email-error"></p>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="property">Interested property <span class="optional">(optional)</span></label>
+                <select id="property" name="property" aria-describedby="property-error">
+                  <option value="">No specific property</option>
+                  <option value="aurelia">Aurelia Residences</option>
+                  <option value="cedar-ridge">Cedar Ridge Villa</option>
+                  <option value="meridian">Meridian Business Suites</option>
+                  <option value="greenfield-gardens">Greenfield Gardens</option>
+                  <option value="terrace-garden">Terrace Garden Home</option>
+                  <option value="lakeview-plots">Lakeview Plots</option>
+                  <option value="harbour-point">Harbour Point Retail Space</option>
+                </select>
+                <p class="field-error" id="property-error"></p>
+              </div>
+              <div class="field">
+                <label for="enquiry-type">Enquiry type <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                <select id="enquiry-type" name="enquiryType" required aria-required="true" aria-describedby="enquiry-type-error">
+                  <option value="" selected disabled>Select an enquiry type</option>
+                  <option value="Buying">Buying</option>
+                  <option value="Selling">Selling</option>
+                  <option value="Renting">Renting</option>
+                  <option value="Commercial">Commercial</option>
+                </select>
+                <p class="field-error" id="enquiry-type-error"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">Message <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+              <textarea id="message" name="message" rows="4" maxlength="1000" required aria-required="true" aria-describedby="message-error"></textarea>
+              <p class="field-error" id="message-error"></p>
+            </div>
+
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+
+            <button class="btn btn--dark" type="submit" id="submit-btn">Send enquiry</button>
+          </form>
+
+          <div id="form-success" class="form-success" hidden tabindex="-1">
+            <p class="eyebrow" id="success-eyebrow">Thank you</p>
+            <h3>Thanks, <span id="success-name"></span>.</h3>
+            <p id="success-text"></p>
+            <dl class="summary" id="success-summary"></dl>
+            <button class="btn btn--outline" type="button" id="new-enquiry">New enquiry</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <header class="reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Talk to the team.</h2>
+          <p class="demo-tag">Demo content: every detail here is an editable placeholder. Replace with the business's real information.</p>
+        </header>
+
+        <div class="contact-details reveal" data-delay="120">
+          <div class="contact-block">
+            <h3>Reach us</h3>
+            <ul class="contact-list">
+              <!-- REPLACE: business phone and email -->
+              <li><span class="label">Phone</span> <span class="placeholder">[+00 00000 00000]</span></li>
+              <li><span class="label">Email</span> <span class="placeholder">[hello@your-agency-domain]</span></li>
+            </ul>
+            <a class="btn btn--dark btn--wa" href="#enquiry" data-whatsapp-link>Enquire on WhatsApp</a>
+          </div>
+          <div class="contact-block">
+            <h3>Office</h3>
+            <!-- REPLACE: office location -->
+            <address class="placeholder">[Office street address]<br>[City, State / Region, Postal code]</address>
+          </div>
+          <div class="contact-block">
+            <h3>Follow</h3>
+            <ul class="social-list">
+              <li><a class="social" href="#contact" data-social="instagram">Instagram</a></li>
+              <li><a class="social" href="#contact" data-social="facebook">Facebook</a></li>
+              <li><a class="social" href="#contact" data-social="linkedin">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo logo--light" href="#home" aria-label="UrbanKey Properties, back to top">
+          <svg class="logo-mark" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true" focusable="false">
+            <rect x="1" y="1" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M9 30V17l11-8 11 8v13h-7v-8h-8v8z" fill="currentColor"/>
+            <circle cx="20" cy="19" r="2.2" fill="#C9B78C"/>
+          </svg>
+          <span class="logo-text">UrbanKey <span>Properties</span></span>
+        </a>
+        <p>Find Your Place. Build Your Future.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#properties">Properties</a></li>
+          <li><a href="#property-types">Property Types</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#enquiry">Enquire</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <p class="label">Contact (placeholders)</p>
+        <p class="placeholder">[+00 00000 00000]</p>
+        <p class="placeholder">[hello@your-agency-domain]</p>
+        <ul class="social-list social-list--footer">
+          <li><a class="social" href="#contact" data-social="instagram">Instagram</a></li>
+          <li><a class="social" href="#contact" data-social="facebook">Facebook</a></li>
+          <li><a class="social" href="#contact" data-social="linkedin">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-disclaimer">
+      <p><strong>Demo site disclaimer.</strong> UrbanKey Properties is a fictional brand created for demonstration purposes. Property listings, prices, locations, measurements, amenities and contact details are illustrative sample data. No property shown is genuinely available for sale or rent.</p>
+    </div>
+
+    <div class="container footer-base">
+      <p>&copy; <span id="year">2026</span> UrbanKey Properties (demo). All rights reserved.</p>
+      <a href="#home" class="to-top">Back to top</a>
+    </div>
+  </footer>
+
+  <!-- Property details modal -->
+  <dialog id="detail-modal" class="modal" aria-labelledby="modal-title">
+    <button class="modal-close" type="button" aria-label="Close property details">&times;</button>
+    <div class="modal-grid">
+      <div class="media modal-media">
+        <img id="modal-img" src="" alt="">
+      </div>
+      <div class="modal-body">
+        <span class="tag tag--static" id="modal-type"></span>
+        <h2 id="modal-title"></h2>
+        <p class="modal-loc" id="modal-loc"></p>
+        <p class="modal-price"><span id="modal-price"></span> <span class="price-note">illustrative price</span></p>
+        <p id="modal-desc"></p>
+        <dl class="facts" id="modal-facts"></dl>
+        <h3 class="modal-sub">Sample amenities</h3>
+        <ul class="d-amenities" id="modal-amenities"></ul>
+        <p class="demo-tag modal-demo">Illustrative sample data. This property is not real and is not available for sale.</p>
+        <div class="modal-actions">
+          <a class="btn btn--dark" href="#enquiry" id="modal-enquire">Enquire Now</a>
+          <button class="btn btn--outline" type="button" id="modal-whatsapp">Enquire on WhatsApp</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
