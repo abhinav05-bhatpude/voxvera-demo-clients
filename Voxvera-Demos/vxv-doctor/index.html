@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CarePoint Health | Healthcare, Made More Accessible.</title>
+  <meta name="description" content="CarePoint Health is a fictional healthcare brand, created as a demonstration website for clinics, hospitals, diagnostic centres and pharmacies. All doctors, schedules and services are illustrative.">
+  <meta name="theme-color" content="#173D35">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23173D35'/%3E%3Cpath d='M32 16v32M16 32h32' stroke='%23B9DCCB' stroke-width='9' stroke-linecap='round'/%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="demo-bar" role="note">
+    Fictional demonstration website. All doctors, schedules, services, clinic details and contact information are illustrative samples, not real medical care.
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home" aria-label="CarePoint Health, back to top">
+        <svg class="logo-mark" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true" focusable="false">
+          <rect width="40" height="40" rx="9" fill="currentColor"/>
+          <path d="M20 11v18M11 20h18" stroke="#B9DCCB" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text">CarePoint <span>Health</span></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#specialties">Specialties</a></li>
+          <li><a href="#doctors">Doctors</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn--primary nav-cta" href="#appointment">Book Appointment</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Healthcare, Made More Accessible.</p>
+          <h1 id="hero-title">Expert Care. <em>One Place.</em></h1>
+          <p class="lead">Explore medical specialties, discover healthcare services, and request appointments through a simpler patient experience.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#appointment">Book an Appointment</a>
+            <a class="btn btn--outline" href="#specialties">Explore Specialties</a>
+          </div>
+          <p class="hero-demo">Demonstration brand: the services shown here are illustrative samples.</p>
+        </div>
+
+        <figure class="hero-media reveal reveal-img" data-delay="150">
+          <div class="media">
+            <img src="assets/healthcare-hero.jpg" alt="Modern healthcare facility with a bright, welcoming entrance" fetchpriority="high" decoding="async">
+          </div>
+          <figcaption>Illustrative demo imagery</figcaption>
+        </figure>
+      </div>
+
+      <div class="highlights-band">
+        <div class="container">
+          <ul class="highlights" aria-label="Service highlights">
+            <li>
+              <a href="#service-consultations">
+                <svg class="icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5h14v10H11l-4 4v-4H5z"/></svg>
+                <span><strong>Medical consultations</strong><small>General and specialist visits</small></span>
+              </a>
+            </li>
+            <li>
+              <a href="#service-diagnostics">
+                <svg class="icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M8 15h8"/></svg>
+                <span><strong>Diagnostics</strong><small>Laboratory testing enquiries</small></span>
+              </a>
+            </li>
+            <li>
+              <a href="#service-specialist">
+                <svg class="icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                <span><strong>Specialist care</strong><small>Appointments by specialty</small></span>
+              </a>
+            </li>
+            <li>
+              <a href="#service-pharmacy">
+                <svg class="icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="9" width="18" height="6" rx="3" transform="rotate(-35 12 12)"/><path d="M9.5 8.8l5.2 6.4"/></svg>
+                <span><strong>Pharmacy services</strong><small>Medicine-related enquiries</small></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIALTIES -->
+    <section class="section specialties" id="specialties" aria-labelledby="specialties-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Medical specialties</p>
+          <h2 id="specialties-title">Find the right specialty.</h2>
+          <p class="lead">Browse the areas of care listed below and request an appointment in a couple of clicks. Descriptions are general and for orientation only.</p>
+          <p class="demo-tag">Demo content: this list is a configurable sample. A real clinic would show only the specialties it offers.</p>
+        </header>
+
+        <ul class="specialty-grid" id="specialty-grid"></ul>
+        <noscript><p class="demo-tag">This demonstration lists its specialties and sample doctors with JavaScript. Please enable JavaScript to view them.</p></noscript>
+      </div>
+    </section>
+
+    <!-- DOCTORS -->
+    <section class="section doctors" id="doctors" aria-labelledby="doctors-title">
+      <div class="container">
+        <div class="doctors-intro">
+          <header class="reveal">
+            <p class="eyebrow">Doctor directory</p>
+            <h2 id="doctors-title">Meet the sample team.</h2>
+            <p class="lead">Search by name or specialty to see how a doctor directory could work for a clinic or hospital.</p>
+            <p class="demo-tag">Fictional demo profiles and sample schedules. These doctors do not exist, and no qualifications, registrations or experience are listed.</p>
+          </header>
+
+          <figure class="doctors-media reveal reveal-img" data-delay="120">
+            <div class="media">
+              <img src="assets/healthcare-doctor.jpg" alt="Doctor consulting with a patient in a clinic room" loading="lazy" decoding="async">
+            </div>
+            <figcaption>Illustrative demo imagery</figcaption>
+          </figure>
+        </div>
+
+        <form class="doctor-filters reveal" id="doctor-filters" role="search" aria-label="Search the sample doctor directory" novalidate>
+          <div class="filter-field filter-field--search">
+            <label for="doctor-search">Search by name or specialty</label>
+            <input id="doctor-search" type="search" autocomplete="off" placeholder="e.g. Cardiology or a name">
+          </div>
+          <div class="filter-field">
+            <label for="doctor-specialty">Specialty</label>
+            <select id="doctor-specialty">
+              <option value="">All specialties</option>
+            </select>
+          </div>
+          <button class="btn-text" type="button" id="doctor-reset">Reset</button>
+        </form>
+        <p class="results-count" id="doctor-count" role="status" aria-live="polite"></p>
+
+        <ul class="doctor-list" id="doctor-list"></ul>
+
+        <div class="no-results" id="doctor-empty" hidden>
+          <h3>No sample doctors match that search.</h3>
+          <p>Try a different name or specialty, or reset the filters to see everyone.</p>
+          <button class="btn btn--primary" type="button" id="doctor-empty-reset">Reset filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Healthcare services</p>
+          <h2 id="services-title">Services around the patient.</h2>
+          <p class="demo-tag">Configurable demo services, not confirmed capabilities of any real medical provider.</p>
+        </header>
+
+        <article class="service" id="service-consultations" aria-labelledby="svc-consultations-title">
+          <div class="service-panel reveal">
+            <p class="panel-label">What it could cover (sample)</p>
+            <ul>
+              <li>General medical consultations</li>
+              <li>Specialist appointments</li>
+              <li>Follow-up visits</li>
+              <li>Appointment rescheduling requests</li>
+            </ul>
+          </div>
+          <div class="service-body reveal" data-delay="120">
+            <span class="service-num" aria-hidden="true">01</span>
+            <h3 id="svc-consultations-title">Consultations</h3>
+            <p>General medical consultations and specialist appointments. Request a visit online and the clinic follows up with you to arrange a suitable time.</p>
+            <a class="link-arrow" href="#appointment" data-specialty="general-medicine" data-message="I would like to enquire about a general consultation.">Request a consultation</a>
+          </div>
+        </article>
+
+        <article class="service service--reverse" id="service-diagnostics" aria-labelledby="svc-diagnostics-title">
+          <div class="service-media reveal reveal-img">
+            <div class="media">
+              <img src="assets/health-diagnostic.jpg" alt="Medical laboratory with diagnostic equipment" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="service-body reveal" data-delay="120">
+            <span class="service-num" aria-hidden="true">02</span>
+            <h3 id="svc-diagnostics-title">Diagnostics</h3>
+            <p>Laboratory testing and diagnostic enquiries. Ask which tests are available, how to prepare and how reports are shared. Test availability would be set by the clinic.</p>
+            <a class="link-arrow" href="#appointment" data-message="I would like to enquire about diagnostic or laboratory tests.">Ask about diagnostics</a>
+          </div>
+        </article>
+
+        <article class="service" id="service-pharmacy" aria-labelledby="svc-pharmacy-title">
+          <div class="service-media reveal reveal-img">
+            <div class="media">
+              <img src="assets/health-pharmacy.jpg" alt="Pharmacy interior with organised medicine shelves" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="service-body reveal" data-delay="120">
+            <span class="service-num" aria-hidden="true">03</span>
+            <h3 id="svc-pharmacy-title">Pharmacy</h3>
+            <p>Pharmacy information and medicine-related enquiries, such as opening hours and how to ask about a prescription. Medicine availability and advice would come from the pharmacy.</p>
+            <a class="link-arrow" href="#appointment" data-message="I would like to enquire about the pharmacy.">Ask the pharmacy</a>
+          </div>
+        </article>
+
+        <article class="service service--reverse" id="service-facilities" aria-labelledby="svc-facilities-title">
+          <div class="service-media reveal reveal-img">
+            <div class="media">
+              <img src="assets/health-reception.jpg" alt="Clinic reception and comfortable waiting area" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="service-body reveal" data-delay="120">
+            <span class="service-num" aria-hidden="true">04</span>
+            <h3 id="svc-facilities-title">Patient facilities</h3>
+            <p>Reception, appointment assistance and patient information, in a calm and welcoming space. Facilities shown are illustrative and would be described accurately by the real provider.</p>
+            <a class="link-arrow" href="#patient-info">See patient information</a>
+          </div>
+        </article>
+
+        <article class="service" id="service-specialist" aria-labelledby="svc-specialist-title">
+          <div class="service-media reveal reveal-img">
+            <div class="media">
+              <img src="assets/health-specialist.jpg" alt="Specialist consultation with a patient during medical treatment" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="service-body reveal" data-delay="120">
+            <span class="service-num" aria-hidden="true">05</span>
+            <h3 id="svc-specialist-title">Specialist care</h3>
+            <p>Specialist consultations across the areas of care listed above. Choose a specialty, or browse the sample doctor directory, and send a request.</p>
+            <a class="link-arrow" href="#specialties">Browse specialties</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <header class="reveal">
+          <p class="eyebrow">About CarePoint</p>
+          <h2 id="about-title">Healthcare information, made easier to find.</h2>
+        </header>
+
+        <div class="about-body">
+          <p class="lead reveal" data-delay="60">CarePoint Health is a fictional healthcare brand, created to show how a clinic, hospital, diagnostic centre or pharmacy could present itself online.</p>
+          <p class="reveal" data-delay="100">Its focus is simple: make healthcare information and appointment enquiries more accessible. Clear specialties, a searchable directory and a short request form help patients reach the right people without hunting for details.</p>
+
+          <dl class="principles">
+            <div class="principle reveal" data-delay="60">
+              <dt>Clear information</dt>
+              <dd>Specialties, services and contact details laid out plainly.</dd>
+            </div>
+            <div class="principle reveal" data-delay="120">
+              <dt>Simple requests</dt>
+              <dd>A short form that asks only what is needed to arrange a call-back.</dd>
+            </div>
+            <div class="principle reveal" data-delay="180">
+              <dt>Privacy-aware</dt>
+              <dd>No medical details are requested, and nothing is kept in the browser.</dd>
+            </div>
+            <div class="principle reveal" data-delay="240">
+              <dt>Built to adapt</dt>
+              <dd>Easy to tailor for dermatology, cardiology, neurology and dental clinics, general physicians, multispecialty hospitals, diagnostic laboratories and pharmacies.</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- PATIENT INFORMATION -->
+    <section class="section patient-info" id="patient-info" aria-labelledby="patient-info-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow eyebrow--mint">Patient information</p>
+          <h2 id="patient-info-title">Before you visit.</h2>
+          <p class="demo-tag demo-tag--dark">Sample content: replace with the clinic's real procedures and hours.</p>
+        </header>
+
+        <div class="info-grid">
+          <div class="info-block reveal">
+            <h3>Appointment requests</h3>
+            <ol class="steps">
+              <li>Choose a specialty, date and preferred time in the request form.</li>
+              <li>Submit your request. It is a request only, not a confirmed booking.</li>
+              <li>The clinic contacts you to confirm or suggest another time (sample process).</li>
+            </ol>
+          </div>
+          <div class="info-block reveal" data-delay="100">
+            <h3>Clinic hours <span class="sample">(sample)</span></h3>
+            <table class="hours hours--light">
+              <caption class="sr-only">Sample clinic hours</caption>
+              <tbody>
+                <tr><th scope="row">Monday – Friday</th><td>09:00 – 18:00</td></tr>
+                <tr><th scope="row">Saturday</th><td>09:00 – 14:00</td></tr>
+                <tr><th scope="row">Sunday</th><td>Closed</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="info-block reveal" data-delay="200">
+            <h3>Visiting the clinic <span class="sample">(sample)</span></h3>
+            <ul class="plain-list">
+              <li>Please arrive a little before your appointment time.</li>
+              <li>Bring any previous reports you would like to share with the doctor.</li>
+              <li>Carry a list of the medicines you currently take.</li>
+              <li>A photo ID may be requested at reception.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <header class="reveal">
+          <p class="eyebrow">Frequently asked questions</p>
+          <h2 id="faq-title">Quick answers.</h2>
+          <p class="demo-tag">Sample answers for demonstration. A real provider would write its own.</p>
+        </header>
+
+        <div class="faq-list" id="faq-list">
+          <div class="faq-item reveal">
+            <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">How do I request an appointment?</button></h3>
+            <div class="faq-panel" id="faq-a1" role="region" aria-labelledby="faq-q1"><div class="faq-inner"><p>Use the appointment request form on this page. Choose a specialty, a preferred date and a time, and add your contact details. The clinic then contacts you to arrange the visit.</p></div></div>
+          </div>
+          <div class="faq-item reveal">
+            <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">Does sending the form confirm my appointment?</button></h3>
+            <div class="faq-panel" id="faq-a2" role="region" aria-labelledby="faq-q2"><div class="faq-inner"><p>No. The form sends a request only. An appointment is confirmed when the clinic contacts you and agrees a time. In this demonstration, requests are not transmitted anywhere at all.</p></div></div>
+          </div>
+          <div class="faq-item reveal">
+            <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">Which specialties are listed?</button></h3>
+            <div class="faq-panel" id="faq-a3" role="region" aria-labelledby="faq-q3"><div class="faq-inner"><p>The sample list covers general medicine and a range of specialties, from dermatology and cardiology to dentistry and psychiatry. A real provider would list only the specialties it offers.</p></div></div>
+          </div>
+          <div class="faq-item reveal">
+            <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">Can I ask about diagnostic tests?</button></h3>
+            <div class="faq-panel" id="faq-a4" role="region" aria-labelledby="faq-q4"><div class="faq-inner"><p>Yes. Use the form to ask about laboratory or diagnostic tests, how to prepare and how reports are shared. Which tests are available depends on the provider.</p></div></div>
+          </div>
+          <div class="faq-item reveal">
+            <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">Can I ask the pharmacy about medicines?</button></h3>
+            <div class="faq-panel" id="faq-a5" role="region" aria-labelledby="faq-q5"><div class="faq-inner"><p>You can send a general enquiry about the pharmacy, such as opening hours or how to ask about a prescription. Medicine availability and advice come from the pharmacy team directly.</p></div></div>
+          </div>
+          <div class="faq-item reveal">
+            <h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">Should I include medical details in the form?</button></h3>
+            <div class="faq-panel" id="faq-a6" role="region" aria-labelledby="faq-q6"><div class="faq-inner"><p>Please do not. Keep the message brief and discuss any medical details with the clinic directly when they contact you. If it is an emergency, do not use this form: call your local emergency number (112 in India).</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPOINTMENT -->
+    <section class="section appointment" id="appointment" aria-labelledby="appointment-title">
+      <div class="container appointment-grid">
+        <header class="appointment-head reveal">
+          <p class="eyebrow">Book an appointment</p>
+          <h2 id="appointment-title">Request an appointment.</h2>
+          <p class="lead">Tell us when you would like to visit and how to reach you. This is a request, not a confirmed booking.</p>
+
+          <p class="demo-tag" id="form-mode-note">Front-end demonstration: this form does not transmit your request anywhere, and no appointment is booked.</p>
+
+          <p class="notice notice--emergency"><strong>Emergency?</strong> Do not use this form. Call your local emergency number (112 in India) or go to the nearest emergency department.</p>
+          <p class="notice"><strong>Privacy.</strong> Please do not include medical details in your message. Nothing you enter here is stored in your browser.</p>
+          <p class="prefer-wa">Prefer WhatsApp? <a class="link-inline" href="#contact" data-whatsapp-link>Message us on WhatsApp</a></p>
+        </header>
+
+        <div class="form-wrap reveal" data-delay="120">
+          <form id="appointment-form" class="appointment-form" novalidate aria-labelledby="appointment-title">
+            <p class="form-note">Fields marked <span aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="patient-name">Patient name <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                <input id="patient-name" name="patientName" type="text" autocomplete="name" required aria-required="true" aria-describedby="patient-name-error">
+                <p class="field-error" id="patient-name-error"></p>
+              </div>
+              <div class="field">
+                <label for="phone">Phone number <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="e.g. 98765 43210" required aria-required="true" aria-describedby="phone-hint phone-error">
+                <p class="field-hint" id="phone-hint">Indian mobile number, with or without +91.</p>
+                <p class="field-error" id="phone-error"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email address <span class="optional">(optional)</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error">
+              <p class="field-error" id="email-error"></p>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="specialty">Preferred specialty <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                <select id="specialty" name="specialty" required aria-required="true" aria-describedby="specialty-error">
+                  <option value="" selected disabled>Select a specialty</option>
+                </select>
+                <p class="field-error" id="specialty-error"></p>
+              </div>
+              <div class="field">
+                <label for="doctor">Preferred doctor <span class="optional">(optional, sample profiles)</span></label>
+                <select id="doctor" name="doctor" aria-describedby="doctor-error">
+                  <option value="">No preference</option>
+                </select>
+                <p class="field-error" id="doctor-error"></p>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="appt-date">Preferred date <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                <input id="appt-date" name="date" type="date" required aria-required="true" aria-describedby="appt-date-error">
+                <p class="field-error" id="appt-date-error"></p>
+              </div>
+              <div class="field">
+                <label for="appt-time">Preferred time <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+                <select id="appt-time" name="time" required aria-required="true" aria-describedby="appt-time-error">
+                  <option value="" selected disabled>Select a time</option>
+                  <option value="09:00">9:00 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                  <option value="14:00">2:00 PM</option>
+                  <option value="15:00">3:00 PM</option>
+                  <option value="16:00">4:00 PM</option>
+                  <option value="17:00">5:00 PM</option>
+                </select>
+                <p class="field-error" id="appt-time-error"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">Short message <span class="optional">(optional)</span></label>
+              <textarea id="message" name="message" rows="3" maxlength="500" aria-describedby="message-hint message-error"></textarea>
+              <p class="field-hint" id="message-hint">Please do not include medical details.</p>
+              <p class="field-error" id="message-error"></p>
+            </div>
+
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+
+            <button class="btn btn--primary" type="submit" id="submit-btn">Request appointment</button>
+          </form>
+
+          <div id="form-success" class="form-success" role="status" hidden tabindex="-1">
+            <p class="eyebrow" id="success-eyebrow">Request noted</p>
+            <h3>Thank you, <span id="success-name"></span>.</h3>
+            <p id="success-text"></p>
+            <dl class="summary" id="success-summary"></dl>
+            <button class="btn btn--outline" type="button" id="new-request">Make another request</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <header class="reveal">
+          <p class="eyebrow">Contact &amp; location</p>
+          <h2 id="contact-title">Find us.</h2>
+          <p class="demo-tag">Demo content: every detail here is an editable placeholder. Replace with the provider's real information.</p>
+        </header>
+
+        <div class="contact-details reveal" data-delay="120">
+          <div class="contact-block">
+            <h3>Address</h3>
+            <!-- REPLACE: clinic or hospital address -->
+            <address class="placeholder">[Clinic or hospital address]<br>[City, State / Region, Postal code]</address>
+            <a class="link-arrow" href="#contact" data-directions>Get directions</a>
+          </div>
+          <div class="contact-block">
+            <h3>Reach us</h3>
+            <ul class="contact-list">
+              <!-- REPLACE: phone and email -->
+              <li><span class="label">Phone</span> <span class="placeholder">[+00 00000 00000]</span></li>
+              <li><span class="label">Email</span> <span class="placeholder">[hello@your-clinic-domain]</span></li>
+            </ul>
+            <a class="btn btn--outline btn--wa" href="#contact" data-whatsapp-link>Enquire on WhatsApp</a>
+          </div>
+          <div class="contact-block">
+            <h3>Opening hours <span class="sample">(sample)</span></h3>
+            <!-- REPLACE: opening hours -->
+            <table class="hours">
+              <caption class="sr-only">Sample opening hours</caption>
+              <tbody>
+                <tr><th scope="row">Monday – Friday</th><td>09:00 – 18:00</td></tr>
+                <tr><th scope="row">Saturday</th><td>09:00 – 14:00</td></tr>
+                <tr><th scope="row">Sunday</th><td>Closed</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo logo--light" href="#home" aria-label="CarePoint Health, back to top">
+          <svg class="logo-mark" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true" focusable="false">
+            <rect width="40" height="40" rx="9" fill="#B9DCCB"/>
+            <path d="M20 11v18M11 20h18" stroke="#173D35" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text">CarePoint <span>Health</span></span>
+        </a>
+        <p>Healthcare, Made More Accessible.</p>
+        <p class="footer-desc">A fictional healthcare brand focused on making healthcare information and appointment enquiries easier to find.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#specialties">Specialties</a></li>
+          <li><a href="#doctors">Doctors</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#appointment">Book Appointment</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <p class="label">Contact (placeholders)</p>
+        <p class="placeholder">[+00 00000 00000]</p>
+        <p class="placeholder">[hello@your-clinic-domain]</p>
+        <p class="placeholder">[Clinic or hospital address]</p>
+      </div>
+    </div>
+
+    <div class="container footer-disclaimer">
+      <p><strong>Demo site disclaimer.</strong> CarePoint Health is a fictional brand created for demonstration purposes. Doctors, schedules, specialties, services and contact details are illustrative samples. Nothing here is real medical care, a medical credential or confirmed appointment availability, and nothing on this site is medical advice. In an emergency, call your local emergency number (112 in India).</p>
+    </div>
+
+    <div class="container footer-base">
+      <p>&copy; <span id="year">2026</span> CarePoint Health (demo). All rights reserved.</p>
+      <a href="#home" class="to-top">Back to top</a>
+    </div>
+  </footer>
+
+  <!-- Doctor details modal -->
+  <dialog id="doctor-modal" class="modal" aria-labelledby="modal-title">
+    <button class="modal-close" type="button" aria-label="Close doctor details">&times;</button>
+    <div class="modal-body">
+      <div class="modal-head">
+        <span class="avatar avatar--lg" id="modal-avatar" aria-hidden="true"></span>
+        <div>
+          <span class="badge">Fictional demo profile</span>
+          <h2 id="modal-title"></h2>
+          <p class="modal-spec" id="modal-spec"></p>
+        </div>
+      </div>
+      <p id="modal-about"></p>
+      <dl class="facts" id="modal-facts"></dl>
+      <p class="demo-tag modal-demo">Illustrative sample data. This doctor does not exist, and the schedule is not real availability.</p>
+      <div class="modal-actions">
+        <a class="btn btn--primary" href="#appointment" id="modal-request">Request Appointment</a>
+        <button class="btn btn--outline" type="button" id="modal-done">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
